@@ -32,6 +32,16 @@ if (plugin.getLoginBundle) {
   if (login.scheme?.action?.fnPath) wanted.push(["login:submit", login.scheme.action.fnPath]);
 }
 
+// 云端收藏页的列表函数
+if (plugin.getPluginCloudFavoritePagesBundle) {
+  const cloud = await plugin.getPluginCloudFavoritePagesBundle({});
+  for (const tab of cloud.data?.tabs ?? []) {
+    const scene = tab.scene;
+    if (scene?.body?.request?.fnPath) wanted.push([`cloud:${tab.id}`, scene.body.request.fnPath]);
+    if (scene?.filter?.fnPath) wanted.push([`cloud:${tab.id}/filter`, scene.filter.fnPath]);
+  }
+}
+
 let bad = 0;
 for (const [where, fnPath] of wanted) {
   const ok = exported.has(fnPath);

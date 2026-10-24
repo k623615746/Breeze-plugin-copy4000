@@ -15,17 +15,23 @@ import type {
   ComicDetailContract,
   ComicDetailNormal,
   ComicDetailPayload,
+  ComicListScene,
   ComicListSceneBundleContract,
   ComicPagedListContract,
   ComicListItem,
   CreatorPageAction,
+  FavoriteWorkflowContinuePayload,
+  FavoriteWorkflowResult,
+  FavoriteWorkflowStartPayload,
   FilterBundleContract,
   GetFunctionPagePayload,
   FunctionPageContract,
+  GetPluginCloudFavoritePagesBundlePayload,
   InfoContract,
   LoginBundleContract,
   LoginSubmitPayload,
   LoginSubmitResult,
+  PluginCloudFavoritePagesBundleContract,
   ReadSnapshotContract,
   ReadSnapshotPayload,
   SearchComicPayload,
@@ -34,8 +40,17 @@ import type {
   SettingsBundleContract,
   UserInfoBundleContract,
 } from "breeze-plugin-kit";
-import { authConfig, buildLoginBundle, cache, flutterTools, pluginConfig, readLoginValues, runtime } from "breeze-plugin-kit";
-import { apiGet, apiGetAuthed, apiPostForm, loadToken, qs } from "./api";
+import {
+  authConfig,
+  buildLoginBundle,
+  buildUnauthorizedError,
+  cache,
+  flutterTools,
+  pluginConfig,
+  readLoginValues,
+  runtime,
+} from "breeze-plugin-kit";
+import { apiGet, apiRequestAuthed, apiPostForm, loadToken, qs } from "./api";
 import {
   createActionItem,
   createImage,
@@ -278,6 +293,16 @@ async function getComicDetail(payload: ComicDetailPayload = {}): Promise<ComicDe
   const statusText = str(comic.status?.display);
   const regionText = str(comic.region?.display);
 
+  // 已登录时查真实收藏状态；token 失效不让详情页崩，收藏动作会再抛 unauthorized
+  let isFavourite = false;
+  if (await loadToken()) {
+    try {
+      isFavourite = (await queryCollectId(pathWord)) !== null;
+    } catch {
+      isFavourite = false;
+    }
+  }
+
   const normal: ComicDetailNormal = {
     comicInfo: {
       id: pathWord,
@@ -317,15 +342,14 @@ async function getComicDetail(payload: ComicDetailPayload = {}): Promise<ComicDe
     totalViews: Number(comic.popular ?? 0),
     totalLikes: Number(comic.popular ?? 0),
     totalComments: 0,
-    isFavourite: false,
+    isFavourite,
     isLiked: false,
     allowComments: false,
     allowLike: false,
-    allowCollected: false,
+    allowCollected: true,
     allowDownload: true,
     allowCommentsReason: "该图源暂不支持评论",
     allowLikeReason: "该图源暂不支持点赞",
-    allowCollectedReason: "拷贝漫画云端收藏需登录，当前版本暂未开放",
     extern: {},
   };
 
@@ -491,6 +515,206 @@ async function fetchImageBytes({
 
 async function getDownloadConcurrency(): Promise<{ concurrency: number }> {
   return { concurrency: 4 };
+}
+
+// ---------------------------------------------------------------------------
+// 云端收藏
+// ---------------------------------------------------------------------------
+
+const COLLECT_PAGE_SIZE = 21;
+const COLLECT_ORDERING = "-datetime_modifier";
+
+/**
+ * 查收藏记录 ID：>0 表示已收藏，null 表示未收藏。
+ *
+ * 注意：这个接口对无效 token 不报错，而是返回 200 + `is_login: false`，
+ * 必须自己判断，否则 token 失效会被误当成"未收藏"。
+ */
+async function queryCollectId(pathWord: string): Promise<number | null> {
+  const data = await apiRequestAuthed<{ collect?: number; is_login?: boolean }>(
+    `/comic2/${encodeURIComponent(pathWord)}/query${qs({ platform: 1 })}`,
+  );
+  const map = toStringMap(data);
+  if (map.is_login === false) throw buildUnauthorizedError(PLUGIN_ID, "登录已失效，请重新登录");
+  const id = Number(map.collect ?? 0);
+  return Number.isFinite(id) && id > 0 ? id : null;
+}
+
+/** 收藏接口要的是 uuid，不是 path_word */
+async function fetchComicUuid(pathWord: string): Promise<string> {
+  const detail = await getDetailRaw(pathWord);
+  const uuid = str(toStringMap(detail.comic).uuid);
+  if (!uuid) throw new Error("未找到漫画 UUID，无法收藏");
+  return uuid;
+}
+
+async function addFavorite(pathWord: string): Promise<void> {
+  const uuid = await fetchComicUuid(pathWord);
+  const body = new URLSearchParams({ comic_id: uuid, is_collect: "1" }).toString();
+  await apiRequestAuthed<null>(`/member/collect/comic${qs({ platform: 1 })}`, { method: "POST", body });
+  await cache.set(`${CACHE_KEY.detail}${pathWord}`, null);
+}
+
+async function removeFavorite(pathWord: string): Promise<void> {
+  const collectId = await queryCollectId(pathWord);
+  if (!collectId) return;
+  const body = new URLSearchParams({ ids: String(collectId) }).toString();
+  await apiRequestAuthed<unknown>(`/member/collect/comics${qs({ platform: 1 })}`, {
+    method: "DELETE",
+    body,
+  });
+  await cache.set(`${CACHE_KEY.detail}${pathWord}`, null);
+}
+
+function isUnauthorizedError(error: unknown): boolean {
+  const message = String((error as Error)?.message ?? "");
+  return message.includes('"type":"unauthorized"') || /登录已失效|请先登录/.test(message);
+}
+
+async function startFavoriteAction(
+  payload: FavoriteWorkflowStartPayload,
+): Promise<FavoriteWorkflowResult> {
+  const pathWord = str(payload.comicId);
+  const action = payload.action;
+  if (!pathWord) {
+    return {
+      status: "failed",
+      favorited: false,
+      committed: false,
+      message: "comicId 不能为空",
+      errorCode: "INVALID_COMIC_ID",
+    };
+  }
+
+  try {
+    if (action === "add") {
+      await addFavorite(pathWord);
+      return { status: "completed", favorited: true, committed: true };
+    }
+
+    if (action === "removeAll") {
+      await removeFavorite(pathWord);
+      return { status: "completed", favorited: false, committed: true };
+    }
+
+    if (action === "removeFromTarget") {
+      // 拷贝漫画只有全局收藏，没有多收藏夹。target.id 是收藏记录 ID，
+      // 必须与当前记录一致才允许删，避免误删其它收藏。
+      const target = toStringMap(toStringMap(payload.context).target);
+      const targetId = Number(str(target.id, "0"));
+      if (!Number.isFinite(targetId) || targetId <= 0) {
+        return {
+          status: "failed",
+          favorited: true,
+          committed: false,
+          message: "缺少当前收藏信息，无法安全移除",
+          errorCode: "TARGET_REQUIRED",
+        };
+      }
+      const current = await queryCollectId(pathWord);
+      if (current !== null && current !== targetId) {
+        return {
+          status: "failed",
+          favorited: true,
+          committed: false,
+          message: "当前收藏与目标不一致，已拒绝移除",
+          errorCode: "TARGET_MISMATCH",
+        };
+      }
+      await removeFavorite(pathWord);
+      return { status: "completed", favorited: false, committed: true };
+    }
+
+    return {
+      status: "failed",
+      favorited: false,
+      committed: false,
+      message: "拷贝漫画只支持全局收藏与取消，不支持移动",
+      errorCode: "UNSUPPORTED_ACTION",
+    };
+  } catch (error) {
+    // 未登录必须原样抛，宿主才会拉起登录页
+    if (isUnauthorizedError(error)) throw error;
+    return {
+      status: "failed",
+      favorited: action !== "add",
+      committed: false,
+      message: String((error as Error)?.message ?? error),
+      errorCode: "FAVORITE_REQUEST_FAILED",
+    };
+  }
+}
+
+async function continueFavoriteAction(
+  payload: FavoriteWorkflowContinuePayload,
+): Promise<FavoriteWorkflowResult> {
+  void payload;
+  return {
+    status: "failed",
+    committed: false,
+    message: "拷贝漫画收藏不需要继续交互",
+    errorCode: "UNSUPPORTED_CONTINUATION",
+  };
+}
+
+async function getCloudFavoriteData(payload: SearchComicPayload = {}): Promise<ComicPagedListContract> {
+  const page = pageOf(payload);
+  const offset = (page - 1) * COLLECT_PAGE_SIZE;
+  const data = await apiRequestAuthed<ApiCollectList>(
+    `/member/collect/comics${qs({
+      limit: COLLECT_PAGE_SIZE,
+      offset,
+      free_type: 1,
+      ordering: COLLECT_ORDERING,
+    })}`,
+  );
+
+  const list = Array.isArray(data.list) ? data.list : [];
+  const items: ComicListItem[] = list
+    .map((row): ComicListItem | null => {
+      const comic = toStringMap(row.comic) as ApiComic;
+      if (!str(comic.path_word)) return null;
+      const item: ComicListItem = mapComicToItem(comic);
+      return { ...item, extern: { ...item.extern, collectId: Number(row.uuid ?? 0) } };
+    })
+    .filter((item): item is ComicListItem => item !== null);
+
+  const total = Number(data.total ?? 0) || items.length;
+  const pages = Math.max(1, Math.ceil(total / COLLECT_PAGE_SIZE));
+
+  return {
+    source: PLUGIN_ID,
+    extern: payload.extern ?? null,
+    scheme: { version: "1.0.0" as const, type: "searchResult" as const, source: PLUGIN_ID, list: "comicGrid" },
+    data: { hasReachedMax: page >= pages, items },
+  };
+}
+
+function buildCloudFavoriteScene(): ComicListScene {
+  return {
+    title: "云端收藏",
+    source: PLUGIN_ID,
+    body: {
+      type: "pluginPagedComicList",
+      request: {
+        fnPath: "getCloudFavoriteData",
+        core: {},
+        extern: { source: "cloudFavorite" },
+      },
+    },
+  };
+}
+
+async function getPluginCloudFavoritePagesBundle(
+  _payload: GetPluginCloudFavoritePagesBundlePayload = {},
+): Promise<PluginCloudFavoritePagesBundleContract> {
+  return {
+    source: PLUGIN_ID,
+    scheme: { version: "1.0.0" as const, type: "cloudFavoritePagesBundle" as const },
+    data: {
+      tabs: [{ id: "cloudFavorite", title: "云端收藏", scene: buildCloudFavoriteScene() }],
+    },
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -789,7 +1013,7 @@ async function getUserInfoBundle(): Promise<UserInfoBundleContract> {
   }
 
   try {
-    const me = await apiGetAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
+    const me = await apiRequestAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
     const name = str(me.nickname, str(me.username, "已登录"));
     const avatarUrl = str(me.avatar);
     return {
@@ -855,7 +1079,7 @@ async function onTokenChanged(
   if (!value || value === "******") return {};
   await authConfig.save(CFG.token, value);
   try {
-    const me = await apiGetAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
+    const me = await apiRequestAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
     await flutterTools.showToast({
       message: `已登录：${str(me.nickname, str(me.username, "账号"))}`,
       level: "success",
@@ -958,7 +1182,7 @@ async function checkLogin(): Promise<Record<string, unknown>> {
     return { ok: false };
   }
   try {
-    const me = await apiGetAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
+    const me = await apiRequestAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
     await flutterTools.showToast({
       message: `已登录：${str(me.nickname, str(me.username, "账号"))}`,
       level: "success",
@@ -1034,6 +1258,12 @@ export default {
   getComicListSceneBundle,
   getRankingData,
   getRankingFilterBundle,
+
+  // 云端收藏
+  startFavoriteAction,
+  continueFavoriteAction,
+  getCloudFavoriteData,
+  getPluginCloudFavoritePagesBundle,
 
   getSettingsBundle,
   getCapabilitiesBundle,

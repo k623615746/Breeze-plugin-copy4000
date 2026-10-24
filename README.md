@@ -104,10 +104,59 @@ Breeze 漫画阅读器插件，接入拷贝漫画 **copy4000** 线路。
 | 编辑推荐 | `/recs` |
 | 登录 | `/login`，`base64(password + "-1729")` + `salt=1729` |
 | 账号信息 | `/member/info`，设置页顶部显示昵称与头像 |
+| 云端收藏 | `startFavoriteAction` / `continueFavoriteAction` 工作流 |
+| 收藏列表 | `/member/collect/comics`，独立 tab |
 
 ---
 
-## 五、登录
+## 五、云端收藏
+
+Breeze 的新协议要求插件导出 `startFavoriteAction` / `continueFavoriteAction`，旧的三件套（`toggleFavorite` / `listFavoriteFolders` / `moveFavoriteToFolder`）已废弃。
+
+### 接口
+
+| 动作 | 接口 |
+| --- | --- |
+| 查收藏状态 | `GET /comic2/{path_word}/query` → `results.collect`（>0 为已收藏） |
+| 加收藏 | `POST /member/collect/comic`，body `comic_id={uuid}&is_collect=1` |
+| 取消收藏 | `DELETE /member/collect/comics`，body `ids={collectId}` |
+| 收藏列表 | `GET /member/collect/comics`，`free_type=1&ordering=-datetime_modifier` |
+
+### 三个容易踩的点
+
+**1. `comic_id` 要 uuid，不是 path_word**
+
+收藏接口认的是漫画 uuid，得先从 `/comic2/{path_word}` 取。传 path_word 会失败。
+
+**2. 取消收藏要两步**
+
+接口没有"按漫画取消"，只有"按收藏记录 ID 批量删除"。所以流程是：先 `/query` 拿 `collect` 字段（收藏记录 ID），再 `DELETE` 那个 ID。
+
+**3. `/query` 对无效 token 不报错**
+
+实测假 token 请求 `/comic2/{path}/query` 返回：
+
+```json
+{"code":200,"results":{"collect":null,"is_login":false}}
+```
+
+`code 200`、不抛错、`collect` 是 `null`——和"未收藏"长得一模一样。必须自己看 `is_login`，否则 token 失效会被静默当成未收藏。
+
+而 `/member/collect/*` 是正常校验的，假 token 返回 `code 401 Invalid token header`。
+
+### 拷贝漫画只有全局收藏
+
+没有多收藏夹概念。所以：
+
+- `add` / `removeAll` 直接完成
+- `removeFromTarget` 只在 `context.target.id` 与当前收藏记录 ID 一致时才执行，否则返回 `TARGET_MISMATCH`，避免误删
+- `move` 返回 `UNSUPPORTED_ACTION`，不伪装成"先删后加"
+
+未登录时 `startFavoriteAction` 抛 `unauthorized`，宿主自动拉起登录页。
+
+---
+
+## 六、登录
 
 设置页用户信息区底部有「拷贝漫画账号」入口（`data.canLogin`），点开填账号密码即可。
 
@@ -134,7 +183,7 @@ Breeze 漫画阅读器插件，接入拷贝漫画 **copy4000** 线路。
 
 ---
 
-## 六、设置项
+## 七、设置项
 
 | 键 | 说明 |
 | --- | --- |
@@ -154,7 +203,7 @@ Breeze 漫画阅读器插件，接入拷贝漫画 **copy4000** 线路。
 
 ---
 
-## 七、安装到 Breeze
+## 八、安装到 Breeze
 
 两种方式：
 
@@ -170,7 +219,7 @@ Breeze 漫画阅读器插件，接入拷贝漫画 **copy4000** 线路。
 
 ---
 
-## 八、开发
+## 九、开发
 
 ```bash
 npm install
@@ -190,7 +239,7 @@ node test/smoke.mjs           # 加载打包产物跑真实接口
 
 ---
 
-## 九、已知边界
+## 十、已知边界
 
 - **镜像站路线未接入**：`ios.2026copy.com` 那套走 SSR HTML + AES-128-CBC 解密（`dnts` 头、`ccz`/`cct` 密钥、`contentKey`），可以在 v3 API 全线死掉时作为第四条兜底。运行时有 `crypto.aesCbcPkcs7Decrypt`，技术上可行，未实现。
 - **登录 salt 硬编码 1729**：站点改算法时登录会挂，阅读不受影响。

@@ -123,27 +123,28 @@ export async function apiGetAuthed<T>(path: string): Promise<T> {
 }
 
 /**
- * 表单 POST（登录用）。
+ * 通用请求（支持 POST / DELETE + 登录态）。
  *
- * 注意：登录接口必须带 APP UA，否则直接吃 code 210 反盗版提示——这是登录
- * "怎么点都失败"的根因。业务错误（账号不存在 / 密码错）同样是 code 210，
- * 但文案不含反盗版关键词，所以直接抛出、不触发换线。
+ * 容错策略与 GET 一致：反盗版文案换浏览器 UA 重试 → 仍失败换线路。
+ * 业务错误（账号不存在、未登录、参数错）直接抛出，不换线。
  */
-export async function apiPostForm<T>(
+export async function apiRequest<T>(
   path: string,
-  body: string,
-  options: { timeoutMs?: number } = {},
+  options: { method?: "GET" | "POST" | "DELETE"; body?: string; token?: string; timeoutMs?: number } = {},
 ): Promise<T> {
+  const method = options.method ?? "GET";
   const timeoutMs = options.timeoutMs ?? 20000;
   const base = await resolveApiBase();
 
   const attempt = async (targetBase: string, browser: boolean): Promise<T> => {
-    const headers = browser ? browserHeaders(targetBase) : await apiHeaders(targetBase);
-    headers["Content-Type"] = "application/x-www-form-urlencoded;charset=utf-8";
+    const headers = browser
+      ? browserHeaders(targetBase, options.token)
+      : await apiHeaders(targetBase, options.token);
+    if (options.body) headers["Content-Type"] = "application/x-www-form-urlencoded;charset=utf-8";
     const res = await fetch(`${targetBase}${path}`, {
-      method: "POST",
+      method,
       headers,
-      body,
+      body: options.body,
       signal: AbortSignal.timeout(timeoutMs),
     });
     const json = parse<T>(await res.text());
@@ -170,6 +171,33 @@ export async function apiPostForm<T>(
     const next = await resolveApiBase({ force: true });
     return attempt(next, false);
   }
+}
+
+/** 带登录态的请求（收藏等）；未登录时抛 unauthorized，宿主会拉起登录页 */
+export async function apiRequestAuthed<T>(
+  path: string,
+  options: { method?: "GET" | "POST" | "DELETE"; body?: string; timeoutMs?: number } = {},
+): Promise<T> {
+  const token = await loadToken();
+  if (!token) throw buildUnauthorizedError(PLUGIN_ID, "请先登录拷贝漫画账号");
+  try {
+    return await apiRequest<T>(path, { ...options, token });
+  } catch (error) {
+    const message = String((error as Error)?.message ?? "");
+    if (/登录|登錄|token|unauthorized|401/i.test(message)) {
+      throw buildUnauthorizedError(PLUGIN_ID, "登录已失效，请重新登录");
+    }
+    throw error;
+  }
+}
+
+/** 表单 POST（登录用） */
+export async function apiPostForm<T>(
+  path: string,
+  body: string,
+  options: { timeoutMs?: number } = {},
+): Promise<T> {
+  return apiRequest<T>(path, { method: "POST", body, timeoutMs: options.timeoutMs });
 }
 
 export function qs(params: Record<string, string | number | undefined | null>): string {

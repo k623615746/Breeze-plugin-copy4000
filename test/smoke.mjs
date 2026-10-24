@@ -104,5 +104,27 @@ log(`登录链路返回：${loginErr || "(意外成功)"}`);
 check("登录请求到达业务层（未被反盗版拦截）", loginErr.length > 0 && !/破解|官網|官网|download/i.test(loginErr));
 check("账号错误信息正确透传", /賬戶不存在|账户不存在|密碼|密码/.test(loginErr));
 
+// 9. 云端收藏
+const detail2 = await plugin.getComicDetail({ comicId: first.id });
+check("详情页开放收藏入口", detail2.data.normal.allowCollected === true);
+check("未登录时收藏状态为 false", detail2.data.normal.isFavourite === false);
+
+let favErr = "";
+try {
+  await plugin.startFavoriteAction({ comicId: first.id, action: "add" });
+} catch (error) {
+  favErr = String(error?.message ?? error);
+}
+log(`未登录收藏：${favErr.slice(0, 60)}`);
+check("未登录收藏会拉起登录页", /unauthorized/.test(favErr) || /登录/.test(favErr));
+
+const unsupported = await plugin.startFavoriteAction({ comicId: first.id, action: "move" });
+check("不支持的动作返回 UNSUPPORTED_ACTION", unsupported.status === "failed" && unsupported.errorCode === "UNSUPPORTED_ACTION");
+
+const cloud = await plugin.getPluginCloudFavoritePagesBundle({});
+const cloudScene = cloud.data.tabs[0]?.scene;
+log(`云端收藏页：${cloud.data.tabs.map((t) => t.title).join(" / ")} → ${cloudScene?.body?.request?.fnPath}`);
+check("云端收藏页入口正确", cloudScene?.body?.request?.fnPath === "getCloudFavoriteData");
+
 console.log(`\n${failures === 0 ? "全部通过" : `${failures} 项失败`}`);
 process.exit(failures === 0 ? 0 : 1);
