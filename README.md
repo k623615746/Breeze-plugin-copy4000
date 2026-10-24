@@ -217,6 +217,33 @@ Breeze 的新协议要求插件导出 `startFavoriteAction` / `continueFavoriteA
 
 装好后进插件设置页可开**调试模式**填 bundle 地址，之后改代码能热更新（`init` / `getInfo` 的入口列表除外，那两项要重装）。
 
+### 更新通道（踩过的坑）
+
+`getInfo()` 里**只填 `updateUrl`，不填 `npmName`**：
+
+```ts
+updateUrl: "https://api.github.com/repos/k623615746/breeze-plugin-copy4000/releases/latest"
+```
+
+原因是 Breeze 的 `fetchSelfChannelLatestVersion` 是这样写的：
+
+```dart
+if (npmName.isNotEmpty) return fetchNpmLatestVersion(npmName);  // 只查 npm
+return fetchUpdateUrlLatestVersion(updateUrl);                  // 否则才走 updateUrl
+```
+
+**有 `npmName` 就只查 npm，不会回退 `updateUrl`。** 之前填了 `npmName` 却没发布到 npm，同步就报「远程插件文件不存在（404）」。
+
+另外 release 必须同时提供 `.cjs.br` 和 `.cjs`——客户端优先选 `.br`（10KB vs 34KB），下载更快。
+
+发布 checklist：
+
+1. 改 `src/get-info.ts` 的 `version`（字面量，`generate-version.ts` 靠正则读它）
+2. `npx rspack build` + `node --import tsx build/generate-brotli.ts`
+3. Release tag 与 `version` 一致（`v` 前缀可有可无，比较时会 strip）
+4. **两个资产都传**：`.bundle.cjs` + `.bundle.cjs.br`
+5. `node test/update-channel.mjs` 验证整条通道
+
 ---
 
 ## 九、开发
