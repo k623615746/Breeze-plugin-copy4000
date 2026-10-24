@@ -2,7 +2,7 @@
 
 export const PLUGIN_ID = "371d33c6-a901-434a-a0ae-d4ea80c7612f";
 export const PLUGIN_NAME = "拷贝漫画 Copy4000";
-export const PLUGIN_VERSION = "0.1.3";
+export const PLUGIN_VERSION = "0.1.4";
 
 /** 当前主线路（copy4000 系列） */
 export const PRIMARY_API_BASE = "https://api.copy4000.com/api/v3";

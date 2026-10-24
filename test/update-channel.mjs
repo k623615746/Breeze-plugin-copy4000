@@ -3,7 +3,7 @@
 import { brotliDecompressSync } from "node:zlib";
 import { createRequire } from "node:module";
 
-const REPO = "k623615746/breeze-plugin-copy4000";
+const REPO = "k623615746/Breeze-plugin-copy4000";
 const UPDATE_URL = `https://api.github.com/repos/${REPO}/releases/latest`;
 
 let failed = 0;

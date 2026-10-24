@@ -210,7 +210,7 @@ Breeze 的新协议要求插件导出 `startFavoriteAction` / `continueFavoriteA
 1. **网络安装（推荐）**：插件商店 → 浏览安装 → 网络安装，填
 
    ```
-   https://github.com/k623615746/breeze-plugin-copy4000/releases/latest/download/breeze-plugin-copy4000.bundle.cjs
+   https://github.com/k623615746/Breeze-plugin-copy4000/releases/latest/download/breeze-plugin-copy4000.bundle.cjs
    ```
 
 2. **本地文件**：插件商店 → 底部「更新」→ 本地文件 → 选 `dist/breeze-plugin-copy4000.bundle.cjs`
