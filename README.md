@@ -205,6 +205,11 @@ Breeze 的新协议要求插件导出 `startFavoriteAction` / `continueFavoriteA
 
 ## 八、安装到 Breeze
 
+> **仓库命名**：Breeze 的列表脚本只收录名字以 `Breeze-plugin` 开头的仓库
+> （`isPluginRepo` 里是 `name.startsWith("Breeze-plugin")`），并且要求根目录有
+> `manifest.json`、`updateUrl` 对应的 release 至少有一个可下载附件。
+> 本仓库因此命名为 `Breeze-plugin-copy4000`（本地目录仍是小写，无影响）。
+
 两种方式：
 
 1. **网络安装（推荐）**：插件商店 → 浏览安装 → 网络安装，填
@@ -222,7 +227,7 @@ Breeze 的新协议要求插件导出 `startFavoriteAction` / `continueFavoriteA
 `getInfo()` 里**只填 `updateUrl`，不填 `npmName`**：
 
 ```ts
-updateUrl: "https://api.github.com/repos/k623615746/breeze-plugin-copy4000/releases/latest"
+updateUrl: "https://api.github.com/repos/k623615746/Breeze-plugin-copy4000/releases/latest"
 ```
 
 原因是 Breeze 的 `fetchSelfChannelLatestVersion` 是这样写的：
