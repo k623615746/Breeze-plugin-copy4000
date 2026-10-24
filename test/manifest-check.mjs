@@ -26,6 +26,12 @@ for (const action of plugin.getCapabilitiesBundle ? (await plugin.getCapabilitie
   if (action.fnPath) wanted.push([`capability:${action.key}`, action.fnPath]);
 }
 
+// 登录页的提交函数
+if (plugin.getLoginBundle) {
+  const login = await plugin.getLoginBundle();
+  if (login.scheme?.action?.fnPath) wanted.push(["login:submit", login.scheme.action.fnPath]);
+}
+
 let bad = 0;
 for (const [where, fnPath] of wanted) {
   const ok = exported.has(fnPath);

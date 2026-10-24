@@ -23,6 +23,9 @@ import type {
   GetFunctionPagePayload,
   FunctionPageContract,
   InfoContract,
+  LoginBundleContract,
+  LoginSubmitPayload,
+  LoginSubmitResult,
   ReadSnapshotContract,
   ReadSnapshotPayload,
   SearchComicPayload,
@@ -31,8 +34,8 @@ import type {
   SettingsBundleContract,
   UserInfoBundleContract,
 } from "breeze-plugin-kit";
-import { cache, flutterTools, pluginConfig, runtime } from "breeze-plugin-kit";
-import { apiGet, qs } from "./api";
+import { authConfig, buildLoginBundle, cache, flutterTools, pluginConfig, readLoginValues, runtime } from "breeze-plugin-kit";
+import { apiGet, apiGetAuthed, apiPostForm, loadToken, qs } from "./api";
 import {
   createActionItem,
   createImage,
@@ -682,11 +685,9 @@ async function showCurrentBase(): Promise<Record<string, unknown>> {
 
 async function getSettingsBundle(): Promise<SettingsBundleContract> {
   const locked = await getLockedBase();
-  const current = currentBase() || locked;
   const platform = await loadString(CFG.platform, "1");
   const version = await loadString(CFG.version, "2025.05.09");
-  const username = await loadString(CFG.username, "");
-  const token = await loadString(CFG.token, "");
+  const token = await loadToken();
 
   return {
     source: PLUGIN_ID,
@@ -723,23 +724,27 @@ async function getSettingsBundle(): Promise<SettingsBundleContract> {
           ],
         },
         {
-          title: "账号（可选，仅用于收藏）",
+          title: "账号",
           fields: [
-            { key: CFG.username, kind: "text", label: "用户名", fnPath: "onAuthChanged" },
-            { key: CFG.password, kind: "password", label: "密码", fnPath: "onAuthChanged" },
-            { key: CFG.token, kind: "password", label: "Token（可留空，用上方账号登录）", fnPath: "onTokenChanged" },
+            {
+              key: CFG.token,
+              kind: "password",
+              label: "手动填 Token（一般不用，用下方「账号登录」）",
+              fnPath: "onTokenChanged",
+            },
           ],
         },
       ],
     },
     data: {
-      canShowUserInfo: false,
+      canShowUserInfo: true,
+      canLogin: true,
+      loginTitle: "拷贝漫画账号",
+      loginSubtitle: "登录后可同步云端收藏",
       values: {
         [CFG.apiLock]: locked,
         [CFG.platform]: platform || "1",
         [CFG.version]: version || "2025.05.09",
-        [CFG.username]: username,
-        [CFG.password]: "",
         [CFG.token]: token ? "******" : "",
       },
     },
@@ -753,6 +758,8 @@ async function getCapabilitiesBundle(): Promise<CapabilitiesBundleContract> {
       version: "1.0.0" as const,
       type: "capabilities" as const,
       actions: [
+        { key: "login", title: "检查登录状态", fnPath: "checkLogin" },
+        { key: "logout", title: "退出登录", fnPath: "logout" },
         { key: "diagnose", title: "重新探测所有线路", fnPath: "diagnoseDomains" },
         { key: "mine", title: "从报错挖新域名", fnPath: "mineDomains" },
         { key: "show", title: "查看当前线路", fnPath: "showCurrentBase" },
@@ -763,20 +770,50 @@ async function getCapabilitiesBundle(): Promise<CapabilitiesBundleContract> {
   };
 }
 
+const EMPTY_AVATAR = { id: "", url: "", name: "", path: "", extern: {} };
+
 async function getUserInfoBundle(): Promise<UserInfoBundleContract> {
   const base = currentBase() || (await getLockedBase());
-  return {
-    source: PLUGIN_ID,
-    scheme: { version: "1.0.0" as const, type: "userInfo" as const },
-    data: {
-      title: "线路状态",
-      avatar: createImage({ id: "route", url: "", name: "", path: "", extern: {} }),
-      lines: [
-        `当前线路：${base ? describeBase(base) : "未解析"}`,
-        `插件版本：${PLUGIN_VERSION}`,
-      ],
-    },
-  };
+  const routeLines = [
+    `当前线路：${base ? describeBase(base) : "未解析"}`,
+    `插件版本：${PLUGIN_VERSION}`,
+  ];
+  const token = await loadToken();
+
+  if (!token) {
+    return {
+      source: PLUGIN_ID,
+      scheme: { version: "1.0.0" as const, type: "userInfo" as const },
+      data: { title: "未登录", avatar: EMPTY_AVATAR, lines: ["登录后可同步云端收藏", ...routeLines] },
+    };
+  }
+
+  try {
+    const me = await apiGetAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
+    const name = str(me.nickname, str(me.username, "已登录"));
+    const avatarUrl = str(me.avatar);
+    return {
+      source: PLUGIN_ID,
+      scheme: { version: "1.0.0" as const, type: "userInfo" as const },
+      data: {
+        title: name,
+        avatar: avatarUrl
+          ? createImage({ id: "avatar", url: avatarUrl, name: "avatar", path: "user/avatar.jpg", extern: {} })
+          : EMPTY_AVATAR,
+        lines: [`账号：${name}`, ...routeLines],
+      },
+    };
+  } catch (error) {
+    return {
+      source: PLUGIN_ID,
+      scheme: { version: "1.0.0" as const, type: "userInfo" as const },
+      data: {
+        title: "登录已失效",
+        avatar: EMPTY_AVATAR,
+        lines: [`${String((error as Error)?.message ?? error)}`, ...routeLines],
+      },
+    };
+  }
 }
 
 // 设置回调
@@ -811,58 +848,131 @@ async function onVersionChanged(
   return {};
 }
 
-async function onAuthChanged(
-  payload: SettingChangedPayload<string> = { extern: {}, key: "", value: "" },
-): Promise<Record<string, unknown>> {
-  if (payload.key === CFG.username) await saveString(CFG.username, str(payload.value));
-  if (payload.key === CFG.password) await saveString(CFG.password, String(payload.value ?? ""));
-  return {};
-}
-
 async function onTokenChanged(
   payload: SettingChangedPayload<string> = { extern: {}, key: "", value: "" },
 ): Promise<Record<string, unknown>> {
   const value = str(payload.value);
-  if (value && value !== "******") await saveString(CFG.token, value);
+  if (!value || value === "******") return {};
+  await authConfig.save(CFG.token, value);
+  try {
+    const me = await apiGetAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
+    await flutterTools.showToast({
+      message: `已登录：${str(me.nickname, str(me.username, "账号"))}`,
+      level: "success",
+      seconds: 3,
+    });
+  } catch (error) {
+    await flutterTools.showToast({
+      message: `Token 无效：${String((error as Error)?.message ?? error)}`,
+      level: "error",
+      seconds: 4,
+    });
+  }
   return {};
 }
 
-async function loginWithAccount(): Promise<Record<string, unknown>> {
-  const username = await loadString(CFG.username, "");
-  const password = await loadString(CFG.password, "");
-  if (!username || !password) {
-    await flutterTools.showToast({ message: "请先填写用户名和密码", level: "warning", seconds: 3 });
+/** 站点登录口令 = base64(password + "-1729")，salt 固定 1729 */
+function encodePassword(password: string): string {
+  const bytes = new TextEncoder().encode(`${password}-1729`);
+  const runtimeFn = (globalThis as { bytesToBase64?: (input: Uint8Array) => string }).bytesToBase64;
+  if (typeof runtimeFn === "function") return runtimeFn(bytes);
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary);
+}
+
+async function getLoginBundle(): Promise<LoginBundleContract> {
+  let account = "";
+  try {
+    account = String(await authConfig.load(CFG.username, "")).trim();
+  } catch {
+    account = "";
+  }
+  return buildLoginBundle(PLUGIN_ID, {
+    title: "拷贝漫画登录",
+    fields: [
+      { key: "username", kind: "text", label: "用户名 / 邮箱", required: true },
+      { key: "password", kind: "password", label: "密码", required: true },
+    ],
+    submitFnPath: "submitLogin",
+    submitText: "登录",
+    values: account ? { username: account } : {},
+  });
+}
+
+/**
+ * 取登录表单值。
+ * 文档写表单值放在 `core.values`，但 kit 的 readLoginValues 只读 `payload.values`，
+ * 两种形态都兜住，避免宿主版本差异导致永远读到空值。
+ */
+function readFormValues(payload: LoginSubmitPayload): Record<string, string> {
+  const direct = readLoginValues(payload);
+  if (direct.username || direct.password) return direct;
+  const core = (payload as { core?: { values?: Record<string, unknown> } }).core;
+  if (core?.values) {
+    const nested = readLoginValues({ values: core.values } as LoginSubmitPayload);
+    if (nested.username || nested.password) return nested;
+  }
+  return direct;
+}
+
+async function submitLogin(payload: LoginSubmitPayload = {}): Promise<LoginSubmitResult> {
+  const values = readFormValues(payload);
+  const username = str(values.username);
+  const password = String(values.password ?? "");
+  if (!username) throw new Error("请填写用户名");
+  if (!password) throw new Error("请填写密码");
+
+  const body = new URLSearchParams({
+    username,
+    password: encodePassword(password),
+    salt: "1729",
+  }).toString();
+
+  const data = await apiPostForm<ApiMemberInfo & { token?: string }>("/login", body);
+  const token = str(data.token);
+  if (!token) throw new Error("登录成功但站点未返回 token");
+
+  await Promise.allSettled([
+    authConfig.save(CFG.token, token),
+    authConfig.save(CFG.username, username),
+  ]);
+
+  return {
+    source: PLUGIN_ID,
+    message: `登录成功：${str(data.nickname, str(data.username, username))}`,
+    data: { ok: true },
+  };
+}
+
+async function logout(): Promise<Record<string, unknown>> {
+  await Promise.allSettled([authConfig.save(CFG.token, ""), authConfig.save(CFG.username, "")]);
+  await flutterTools.showToast({ message: "已退出登录", level: "info", seconds: 2 });
+  return { ok: true };
+}
+
+async function checkLogin(): Promise<Record<string, unknown>> {
+  const token = await loadToken();
+  if (!token) {
+    await flutterTools.showToast({ message: "当前未登录", level: "warning", seconds: 3 });
     return { ok: false };
   }
-  // 站点登录口令 = base64(password + "-1729")，salt 固定 1729
-  const encoded = bytesToBase64(new TextEncoder().encode(`${password}-1729`));
-  const body = new URLSearchParams({ username, password: encoded, salt: "1729" }).toString();
-  const base = await resolveApiBase();
-  const res = await fetch(`${base}/login`, {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",
-      Origin: `https://${hostOf(base).replace(/^(api|mapi)\./, "")}`,
-      platform: "1",
-      version: await loadString(CFG.version, "2025.05.09"),
-    },
-    body,
-    signal: AbortSignal.timeout(15000),
-  });
-  const json = (await res.json()) as { code?: number; message?: string; results?: ApiMemberInfo & { token?: string } };
-  if (Number(json.code ?? 0) !== 200) {
-    await flutterTools.showToast({ message: `登录失败：${json.message ?? json.code}`, level: "error", seconds: 4 });
+  try {
+    const me = await apiGetAuthed<ApiMemberInfo>(`/member/info${qs({ platform: 1 })}`);
+    await flutterTools.showToast({
+      message: `已登录：${str(me.nickname, str(me.username, "账号"))}`,
+      level: "success",
+      seconds: 3,
+    });
+    return { ok: true };
+  } catch (error) {
+    await flutterTools.showToast({
+      message: `登录已失效：${String((error as Error)?.message ?? error)}`,
+      level: "error",
+      seconds: 4,
+    });
     return { ok: false };
   }
-  const token = str(json.results?.token);
-  if (token) await saveString(CFG.token, token);
-  await flutterTools.showToast({
-    message: token ? `登录成功：${str(json.results?.nickname, username)}` : "登录成功但未返回 token",
-    level: token ? "success" : "warning",
-    seconds: 3,
-  });
-  return { ok: Boolean(token) };
 }
 
 // ---------------------------------------------------------------------------
@@ -930,16 +1040,20 @@ export default {
   getUserInfoBundle,
   getFunctionPage,
 
+  // 登录
+  getLoginBundle,
+  submitLogin,
+  logout,
+  checkLogin,
+
   diagnoseDomains,
   mineDomains,
   showCurrentBase,
   clearCache,
-  loginWithAccount,
 
   onApiLockChanged,
   onPlatformChanged,
   onVersionChanged,
-  onAuthChanged,
   onTokenChanged,
 };
 

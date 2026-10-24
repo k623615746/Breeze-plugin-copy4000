@@ -75,9 +75,34 @@ check("getRankingData 返回条目", rank.data.items.length > 0);
 const settings = await plugin.getSettingsBundle();
 log(`设置：${settings.scheme.sections.length} 个分组，当前锁定=${JSON.stringify(settings.data.values["api.lock"])}`);
 check("getSettingsBundle 有线路字段", settings.scheme.sections[0].fields.length >= 3);
+check("设置页开放登录入口", settings.data.canLogin === true);
+check("设置页显示用户信息区", settings.data.canShowUserInfo === true);
+
+// 7. 登录表单
+const login = await plugin.getLoginBundle();
+const loginFields = login.scheme.fields.map((f) => f.key);
+log(`登录表单：${loginFields.join(" / ")} → ${login.scheme.action.fnPath}`);
+check("登录表单含账号密码", loginFields.includes("username") && loginFields.includes("password"));
+check("登录提交函数已导出", typeof plugin[login.scheme.action.fnPath] === "function");
+
+const userInfo = await plugin.getUserInfoBundle();
+log(`用户信息区：${userInfo.data.title}`);
+check("未登录时显示未登录", userInfo.data.title === "未登录");
 
 const caps = await plugin.getCapabilitiesBundle();
 log(`能力：${caps.scheme.actions.map((a) => a.title).join(" / ")}`);
+check("能力区含登录相关操作", caps.scheme.actions.some((a) => a.key === "logout"));
+
+// 8. 登录链路：用不存在的账号，验证请求能穿过反盗版拦截、走到业务层
+let loginErr = "";
+try {
+  await plugin.submitLogin({ core: { values: { username: "nonexistent_user_xyz", password: "wrongpass" } } });
+} catch (error) {
+  loginErr = String(error?.message ?? error);
+}
+log(`登录链路返回：${loginErr || "(意外成功)"}`);
+check("登录请求到达业务层（未被反盗版拦截）", loginErr.length > 0 && !/破解|官網|官网|download/i.test(loginErr));
+check("账号错误信息正确透传", /賬戶不存在|账户不存在|密碼|密码/.test(loginErr));
 
 console.log(`\n${failures === 0 ? "全部通过" : `${failures} 项失败`}`);
 process.exit(failures === 0 ? 0 : 1);
