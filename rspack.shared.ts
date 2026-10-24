@@ -1,1 +1,68 @@
-aW1wb3J0IHR5cGUgeyBDb25maWd1cmF0aW9uIH0gZnJvbSAiQHJzcGFjay9jb3JlIjsNCmltcG9ydCB7IHJlc29sdmUgfSBmcm9tICJub2RlOnBhdGgiOw0KDQpleHBvcnQgdHlwZSBDcmVhdGVSc3BhY2tDb25maWdPcHRpb25zID0gew0KICByb290RGlyOiBzdHJpbmc7DQogIG91dFBhdGg6IHN0cmluZzsNCiAgb3V0RmlsZU5hbWU6IHN0cmluZzsNCiAgbW9kZT86ICJkZXZlbG9wbWVudCIgfCAicHJvZHVjdGlvbiI7DQp9Ow0KDQpleHBvcnQgZnVuY3Rpb24gY3JlYXRlUnNwYWNrQ29uZmlnKHsNCiAgcm9vdERpciwNCiAgb3V0UGF0aCwNCiAgb3V0RmlsZU5hbWUsDQogIG1vZGUgPSAicHJvZHVjdGlvbiIsDQp9OiBDcmVhdGVSc3BhY2tDb25maWdPcHRpb25zKTogQ29uZmlndXJhdGlvbiB7DQogIGNvbnN0IGlzUHJvZHVjdGlvbiA9IG1vZGUgPT09ICJwcm9kdWN0aW9uIjsNCg0KICByZXR1cm4gew0KICAgIG1vZGUsDQogICAgZW50cnk6IGAke3Jvb3REaXJ9L3NyYy9pbmRleC50c2AsDQogICAgdGFyZ2V0OiAid2ViIiwNCiAgICBkZXZ0b29sOiBpc1Byb2R1Y3Rpb24gPyBmYWxzZSA6ICJpbmxpbmUtc291cmNlLW1hcCIsDQogICAgbW9kdWxlOiB7DQogICAgICBydWxlczogWw0KICAgICAgICB7DQogICAgICAgICAgdGVzdDogL1wudHN4PyQvLA0KICAgICAgICAgIGV4Y2x1ZGU6IC9ub2RlX21vZHVsZXMvLA0KICAgICAgICAgIGVuZm9yY2U6ICJwcmUiLA0KICAgICAgICAgIHVzZTogWw0KICAgICAgICAgICAgew0KICAgICAgICAgICAgICBsb2FkZXI6IHJlc29sdmUocm9vdERpciwgImJ1aWxkL2NvbnNvbGUtbG9jYXRpb24tbG9hZGVyLmNqcyIpLA0KICAgICAgICAgICAgfSwNCiAgICAgICAgICBdLA0KICAgICAgICB9LA0KICAgICAgICB7DQogICAgICAgICAgdGVzdDogL1wudHN4PyQvLA0KICAgICAgICAgIGV4Y2x1ZGU6IC9ub2RlX21vZHVsZXMvLA0KICAgICAgICAgIGxvYWRlcjogImJ1aWx0aW46c3djLWxvYWRlciIsDQogICAgICAgICAgb3B0aW9uczogew0KICAgICAgICAgICAganNjOiB7DQogICAgICAgICAgICAgIHBhcnNlcjogew0KICAgICAgICAgICAgICAgIHN5bnRheDogInR5cGVzY3JpcHQiLA0KICAgICAgICAgICAgICB9LA0KICAgICAgICAgICAgICB0YXJnZXQ6ICJlczIwMTkiLA0KICAgICAgICAgICAgfSwNCiAgICAgICAgICB9LA0KICAgICAgICB9LA0KICAgICAgXSwNCiAgICB9LA0KICAgIHJlc29sdmU6IHsNCiAgICAgIGV4dGVuc2lvbnM6IFsiLnRzIiwgIi50c3giLCAiLm1qcyIsICIuanMiLCAiLmpzb24iXSwNCiAgICB9LA0KICAgIG91dHB1dDogew0KICAgICAgcGF0aDogb3V0UGF0aCwNCiAgICAgIGZpbGVuYW1lOiBvdXRGaWxlTmFtZSwNCiAgICAgIGxpYnJhcnk6IHsNCiAgICAgICAgdHlwZTogImNvbW1vbmpzMiIsDQogICAgICB9LA0KICAgIH0sDQogICAgb3B0aW1pemF0aW9uOiB7DQogICAgICBtaW5pbWl6ZTogdHJ1ZSwNCiAgICAgIHVzZWRFeHBvcnRzOiB0cnVlLA0KICAgICAgc2lkZUVmZmVjdHM6IHRydWUsDQogICAgICBjb25jYXRlbmF0ZU1vZHVsZXM6IHRydWUsDQogICAgfSwNCiAgfTsNCn0NCg==
+import type { Configuration } from "@rspack/core";
+import { resolve } from "node:path";
+
+export type CreateRspackConfigOptions = {
+  rootDir: string;
+  outPath: string;
+  outFileName: string;
+  mode?: "development" | "production";
+};
+
+export function createRspackConfig({
+  rootDir,
+  outPath,
+  outFileName,
+  mode = "production",
+}: CreateRspackConfigOptions): Configuration {
+  const isProduction = mode === "production";
+
+  return {
+    mode,
+    entry: `${rootDir}/src/index.ts`,
+    target: "web",
+    devtool: isProduction ? false : "inline-source-map",
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          enforce: "pre",
+          use: [
+            {
+              loader: resolve(rootDir, "build/console-location-loader.cjs"),
+            },
+          ],
+        },
+        {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          loader: "builtin:swc-loader",
+          options: {
+            jsc: {
+              parser: {
+                syntax: "typescript",
+              },
+              target: "es2019",
+            },
+          },
+        },
+      ],
+    },
+    resolve: {
+      extensions: [".ts", ".tsx", ".mjs", ".js", ".json"],
+    },
+    output: {
+      path: outPath,
+      filename: outFileName,
+      library: {
+        type: "commonjs2",
+      },
+    },
+    optimization: {
+      minimize: true,
+      usedExports: true,
+      sideEffects: true,
+      concatenateModules: true,
+    },
+  };
+}

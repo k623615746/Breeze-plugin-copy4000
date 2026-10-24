@@ -1,1 +1,123 @@
-LyoqIEFQSSDor7fmsYLlsYLvvJrnu5/kuIDluKbnrb7lkI3lpLTjgIHoh6rliqjmjaLnur/jgIHlj43nm5fniYjmlofmoYjlhZzlupUgKi8KCmltcG9ydCB7IEFQUF9VQSwgQ0ZHLCBXRUJfVUEgfSBmcm9tICIuL2NvbmZpZyI7CmltcG9ydCB7IGxvYWRTdHJpbmcsIHJlcG9ydEZhaWx1cmUsIHJlc29sdmVBcGlCYXNlLCBzaXRlT3JpZ2luT2YgfSBmcm9tICIuL2RvbWFpbiI7CgpleHBvcnQgdHlwZSBBcGlFbnZlbG9wZTxUPiA9IHsKICBjb2RlPzogbnVtYmVyOwogIG1lc3NhZ2U/OiBzdHJpbmc7CiAgcmVzdWx0cz86IFQ7Cn07Cgpjb25zdCBBTlRJX1BJUkFDWV9SRSA9IC/noLTop6N85q2j54mIfOWumOe2snzlrpjnvZF8ZG93bmxvYWR85pu05paw5pyA5pawYXBwfOabtOaWsOacgOaWsCBBUFAvaTsKCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBhcGlIZWFkZXJzKGJhc2U6IHN0cmluZywgdG9rZW4gPSAiIik6IFByb21pc2U8UmVjb3JkPHN0cmluZywgc3RyaW5nPj4gewogIGNvbnN0IHZlcnNpb24gPSAoYXdhaXQgbG9hZFN0cmluZyhDRkcudmVyc2lvbiwgIjIwMjUuMDUuMDkiKSkgfHwgIjIwMjUuMDUuMDkiOwogIGNvbnN0IHBsYXRmb3JtID0gKGF3YWl0IGxvYWRTdHJpbmcoQ0ZHLnBsYXRmb3JtLCAiMSIpKSB8fCAiMSI7CiAgLy8g5a6e5rWL77ya6K+m5oOFL+eroOiKguaOpeWPo+WPquiupOegtOino+eJiCBBUFAg55qEIFVB77yIaURPS2l0IOeJueW+ge+8ieOAggogIC8vIOeUqOaZrumAmua1j+iniOWZqCBVQSDkvJrnm7TmjqXlkIMgY29kZSAyMTDjgIzoq4vliLDlrpjntrLmm7TmlrDmnIDmlrBBUFAoLi4uKeOAje+8jOaJgOS7pem7mOiupOWwseeUqOWug+OAggogIGNvbnN0IGhlYWRlcnM6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4gPSB7CiAgICBBY2NlcHQ6ICJhcHBsaWNhdGlvbi9qc29uIiwKICAgICJBY2NlcHQtTGFuZ3VhZ2UiOiAiemgtQ04semg7cT0wLjksemgtVFc7cT0wLjgiLAogICAgdmVyc2lvbiwKICAgIE9yaWdpbjogc2l0ZU9yaWdpbk9mKGJhc2UpLAogICAgcmVnaW9uOiAiMCIsCiAgICB3ZWJwOiAiMCIsCiAgICAiVXNlci1BZ2VudCI6IEFQUF9VQSwKICB9OwogIGlmIChwbGF0Zm9ybS50cmltKCkpIGhlYWRlcnMucGxhdGZvcm0gPSBwbGF0Zm9ybTsKICBpZiAodG9rZW4pIGhlYWRlcnMuYXV0aG9yaXphdGlvbiA9IGBUb2tlbiAke3Rva2VufWA7CiAgcmV0dXJuIGhlYWRlcnM7Cn0KCi8qKiDlj43lkJHlhZzlupXvvJpBUFAg54m55b6B6KKr6aOO5o6n6ZmQ5rWB5pe277yM5o2i5pmu6YCa5rWP6KeI5ZmoIFVBIOWGjeivleS4gOasoSAqLwpmdW5jdGlvbiBicm93c2VySGVhZGVycyhiYXNlOiBzdHJpbmcsIHRva2VuID0gIiIpOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+IHsKICBjb25zdCBoZWFkZXJzOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+ID0gewogICAgQWNjZXB0OiAiYXBwbGljYXRpb24vanNvbiIsCiAgICB2ZXJzaW9uOiAiMjAyNS4wNS4wOSIsCiAgICBPcmlnaW46IHNpdGVPcmlnaW5PZihiYXNlKSwKICAgIHJlZ2lvbjogIjAiLAogICAgd2VicDogIjAiLAogICAgcGxhdGZvcm06ICIxIiwKICAgICJVc2VyLUFnZW50IjogV0VCX1VBLAogIH07CiAgaWYgKHRva2VuKSBoZWFkZXJzLmF1dGhvcml6YXRpb24gPSBgVG9rZW4gJHt0b2tlbn1gOwogIHJldHVybiBoZWFkZXJzOwp9Cgphc3luYyBmdW5jdGlvbiByYXdHZXQodXJsOiBzdHJpbmcsIGhlYWRlcnM6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4sIHRpbWVvdXRNczogbnVtYmVyKSB7CiAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2godXJsLCB7IGhlYWRlcnMsIHNpZ25hbDogQWJvcnRTaWduYWwudGltZW91dCh0aW1lb3V0TXMpIH0pOwogIGNvbnN0IHRleHQgPSBhd2FpdCByZXMudGV4dCgpOwogIHJldHVybiB7IHJlcywgdGV4dCB9Owp9CgpmdW5jdGlvbiBwYXJzZTxUPih0ZXh0OiBzdHJpbmcpOiBBcGlFbnZlbG9wZTxUPiB7CiAgY29uc3QgdHJpbW1lZCA9IHRleHQudHJpbSgpOwogIGlmICghdHJpbW1lZCkgdGhyb3cgbmV3IEVycm9yKCLnqbrlk43lupQiKTsKICBpZiAodHJpbW1lZC5zdGFydHNXaXRoKCI8IikpIHsKICAgIHRocm93IG5ldyBFcnJvcigv5Y2H57Sa5LitfOWNh+e6p+S4rXzntq3orbd857u05oqkLy50ZXN0KHRyaW1tZWQpID8gIuacjeWKoeWZqOWNh+e6p+S4re+8jOivt+eojeWQjuWGjeivlSIgOiAi57q/6Lev6L+U5Zue5byC5bi46aG16Z2iIik7CiAgfQogIHJldHVybiBKU09OLnBhcnNlKHRyaW1tZWQpIGFzIEFwaUVudmVsb3BlPFQ+Owp9CgovKioKICog5Lia5Yqh6K+35rGC44CCCiAqIOWksei0pei3r+W+hO+8mue9kee7nOmUmeivryAvIOe7tOaKpOmhtSAvIGNvZGUhPT0yMDAg4oaSIOiusOWksei0pSDihpIg5o2i57q/6YeN6K+V5LiA5qyh44CCCiAqIOWPjeebl+eJiOaWh+ahiO+8iGNvZGUgMjEw77yJ4oaSIOWFiOaNoua1j+iniOWZqCBVQSDlkIznur/ot6/ph43or5XvvIzku43lpLHotKXlho3mjaLnur/jgIIKICovCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBhcGlHZXQ8VD4oCiAgcGF0aDogc3RyaW5nLAogIG9wdGlvbnM6IHsgdG9rZW4/OiBzdHJpbmc7IHRpbWVvdXRNcz86IG51bWJlcjsgYWxsb3dSZXRyeT86IGJvb2xlYW4gfSA9IHt9LAopOiBQcm9taXNlPFQ+IHsKICBjb25zdCBhbGxvd1JldHJ5ID0gb3B0aW9ucy5hbGxvd1JldHJ5ICE9PSBmYWxzZTsKICBjb25zdCB0aW1lb3V0TXMgPSBvcHRpb25zLnRpbWVvdXRNcyA/PyAyMDAwMDsKICBjb25zdCBiYXNlID0gYXdhaXQgcmVzb2x2ZUFwaUJhc2UoKTsKCiAgY29uc3QgYXR0ZW1wdCA9IGFzeW5jICh0YXJnZXRCYXNlOiBzdHJpbmcsIGJyb3dzZXI6IGJvb2xlYW4pOiBQcm9taXNlPFQ+ID0+IHsKICAgIGNvbnN0IGhlYWRlcnMgPSBicm93c2VyID8gYnJvd3NlckhlYWRlcnModGFyZ2V0QmFzZSwgb3B0aW9ucy50b2tlbikgOiBhd2FpdCBhcGlIZWFkZXJzKHRhcmdldEJhc2UsIG9wdGlvbnMudG9rZW4pOwogICAgY29uc3QgeyB0ZXh0IH0gPSBhd2FpdCByYXdHZXQoYCR7dGFyZ2V0QmFzZX0ke3BhdGh9YCwgaGVhZGVycywgdGltZW91dE1zKTsKICAgIGNvbnN0IGpzb24gPSBwYXJzZTxUPih0ZXh0KTsKICAgIGlmIChOdW1iZXIoanNvbi5jb2RlID8/IDApICE9PSAyMDApIHsKICAgICAgY29uc3QgbWVzc2FnZSA9IFN0cmluZyhqc29uLm1lc3NhZ2UgPz8gYGNvZGU9JHtqc29uLmNvZGV9YCk7CiAgICAgIGNvbnN0IGVycm9yID0gbmV3IEVycm9yKG1lc3NhZ2UpIGFzIEVycm9yICYgeyBhbnRpUGlyYWN5PzogYm9vbGVhbiB9OwogICAgICBlcnJvci5hbnRpUGlyYWN5ID0gQU5USV9QSVJBQ1lfUkUudGVzdChtZXNzYWdlKTsKICAgICAgdGhyb3cgZXJyb3I7CiAgICB9CiAgICByZXR1cm4ganNvbi5yZXN1bHRzIGFzIFQ7CiAgfTsKCiAgdHJ5IHsKICAgIHJldHVybiBhd2FpdCBhdHRlbXB0KGJhc2UsIGZhbHNlKTsKICB9IGNhdGNoIChlcnJvcikgewogICAgY29uc3QgZXJyID0gZXJyb3IgYXMgRXJyb3IgJiB7IGFudGlQaXJhY3k/OiBib29sZWFuIH07CiAgICBpZiAoZXJyLmFudGlQaXJhY3kgJiYgIW9wdGlvbnMudG9rZW4pIHsKICAgICAgdHJ5IHsKICAgICAgICByZXR1cm4gYXdhaXQgYXR0ZW1wdChiYXNlLCB0cnVlKTsKICAgICAgfSBjYXRjaCB7CiAgICAgICAgLy8g57un57ut6LWw5o2i57q/CiAgICAgIH0KICAgIH0KICAgIGlmICghYWxsb3dSZXRyeSkgdGhyb3cgZXJyb3I7CgogICAgYXdhaXQgcmVwb3J0RmFpbHVyZShiYXNlKTsKICAgIGNvbnN0IG5leHQgPSBhd2FpdCByZXNvbHZlQXBpQmFzZSh7IGZvcmNlOiB0cnVlIH0pOwogICAgcmV0dXJuIGF0dGVtcHQobmV4dCwgZmFsc2UpOwogIH0KfQoKLyoqIOW4pueZu+W9leaAgeeahOivt+axgu+8iOaUtuiXj+etie+8iSAqLwpleHBvcnQgYXN5bmMgZnVuY3Rpb24gYXBpR2V0QXV0aGVkPFQ+KHBhdGg6IHN0cmluZyk6IFByb21pc2U8VD4gewogIGNvbnN0IHRva2VuID0gKGF3YWl0IGxvYWRTdHJpbmcoQ0ZHLnRva2VuLCAiIikpLnRyaW0oKTsKICBpZiAoIXRva2VuKSB0aHJvdyBuZXcgRXJyb3IoIuivt+WFiOWcqOaPkuS7tuiuvue9rumHjOeZu+W9lei0puWPtyIpOwogIHJldHVybiBhcGlHZXQ8VD4ocGF0aCwgeyB0b2tlbiB9KTsKfQoKZXhwb3J0IGZ1bmN0aW9uIHFzKHBhcmFtczogUmVjb3JkPHN0cmluZywgc3RyaW5nIHwgbnVtYmVyIHwgdW5kZWZpbmVkIHwgbnVsbD4pOiBzdHJpbmcgewogIGNvbnN0IHNlYXJjaCA9IG5ldyBVUkxTZWFyY2hQYXJhbXMoKTsKICBmb3IgKGNvbnN0IFtrZXksIHZhbHVlXSBvZiBPYmplY3QuZW50cmllcyhwYXJhbXMpKSB7CiAgICBpZiAodmFsdWUgPT09IHVuZGVmaW5lZCB8fCB2YWx1ZSA9PT0gbnVsbCB8fCB2YWx1ZSA9PT0gIiIpIGNvbnRpbnVlOwogICAgc2VhcmNoLnNldChrZXksIFN0cmluZyh2YWx1ZSkpOwogIH0KICBjb25zdCB0ZXh0ID0gc2VhcmNoLnRvU3RyaW5nKCk7CiAgcmV0dXJuIHRleHQgPyBgPyR7dGV4dH1gIDogIiI7Cn0K
+/** API 请求层：统一带签名头、自动换线、反盗版文案兜底 */
+
+import { APP_UA, CFG, WEB_UA } from "./config";
+import { loadString, reportFailure, resolveApiBase, siteOriginOf } from "./domain";
+
+export type ApiEnvelope<T> = {
+  code?: number;
+  message?: string;
+  results?: T;
+};
+
+const ANTI_PIRACY_RE = /破解|正版|官網|官网|download|更新最新app|更新最新 APP/i;
+
+export async function apiHeaders(base: string, token = ""): Promise<Record<string, string>> {
+  const version = (await loadString(CFG.version, "2025.05.09")) || "2025.05.09";
+  const platform = (await loadString(CFG.platform, "1")) || "1";
+  // 实测：详情/章节接口只认破解版 APP 的 UA（iDOKit 特征）。
+  // 用普通浏览器 UA 会直接吃 code 210「請到官網更新最新APP(...)」，所以默认就用它。
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8",
+    version,
+    Origin: siteOriginOf(base),
+    region: "0",
+    webp: "0",
+    "User-Agent": APP_UA,
+  };
+  if (platform.trim()) headers.platform = platform;
+  if (token) headers.authorization = `Token ${token}`;
+  return headers;
+}
+
+/** 反向兜底：APP 特征被风控限流时，换普通浏览器 UA 再试一次 */
+function browserHeaders(base: string, token = ""): Record<string, string> {
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+    version: "2025.05.09",
+    Origin: siteOriginOf(base),
+    region: "0",
+    webp: "0",
+    platform: "1",
+    "User-Agent": WEB_UA,
+  };
+  if (token) headers.authorization = `Token ${token}`;
+  return headers;
+}
+
+async function rawGet(url: string, headers: Record<string, string>, timeoutMs: number) {
+  const res = await fetch(url, { headers, signal: AbortSignal.timeout(timeoutMs) });
+  const text = await res.text();
+  return { res, text };
+}
+
+function parse<T>(text: string): ApiEnvelope<T> {
+  const trimmed = text.trim();
+  if (!trimmed) throw new Error("空响应");
+  if (trimmed.startsWith("<")) {
+    throw new Error(/升級中|升级中|維護|维护/.test(trimmed) ? "服务器升级中，请稍后再试" : "线路返回异常页面");
+  }
+  return JSON.parse(trimmed) as ApiEnvelope<T>;
+}
+
+/**
+ * 业务请求。
+ * 失败路径：网络错误 / 维护页 / code!==200 → 记失败 → 换线重试一次。
+ * 反盗版文案（code 210）→ 先换浏览器 UA 同线路重试，仍失败再换线。
+ */
+export async function apiGet<T>(
+  path: string,
+  options: { token?: string; timeoutMs?: number; allowRetry?: boolean } = {},
+): Promise<T> {
+  const allowRetry = options.allowRetry !== false;
+  const timeoutMs = options.timeoutMs ?? 20000;
+  const base = await resolveApiBase();
+
+  const attempt = async (targetBase: string, browser: boolean): Promise<T> => {
+    const headers = browser ? browserHeaders(targetBase, options.token) : await apiHeaders(targetBase, options.token);
+    const { text } = await rawGet(`${targetBase}${path}`, headers, timeoutMs);
+    const json = parse<T>(text);
+    if (Number(json.code ?? 0) !== 200) {
+      const message = String(json.message ?? `code=${json.code}`);
+      const error = new Error(message) as Error & { antiPiracy?: boolean };
+      error.antiPiracy = ANTI_PIRACY_RE.test(message);
+      throw error;
+    }
+    return json.results as T;
+  };
+
+  try {
+    return await attempt(base, false);
+  } catch (error) {
+    const err = error as Error & { antiPiracy?: boolean };
+    if (err.antiPiracy && !options.token) {
+      try {
+        return await attempt(base, true);
+      } catch {
+        // 继续走换线
+      }
+    }
+    if (!allowRetry) throw error;
+
+    await reportFailure(base);
+    const next = await resolveApiBase({ force: true });
+    return attempt(next, false);
+  }
+}
+
+/** 带登录态的请求（收藏等） */
+export async function apiGetAuthed<T>(path: string): Promise<T> {
+  const token = (await loadString(CFG.token, "")).trim();
+  if (!token) throw new Error("请先在插件设置里登录账号");
+  return apiGet<T>(path, { token });
+}
+
+export function qs(params: Record<string, string | number | undefined | null>): string {
+  const search = new URLSearchParams();
+  for (const [key, value] of Object.entries(params)) {
+    if (value === undefined || value === null || value === "") continue;
+    search.set(key, String(value));
+  }
+  const text = search.toString();
+  return text ? `?${text}` : "";
+}

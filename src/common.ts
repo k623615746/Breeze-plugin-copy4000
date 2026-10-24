@@ -1,1 +1,128 @@
-LyoqIOWlkee6puWvueixoeaehOmAoOW3peWFtyAqLwoKaW1wb3J0IHR5cGUgewogIEFjdGlvbkl0ZW0sCiAgQ29taWNJbmZvUGFnZUFjdGlvbiwKICBDb21pY0xpc3RJdGVtLAogIEltYWdlSXRlbSwKICBNZXRhZGF0YUxpc3RJdGVtLAogIFBhZ2luZ0luZm8sCiAgU3RyaW5nTWFwLAp9IGZyb20gImJyZWV6ZS1wbHVnaW4ta2l0IjsKaW1wb3J0IHsgUExVR0lOX0lEIH0gZnJvbSAiLi9jb25maWciOwppbXBvcnQgdHlwZSB7IEFwaUNvbWljIH0gZnJvbSAiLi90eXBlcyI7CgpleHBvcnQgY29uc3QgTk9UX0ZPVU5EX0lNQUdFX1VSTCA9ICJodHRwczovL3d3dy5jb3B5NDAwMC5jb20vZmF2aWNvbi5pY28iOwpleHBvcnQgY29uc3QgUExBQ0VIT0xERVJfSU1BR0VfUEFUSCA9ICJwbGFjZWhvbGRlci9pbWFnZS00MDQucG5nIjsKCmNvbnN0IEVNUFRZX0FDVElPTiA9IHt9IGFzIENvbWljSW5mb1BhZ2VBY3Rpb247CgpleHBvcnQgZnVuY3Rpb24gdG9TdHJpbmdNYXAodmFsdWU6IHVua25vd24pOiBTdHJpbmdNYXAgewogIGlmICghdmFsdWUgfHwgdHlwZW9mIHZhbHVlICE9PSAib2JqZWN0IiB8fCBBcnJheS5pc0FycmF5KHZhbHVlKSkgcmV0dXJuIHt9OwogIHJldHVybiB2YWx1ZSBhcyBSZWNvcmQ8c3RyaW5nLCB1bmtub3duPjsKfQoKZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUFjdGlvbkl0ZW0oCiAgbmFtZTogdW5rbm93biwKICBvblRhcDogQ29taWNJbmZvUGFnZUFjdGlvbiA9IEVNUFRZX0FDVElPTiwKICBleHRlcm46IFN0cmluZ01hcCA9IHt9LAopOiBBY3Rpb25JdGVtIHsKICByZXR1cm4geyBuYW1lOiBTdHJpbmcobmFtZSA/PyAiIiksIG9uVGFwLCBleHRlcm4gfTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZUltYWdlKAogIGlucHV0OiB7CiAgICBpZD86IHN0cmluZzsKICAgIHVybD86IHN0cmluZzsKICAgIG5hbWU/OiBzdHJpbmc7CiAgICBwYXRoPzogc3RyaW5nOwogICAgZXh0ZXJuPzogU3RyaW5nTWFwOwogIH0gPSB7fSwKKTogSW1hZ2VJdGVtIHsKICByZXR1cm4gewogICAgaWQ6IFN0cmluZyhpbnB1dC5pZCA/PyAiIiksCiAgICB1cmw6IFN0cmluZyhpbnB1dC51cmwgPz8gIiIpLnRyaW0oKSB8fCBOT1RfRk9VTkRfSU1BR0VfVVJMLAogICAgbmFtZTogU3RyaW5nKGlucHV0Lm5hbWUgPz8gIiIpLAogICAgcGF0aDogU3RyaW5nKGlucHV0LnBhdGggPz8gIiIpLnRyaW0oKSB8fCBQTEFDRUhPTERFUl9JTUFHRV9QQVRILAogICAgZXh0ZXJuOiBpbnB1dC5leHRlcm4gPz8ge30sCiAgfTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZU1ldGFkYXRhTGlzdCgKICB0eXBlOiBzdHJpbmcsCiAgbmFtZTogc3RyaW5nLAogIHZhbHVlczogdW5rbm93biwKICBtYXBJdGVtPzogKHZhbHVlOiBzdHJpbmcpID0+IEFjdGlvbkl0ZW0sCik6IE1ldGFkYXRhTGlzdEl0ZW0gewogIGNvbnN0IGxpc3QgPSBBcnJheS5pc0FycmF5KHZhbHVlcykgPyB2YWx1ZXMgOiB2YWx1ZXMgPT0gbnVsbCA/IFtdIDogW3ZhbHVlc107CiAgcmV0dXJuIHsKICAgIHR5cGUsCiAgICBuYW1lLAogICAgdmFsdWU6IGxpc3QKICAgICAgLm1hcCgoaXRlbSkgPT4gU3RyaW5nKGl0ZW0gPz8gIiIpLnRyaW0oKSkKICAgICAgLmZpbHRlcigoaXRlbSkgPT4gaXRlbS5sZW5ndGggPiAwKQogICAgICAubWFwKChpdGVtKSA9PiAobWFwSXRlbSA/IG1hcEl0ZW0oaXRlbSkgOiBjcmVhdGVBY3Rpb25JdGVtKGl0ZW0pKSksCiAgfTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZVBhZ2luZyhwYWdlOiBudW1iZXIsIHBhZ2VzOiBudW1iZXIsIHRvdGFsOiBudW1iZXIpOiBQYWdpbmdJbmZvIHsKICBjb25zdCBzYWZlUGFnZXMgPSBNYXRoLm1heCgxLCBwYWdlcyk7CiAgcmV0dXJuIHsgcGFnZSwgcGFnZXM6IHNhZmVQYWdlcywgdG90YWwsIGhhc1JlYWNoZWRNYXg6IHBhZ2UgPj0gc2FmZVBhZ2VzIH07Cn0KCmZ1bmN0aW9uIGZvcm1hdERhdGUodmFsdWU6IHVua25vd24pOiBzdHJpbmcgewogIGNvbnN0IHRleHQgPSBTdHJpbmcodmFsdWUgPz8gIiIpLnRyaW0oKTsKICBpZiAoIXRleHQpIHJldHVybiAiIjsKICBjb25zdCBwYXJzZWQgPSBEYXRlLnBhcnNlKHRleHQpOwogIGlmIChOdW1iZXIuaXNOYU4ocGFyc2VkKSkgcmV0dXJuIHRleHQuc2xpY2UoMCwgMTYpOwogIHJldHVybiBuZXcgRGF0ZShwYXJzZWQpLnRvSVNPU3RyaW5nKCkuc2xpY2UoMCwgMTYpLnJlcGxhY2UoIlQiLCAiICIpOwp9CgpleHBvcnQgZnVuY3Rpb24gbWFwQ29taWNUb0l0ZW0oY29taWM6IEFwaUNvbWljKTogQ29taWNMaXN0SXRlbSB7CiAgY29uc3QgaWQgPSBTdHJpbmcoY29taWMucGF0aF93b3JkID8/IGNvbWljLnV1aWQgPz8gIiIpLnRyaW0oKTsKICBjb25zdCB0aXRsZSA9IFN0cmluZyhjb21pYy5uYW1lID8/ICLmnKrnn6XmvKvnlLsiKTsKICBjb25zdCBhdXRob3JzID0gKGNvbWljLmF1dGhvciA/PyBbXSkubWFwKChpdGVtKSA9PiBTdHJpbmcoaXRlbS5uYW1lID8/ICIiKSkuZmlsdGVyKEJvb2xlYW4pOwogIGNvbnN0IHRoZW1lcyA9IChjb21pYy50aGVtZSA/PyBbXSkubWFwKChpdGVtKSA9PiBTdHJpbmcoaXRlbS5uYW1lID8/ICIiKSkuZmlsdGVyKEJvb2xlYW4pOwogIGNvbnN0IGNvdmVyID0gU3RyaW5nKGNvbWljLmNvdmVyID8/ICIiKS50cmltKCk7CiAgY29uc3QgdXBkYXRlZEF0ID0gZm9ybWF0RGF0ZShjb21pYy5kYXRldGltZV91cGRhdGVkKTsKICBjb25zdCBzdGF0dXNUZXh0ID0gU3RyaW5nKGNvbWljLnN0YXR1cz8uZGlzcGxheSA/PyAiIik7CiAgY29uc3QgZmluaXNoZWQgPSAv5a6M57WQfOWujOe7ky8udGVzdChzdGF0dXNUZXh0KTsKCiAgcmV0dXJuIHsKICAgIHNvdXJjZTogUExVR0lOX0lELAogICAgaWQsCiAgICB0aXRsZSwKICAgIHN1YnRpdGxlOiBhdXRob3JzLmxlbmd0aCA+IDAgPyBhdXRob3JzLmpvaW4oIiAvICIpIDogU3RyaW5nKGNvbWljLmFsaWFzID8/ICIiKS5zbGljZSgwLCA0MCksCiAgICBmaW5pc2hlZCwKICAgIGxpa2VzQ291bnQ6IE51bWJlcihjb21pYy5wb3B1bGFyID8/IDApLAogICAgdmlld3NDb3VudDogTnVtYmVyKGNvbWljLnBvcHVsYXIgPz8gMCksCiAgICB1cGRhdGVkQXQsCiAgICBjb3ZlcjogY3JlYXRlSW1hZ2UoewogICAgICBpZCwKICAgICAgdXJsOiBjb3ZlciwKICAgICAgbmFtZTogYCR7aWR9LmpwZ2AsCiAgICAgIHBhdGg6IGBjb21pYy8ke2lkfS9jb3Zlci5qcGdgLAogICAgICBleHRlcm46IHsgdXJsOiBjb3ZlciB9LAogICAgfSksCiAgICBtZXRhZGF0YTogWwogICAgICBjcmVhdGVNZXRhZGF0YUxpc3QoImF1dGhvciIsICLkvZzogIUiLCBhdXRob3JzKSwKICAgICAgY3JlYXRlTWV0YWRhdGFMaXN0KCJ0YWdzIiwgIuagh+etviIsIHRoZW1lcyksCiAgICAgIGNyZWF0ZU1ldGFkYXRhTGlzdCgic3RhdHVzIiwgIueKtuaAgSIsIHN0YXR1c1RleHQgPyBbc3RhdHVzVGV4dF0gOiBbXSksCiAgICBdLAogICAgcmF3OiB7CiAgICAgIGlkLAogICAgICB1dWlkOiBjb21pYy51dWlkLAogICAgICBuYW1lOiB0aXRsZSwKICAgICAgYWxpYXM6IGNvbWljLmFsaWFzLAogICAgICBhdXRob3I6IGF1dGhvcnMuam9pbigiLCIpLAogICAgICBkZXNjcmlwdGlvbjogY29taWMuYnJpZWYsCiAgICAgIGltYWdlOiBjb3ZlciwKICAgICAgc3RhdHVzOiBzdGF0dXNUZXh0LAogICAgICBsYXN0X2NoYXB0ZXJfbmFtZTogY29taWMubGFzdF9jaGFwdGVyPy5uYW1lLAogICAgICB1cGRhdGVfYXQ6IGNvbWljLmRhdGV0aW1lX3VwZGF0ZWQsCiAgICAgIHBvcHVsYXI6IGNvbWljLnBvcHVsYXIsCiAgICAgIHRhZ3M6IHRoZW1lcywKICAgIH0sCiAgICBleHRlcm46IHsgcGF0aFdvcmQ6IGlkLCB1dWlkOiBjb21pYy51dWlkID8/ICIiIH0sCiAgfTsKfQo=
+/** 契约对象构造工具 */
+
+import type {
+  ActionItem,
+  ComicInfoPageAction,
+  ComicListItem,
+  ImageItem,
+  MetadataListItem,
+  PagingInfo,
+  StringMap,
+} from "breeze-plugin-kit";
+import { PLUGIN_ID } from "./config";
+import type { ApiComic } from "./types";
+
+export const NOT_FOUND_IMAGE_URL = "https://www.copy4000.com/favicon.ico";
+export const PLACEHOLDER_IMAGE_PATH = "placeholder/image-404.png";
+
+const EMPTY_ACTION = {} as ComicInfoPageAction;
+
+export function toStringMap(value: unknown): StringMap {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return value as Record<string, unknown>;
+}
+
+export function createActionItem(
+  name: unknown,
+  onTap: ComicInfoPageAction = EMPTY_ACTION,
+  extern: StringMap = {},
+): ActionItem {
+  return { name: String(name ?? ""), onTap, extern };
+}
+
+export function createImage(
+  input: {
+    id?: string;
+    url?: string;
+    name?: string;
+    path?: string;
+    extern?: StringMap;
+  } = {},
+): ImageItem {
+  return {
+    id: String(input.id ?? ""),
+    url: String(input.url ?? "").trim() || NOT_FOUND_IMAGE_URL,
+    name: String(input.name ?? ""),
+    path: String(input.path ?? "").trim() || PLACEHOLDER_IMAGE_PATH,
+    extern: input.extern ?? {},
+  };
+}
+
+export function createMetadataList(
+  type: string,
+  name: string,
+  values: unknown,
+  mapItem?: (value: string) => ActionItem,
+): MetadataListItem {
+  const list = Array.isArray(values) ? values : values == null ? [] : [values];
+  return {
+    type,
+    name,
+    value: list
+      .map((item) => String(item ?? "").trim())
+      .filter((item) => item.length > 0)
+      .map((item) => (mapItem ? mapItem(item) : createActionItem(item))),
+  };
+}
+
+export function createPaging(page: number, pages: number, total: number): PagingInfo {
+  const safePages = Math.max(1, pages);
+  return { page, pages: safePages, total, hasReachedMax: page >= safePages };
+}
+
+function formatDate(value: unknown): string {
+  const text = String(value ?? "").trim();
+  if (!text) return "";
+  const parsed = Date.parse(text);
+  if (Number.isNaN(parsed)) return text.slice(0, 16);
+  return new Date(parsed).toISOString().slice(0, 16).replace("T", " ");
+}
+
+export function mapComicToItem(comic: ApiComic): ComicListItem {
+  const id = String(comic.path_word ?? comic.uuid ?? "").trim();
+  const title = String(comic.name ?? "未知漫画");
+  const authors = (comic.author ?? []).map((item) => String(item.name ?? "")).filter(Boolean);
+  const themes = (comic.theme ?? []).map((item) => String(item.name ?? "")).filter(Boolean);
+  const cover = String(comic.cover ?? "").trim();
+  const updatedAt = formatDate(comic.datetime_updated);
+  const statusText = String(comic.status?.display ?? "");
+  const finished = /完結|完结/.test(statusText);
+
+  return {
+    source: PLUGIN_ID,
+    id,
+    title,
+    subtitle: authors.length > 0 ? authors.join(" / ") : String(comic.alias ?? "").slice(0, 40),
+    finished,
+    likesCount: Number(comic.popular ?? 0),
+    viewsCount: Number(comic.popular ?? 0),
+    updatedAt,
+    cover: createImage({
+      id,
+      url: cover,
+      name: `${id}.jpg`,
+      path: `comic/${id}/cover.jpg`,
+      extern: { url: cover },
+    }),
+    metadata: [
+      createMetadataList("author", "作者", authors),
+      createMetadataList("tags", "标签", themes),
+      createMetadataList("status", "状态", statusText ? [statusText] : []),
+    ],
+    raw: {
+      id,
+      uuid: comic.uuid,
+      name: title,
+      alias: comic.alias,
+      author: authors.join(","),
+      description: comic.brief,
+      image: cover,
+      status: statusText,
+      last_chapter_name: comic.last_chapter?.name,
+      update_at: comic.datetime_updated,
+      popular: comic.popular,
+      tags: themes,
+    },
+    extern: { pathWord: id, uuid: comic.uuid ?? "" },
+  };
+}

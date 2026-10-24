@@ -1,1 +1,489 @@
-aW1wb3J0IHsgY3JlYXRlSGFzaCB9IGZyb20gIm5vZGU6Y3J5cHRvIjsNCmltcG9ydCB7IG1rZGlyLCByZWFkRmlsZSB9IGZyb20gIm5vZGU6ZnMvcHJvbWlzZXMiOw0KaW1wb3J0IHsgY3JlYXRlU2VydmVyLCB0eXBlIEluY29taW5nTWVzc2FnZSwgdHlwZSBTZXJ2ZXJSZXNwb25zZSB9IGZyb20gIm5vZGU6aHR0cCI7DQppbXBvcnQgeyBuZXR3b3JrSW50ZXJmYWNlcyB9IGZyb20gIm5vZGU6b3MiOw0KaW1wb3J0IHsgYmFzZW5hbWUsIGRpcm5hbWUsIHJlc29sdmUgfSBmcm9tICJub2RlOnBhdGgiOw0KaW1wb3J0IHsgZmlsZVVSTFRvUGF0aCB9IGZyb20gIm5vZGU6dXJsIjsNCmltcG9ydCB7IHJzcGFjaywgdHlwZSBNdWx0aVN0YXRzLCB0eXBlIFN0YXRzIH0gZnJvbSAiQHJzcGFjay9jb3JlIjsNCmltcG9ydCB7IGNyZWF0ZVJzcGFja0NvbmZpZyB9IGZyb20gIi4vcnNwYWNrLnNoYXJlZCI7DQoNCmNvbnN0IF9fZmlsZW5hbWUgPSBmaWxlVVJMVG9QYXRoKGltcG9ydC5tZXRhLnVybCk7DQpjb25zdCBfX2Rpcm5hbWUgPSBkaXJuYW1lKF9fZmlsZW5hbWUpOw0KDQpjb25zdCBiaW5kSG9zdCA9IHByb2Nlc3MuZW52LkJVTkRMRV9IT1NUIHx8ICIwLjAuMC4wIjsNCmNvbnN0IHByZWZlcnJlZFBvcnQgPSBOdW1iZXIocHJvY2Vzcy5lbnYuQlVORExFX1BPUlQgfHwgIjc4NzgiKTsNCmxldCBhY3RpdmVQb3J0ID0gcHJlZmVycmVkUG9ydDsNCg0KY29uc3Qgb3V0RGlyID0gcmVzb2x2ZShfX2Rpcm5hbWUsICJkaXN0Iik7DQpjb25zdCBwYWNrYWdlSnNvblBhdGggPSByZXNvbHZlKF9fZGlybmFtZSwgInBhY2thZ2UuanNvbiIpOw0KbGV0IGJ1bmRsZUZpbGVOYW1lID0gImJ1bmRsZS5idW5kbGUuY2pzIjsNCmxldCBidW5kbGVSb3V0ZVBhdGggPSBgLyR7YnVuZGxlRmlsZU5hbWV9YDsNCmxldCBvdXRGaWxlID0gcmVzb2x2ZShvdXREaXIsIGJ1bmRsZUZpbGVOYW1lKTsNCg0KdHlwZSBCdWlsZFN0YXRlID0gew0KICBvazogYm9vbGVhbjsNCiAgYnVpbHRBdDogc3RyaW5nIHwgbnVsbDsNCiAgc2hhMjU2OiBzdHJpbmcgfCBudWxsOw0KICBzaXplOiBudW1iZXI7DQogIGVycm9yOiBzdHJpbmcgfCBudWxsOw0KfTsNCg0KY29uc3Qgc3RhdGU6IEJ1aWxkU3RhdGUgPSB7DQogIG9rOiBmYWxzZSwNCiAgYnVpbHRBdDogbnVsbCwNCiAgc2hhMjU2OiBudWxsLA0KICBzaXplOiAwLA0KICBlcnJvcjogbnVsbCwNCn07DQoNCmxldCByZWJ1aWxkQ291bnQgPSAwOw0KDQpmdW5jdGlvbiBub3dJc28oKTogc3RyaW5nIHsNCiAgcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsNCn0NCg0KZnVuY3Rpb24gdG9VcmxIb3N0KGhvc3Q6IHN0cmluZyk6IHN0cmluZyB7DQogIHJldHVybiBob3N0LmluY2x1ZGVzKCI6IikgPyBgWyR7aG9zdH1dYCA6IGhvc3Q7DQp9DQoNCmZ1bmN0aW9uIGdldFNlcnZlclVybChwYXRobmFtZSA9ICIiLCBob3N0ID0gIjEyNy4wLjAuMSIpOiBzdHJpbmcgew0KICByZXR1cm4gYGh0dHA6Ly8ke3RvVXJsSG9zdChob3N0KX06JHthY3RpdmVQb3J0fSR7cGF0aG5hbWV9YDsNCn0NCg0KdHlwZSBMaXN0ZW5BZGRyZXNzID0gew0KICBpbnRlcmZhY2VOYW1lOiBzdHJpbmc7DQogIGZhbWlseTogc3RyaW5nOw0KICBhZGRyZXNzOiBzdHJpbmc7DQogIGludGVybmFsOiBib29sZWFuOw0KfTsNCg0KZnVuY3Rpb24gdG9GYW1pbHlOYW1lKGZhbWlseTogc3RyaW5nIHwgbnVtYmVyKTogc3RyaW5nIHsNCiAgaWYgKHR5cGVvZiBmYW1pbHkgPT09ICJudW1iZXIiKSB7DQogICAgcmV0dXJuIGZhbWlseSA9PT0gNCA/ICJJUHY0IiA6IGZhbWlseSA9PT0gNiA/ICJJUHY2IiA6IFN0cmluZyhmYW1pbHkpOw0KICB9DQogIHJldHVybiBmYW1pbHk7DQp9DQoNCmZ1bmN0aW9uIGdldExpc3RlbkFkZHJlc3NlcygpOiBMaXN0ZW5BZGRyZXNzW10gew0KICBjb25zdCBpbnRlcmZhY2VzID0gbmV0d29ya0ludGVyZmFjZXMoKTsNCiAgY29uc3QgcmVzdWx0OiBMaXN0ZW5BZGRyZXNzW10gPSBbXTsNCiAgY29uc3Qgc2VlbiA9IG5ldyBTZXQ8c3RyaW5nPigpOw0KDQogIGZvciAoY29uc3QgW2ludGVyZmFjZU5hbWUsIHZhbHVlc10gb2YgT2JqZWN0LmVudHJpZXMoaW50ZXJmYWNlcykpIHsNCiAgICBpZiAoIXZhbHVlcykgew0KICAgICAgY29udGludWU7DQogICAgfQ0KDQogICAgZm9yIChjb25zdCBpbmZvIG9mIHZhbHVlcykgew0KICAgICAgaWYgKCFpbmZvPy5hZGRyZXNzKSB7DQogICAgICAgIGNvbnRpbnVlOw0KICAgICAgfQ0KDQogICAgICBjb25zdCBrZXkgPSBgJHtpbnRlcmZhY2VOYW1lfXwke2luZm8uYWRkcmVzc31gOw0KICAgICAgaWYgKHNlZW4uaGFzKGtleSkpIHsNCiAgICAgICAgY29udGludWU7DQogICAgICB9DQoNCiAgICAgIHNlZW4uYWRkKGtleSk7DQogICAgICByZXN1bHQucHVzaCh7DQogICAgICAgIGludGVyZmFjZU5hbWUsDQogICAgICAgIGZhbWlseTogdG9GYW1pbHlOYW1lKGluZm8uZmFtaWx5KSwNCiAgICAgICAgYWRkcmVzczogaW5mby5hZGRyZXNzLA0KICAgICAgICBpbnRlcm5hbDogaW5mby5pbnRlcm5hbCwNCiAgICAgIH0pOw0KICAgIH0NCiAgfQ0KDQogIHJldHVybiByZXN1bHQuc29ydCgoYSwgYikgPT4gew0KICAgIGlmIChhLmludGVyZmFjZU5hbWUgIT09IGIuaW50ZXJmYWNlTmFtZSkgew0KICAgICAgcmV0dXJuIGEuaW50ZXJmYWNlTmFtZS5sb2NhbGVDb21wYXJlKGIuaW50ZXJmYWNlTmFtZSk7DQogICAgfQ0KICAgIGlmIChhLmZhbWlseSAhPT0gYi5mYW1pbHkpIHsNCiAgICAgIHJldHVybiBhLmZhbWlseS5sb2NhbGVDb21wYXJlKGIuZmFtaWx5KTsNCiAgICB9DQogICAgcmV0dXJuIGEuYWRkcmVzcy5sb2NhbGVDb21wYXJlKGIuYWRkcmVzcyk7DQogIH0pOw0KfQ0KDQpmdW5jdGlvbiBwcmludExpc3RlbkVuZHBvaW50cygpOiB2b2lkIHsNCiAgY29uc3QgbGlzdGVuQWRkcmVzc2VzID0gZ2V0TGlzdGVuQWRkcmVzc2VzKCk7DQogIGNvbnN0IGJ1bmRsZVBhdGggPSBidW5kbGVSb3V0ZVBhdGg7DQogIGNvbnN0IGxvZ1BhdGggPSAiL2xvZyI7DQoNCiAgY29uc29sZS5lcnJvcihgW2J1bmRsZS1kZXZdIGxpc3RlbmluZyBvbiAke2JpbmRIb3N0fToke2FjdGl2ZVBvcnR9YCk7DQogIGNvbnNvbGUuZXJyb3IoIltidW5kbGUtZGV2XSBhdmFpbGFibGUgZW5kcG9pbnRzIChieSBpbnRlcmZhY2UpOiIpOw0KICBjb25zb2xlLmVycm9yKGBbYnVuZGxlLWRldl0gICBbbG9jYWxdIGJ1bmRsZTogJHtnZXRTZXJ2ZXJVcmwoYnVuZGxlUGF0aCwgImxvY2FsaG9zdCIpfWApOw0KICBjb25zb2xlLmVycm9yKGBbYnVuZGxlLWRldl0gICBbbG9jYWxdIGxvZzogICAgJHtnZXRTZXJ2ZXJVcmwobG9nUGF0aCwgImxvY2FsaG9zdCIpfWApOw0KDQogIGxldCBjdXJyZW50SW50ZXJmYWNlTmFtZSA9ICIiOw0KICBmb3IgKGNvbnN0IGl0ZW0gb2YgbGlzdGVuQWRkcmVzc2VzKSB7DQogICAgaWYgKGl0ZW0uaW50ZXJmYWNlTmFtZSAhPT0gY3VycmVudEludGVyZmFjZU5hbWUpIHsNCiAgICAgIGN1cnJlbnRJbnRlcmZhY2VOYW1lID0gaXRlbS5pbnRlcmZhY2VOYW1lOw0KICAgICAgY29uc29sZS5lcnJvcihgW2J1bmRsZS1kZXZdICAgWyR7Y3VycmVudEludGVyZmFjZU5hbWV9XWApOw0KICAgIH0NCg0KICAgIGNvbnN0IHN1ZmZpeCA9IGl0ZW0uaW50ZXJuYWwgPyAiIGludGVybmFsIiA6ICIiOw0KICAgIGNvbnNvbGUuZXJyb3IoDQogICAgICBgW2J1bmRsZS1kZXZdICAgICAtICR7aXRlbS5mYW1pbHl9JHtzdWZmaXh9IGJ1bmRsZTogJHtnZXRTZXJ2ZXJVcmwoYnVuZGxlUGF0aCwgaXRlbS5hZGRyZXNzKX1gLA0KICAgICk7DQogICAgY29uc29sZS5lcnJvcihgW2J1bmRsZS1kZXZdICAgICAgIGxvZzogICR7Z2V0U2VydmVyVXJsKGxvZ1BhdGgsIGl0ZW0uYWRkcmVzcyl9YCk7DQogIH0NCn0NCg0KYXN5bmMgZnVuY3Rpb24gc2V0dXBCdW5kbGVOYW1lRnJvbVBhY2thZ2VKc29uKCk6IFByb21pc2U8dm9pZD4gew0KICB0cnkgew0KICAgIGNvbnN0IHJhdyA9IGF3YWl0IHJlYWRGaWxlKHBhY2thZ2VKc29uUGF0aCwgInV0Zi04Iik7DQogICAgY29uc3QgcGtnID0gSlNPTi5wYXJzZShyYXcpIGFzIHsgbmFtZT86IHVua25vd24gfTsNCiAgICBjb25zdCBwYWNrYWdlTmFtZSA9IHR5cGVvZiBwa2cubmFtZSA9PT0gInN0cmluZyIgJiYgcGtnLm5hbWUubGVuZ3RoID4gMCA/IHBrZy5uYW1lIDogImJ1bmRsZSI7DQoNCiAgICBidW5kbGVGaWxlTmFtZSA9IGAke3BhY2thZ2VOYW1lfS5idW5kbGUuY2pzYDsNCiAgICBidW5kbGVSb3V0ZVBhdGggPSBgLyR7YnVuZGxlRmlsZU5hbWV9YDsNCiAgICBvdXRGaWxlID0gcmVzb2x2ZShvdXREaXIsIGJ1bmRsZUZpbGVOYW1lKTsNCiAgfSBjYXRjaCAoZXJyKSB7DQogICAgY29uc29sZS5lcnJvcigNCiAgICAgIGBbYnVuZGxlLWRldl0gcmVhZCBwYWNrYWdlIG5hbWUgZmFpbGVkLCBmYWxsYmFjayB0byAnJHtidW5kbGVGaWxlTmFtZX0nOiAke1N0cmluZyhlcnIpfWAsDQogICAgKTsNCiAgfQ0KfQ0KDQpmdW5jdGlvbiBpc0FkZHJlc3NJblVzZUVycm9yKGVycjogdW5rbm93bik6IGJvb2xlYW4gew0KICBpZiAoIWVyciB8fCB0eXBlb2YgZXJyICE9PSAib2JqZWN0Iikgew0KICAgIHJldHVybiBmYWxzZTsNCiAgfQ0KDQogIHJldHVybiBSZWZsZWN0LmdldChlcnIsICJjb2RlIikgPT09ICJFQUREUklOVVNFIjsNCn0NCg0KYXN5bmMgZnVuY3Rpb24gbGlzdGVuV2l0aFBvcnRGYWxsYmFjayhzZXJ2ZXI6IFJldHVyblR5cGU8dHlwZW9mIGNyZWF0ZVNlcnZlcj4pOiBQcm9taXNlPHZvaWQ+IHsNCiAgbGV0IHRyeVBvcnQgPSBwcmVmZXJyZWRQb3J0Ow0KDQogIHdoaWxlICh0cnVlKSB7DQogICAgdHJ5IHsNCiAgICAgIGF3YWl0IG5ldyBQcm9taXNlPHZvaWQ+KChyZXNvbHZlTGlzdGVuLCByZWplY3RMaXN0ZW4pID0+IHsNCiAgICAgICAgY29uc3Qgb25FcnJvciA9IChlcnI6IEVycm9yKTogdm9pZCA9PiB7DQogICAgICAgICAgc2VydmVyLm9mZigibGlzdGVuaW5nIiwgb25MaXN0ZW5pbmcpOw0KICAgICAgICAgIHJlamVjdExpc3RlbihlcnIpOw0KICAgICAgICB9Ow0KDQogICAgICAgIGNvbnN0IG9uTGlzdGVuaW5nID0gKCk6IHZvaWQgPT4gew0KICAgICAgICAgIHNlcnZlci5vZmYoImVycm9yIiwgb25FcnJvcik7DQogICAgICAgICAgcmVzb2x2ZUxpc3RlbigpOw0KICAgICAgICB9Ow0KDQogICAgICAgIHNlcnZlci5vbmNlKCJlcnJvciIsIG9uRXJyb3IpOw0KICAgICAgICBzZXJ2ZXIub25jZSgibGlzdGVuaW5nIiwgb25MaXN0ZW5pbmcpOw0KICAgICAgICBzZXJ2ZXIubGlzdGVuKHRyeVBvcnQsIGJpbmRIb3N0KTsNCiAgICAgIH0pOw0KDQogICAgICBhY3RpdmVQb3J0ID0gdHJ5UG9ydDsNCiAgICAgIHJldHVybjsNCiAgICB9IGNhdGNoIChlcnIpIHsNCiAgICAgIGlmICghaXNBZGRyZXNzSW5Vc2VFcnJvcihlcnIpKSB7DQogICAgICAgIHRocm93IGVycjsNCiAgICAgIH0NCg0KICAgICAgY29uc29sZS5lcnJvcihgW2J1bmRsZS1kZXZdIHBvcnQgJHt0cnlQb3J0fSBpcyBpbiB1c2UsIHRyeWluZyAke3RyeVBvcnQgKyAxfWApOw0KICAgICAgdHJ5UG9ydCArPSAxOw0KICAgIH0NCiAgfQ0KfQ0KDQpmdW5jdGlvbiBmb3JtYXRSc3BhY2tFcnJvcihlcnI6IHVua25vd24pOiBzdHJpbmcgew0KICBpZiAodHlwZW9mIGVyciA9PT0gInN0cmluZyIpIHsNCiAgICByZXR1cm4gZXJyOw0KICB9DQoNCiAgaWYgKGVyciAmJiB0eXBlb2YgZXJyID09PSAib2JqZWN0Iikgew0KICAgIGNvbnN0IG1lc3NhZ2UgPSBSZWZsZWN0LmdldChlcnIsICJtZXNzYWdlIik7DQogICAgaWYgKHR5cGVvZiBtZXNzYWdlID09PSAic3RyaW5nIiAmJiBtZXNzYWdlLmxlbmd0aCA+IDApIHsNCiAgICAgIHJldHVybiBtZXNzYWdlOw0KICAgIH0NCg0KICAgIGNvbnN0IGRldGFpbHMgPSBSZWZsZWN0LmdldChlcnIsICJkZXRhaWxzIik7DQogICAgaWYgKHR5cGVvZiBkZXRhaWxzID09PSAic3RyaW5nIiAmJiBkZXRhaWxzLmxlbmd0aCA+IDApIHsNCiAgICAgIHJldHVybiBkZXRhaWxzOw0KICAgIH0NCiAgfQ0KDQogIHJldHVybiBTdHJpbmcoZXJyKTsNCn0NCg0KZnVuY3Rpb24gZ2V0RXJyb3JGcm9tU3RhdHMoc3RhdHM6IFN0YXRzIHwgTXVsdGlTdGF0cyB8IHVuZGVmaW5lZCk6IHN0cmluZyB7DQogIGlmICghc3RhdHMpIHsNCiAgICByZXR1cm4gImJ1aWxkIGZhaWxlZCI7DQogIH0NCg0KICBjb25zdCBpbmZvID0gc3RhdHMudG9Kc29uKHsgYWxsOiBmYWxzZSwgZXJyb3JzOiB0cnVlIH0pOw0KICBjb25zdCBmaXJzdEVycm9yID0gaW5mby5lcnJvcnM/LlswXTsNCiAgaWYgKCFmaXJzdEVycm9yKSB7DQogICAgcmV0dXJuICJidWlsZCBmYWlsZWQiOw0KICB9DQoNCiAgcmV0dXJuIGZvcm1hdFJzcGFja0Vycm9yKGZpcnN0RXJyb3IpOw0KfQ0KDQpmdW5jdGlvbiBjcmVhdGVDb21waWxlcigpIHsNCiAgcmV0dXJuIHJzcGFjaygNCiAgICBjcmVhdGVSc3BhY2tDb25maWcoew0KICAgICAgcm9vdERpcjogX19kaXJuYW1lLA0KICAgICAgb3V0UGF0aDogb3V0RGlyLA0KICAgICAgb3V0RmlsZU5hbWU6IGJhc2VuYW1lKG91dEZpbGUpLA0KICAgICAgbW9kZTogImRldmVsb3BtZW50IiwNCiAgICB9KSwNCiAgKTsNCn0NCg0KZnVuY3Rpb24gc2V0Q29tbW9uSGVhZGVycyhyZXM6IFNlcnZlclJlc3BvbnNlLCBjb250ZW50VHlwZT86IHN0cmluZyk6IHZvaWQgew0KICByZXMuc2V0SGVhZGVyKCJBY2Nlc3MtQ29udHJvbC1BbGxvdy1PcmlnaW4iLCAiKiIpOw0KICByZXMuc2V0SGVhZGVyKCJBY2Nlc3MtQ29udHJvbC1BbGxvdy1NZXRob2RzIiwgIkdFVCxQT1NULE9QVElPTlMiKTsNCiAgcmVzLnNldEhlYWRlcigiQWNjZXNzLUNvbnRyb2wtQWxsb3ctSGVhZGVycyIsICJDb250ZW50LVR5cGUiKTsNCiAgaWYgKGNvbnRlbnRUeXBlKSB7DQogICAgcmVzLnNldEhlYWRlcigiQ29udGVudC1UeXBlIiwgY29udGVudFR5cGUpOw0KICB9DQp9DQoNCmZ1bmN0aW9uIGdldFJlcXVlc3RPcmlnaW4ocmVxOiBJbmNvbWluZ01lc3NhZ2UpOiBzdHJpbmcgew0KICBjb25zdCBmb3J3YXJkZWRQcm90byA9IHJlcS5oZWFkZXJzWyJ4LWZvcndhcmRlZC1wcm90byJdOw0KICBjb25zdCBmb3J3YXJkZWRIb3N0ID0gcmVxLmhlYWRlcnNbIngtZm9yd2FyZGVkLWhvc3QiXTsNCiAgY29uc3QgaG9zdEhlYWRlciA9IHJlcS5oZWFkZXJzLmhvc3Q7DQoNCiAgY29uc3QgcHJvdG8gPQ0KICAgIHR5cGVvZiBmb3J3YXJkZWRQcm90byA9PT0gInN0cmluZyIgJiYgZm9yd2FyZGVkUHJvdG8ubGVuZ3RoID4gMA0KICAgICAgPyBmb3J3YXJkZWRQcm90by5zcGxpdCgiLCIpWzBdIS50cmltKCkNCiAgICAgIDogImh0dHAiOw0KDQogIGNvbnN0IGhvc3QgPQ0KICAgIHR5cGVvZiBmb3J3YXJkZWRIb3N0ID09PSAic3RyaW5nIiAmJiBmb3J3YXJkZWRIb3N0Lmxlbmd0aCA+IDANCiAgICAgID8gZm9yd2FyZGVkSG9zdC5zcGxpdCgiLCIpWzBdIS50cmltKCkNCiAgICAgIDogdHlwZW9mIGhvc3RIZWFkZXIgPT09ICJzdHJpbmciICYmIGhvc3RIZWFkZXIubGVuZ3RoID4gMA0KICAgICAgICA/IGhvc3RIZWFkZXINCiAgICAgICAgOiBgMTI3LjAuMC4xOiR7YWN0aXZlUG9ydH1gOw0KDQogIHJldHVybiBgJHtwcm90b306Ly8ke2hvc3R9YDsNCn0NCg0KYXN5bmMgZnVuY3Rpb24gcmVhZFJlcXVlc3RCb2R5KHJlcTogSW5jb21pbmdNZXNzYWdlKTogUHJvbWlzZTxzdHJpbmc+IHsNCiAgY29uc3QgY2h1bmtzOiBCdWZmZXJbXSA9IFtdOw0KDQogIHJldHVybiBhd2FpdCBuZXcgUHJvbWlzZTxzdHJpbmc+KChyZXNvbHZlQm9keSwgcmVqZWN0Qm9keSkgPT4gew0KICAgIHJlcS5vbigiZGF0YSIsIChjaHVuazogQnVmZmVyIHwgc3RyaW5nKSA9PiB7DQogICAgICBjaHVua3MucHVzaChCdWZmZXIuaXNCdWZmZXIoY2h1bmspID8gY2h1bmsgOiBCdWZmZXIuZnJvbShjaHVuaykpOw0KICAgIH0pOw0KDQogICAgcmVxLm9uKCJlbmQiLCAoKSA9PiB7DQogICAgICByZXNvbHZlQm9keShCdWZmZXIuY29uY2F0KGNodW5rcykudG9TdHJpbmcoInV0Zi04IikpOw0KICAgIH0pOw0KDQogICAgcmVxLm9uKCJlcnJvciIsIChlcnIpID0+IHsNCiAgICAgIHJlamVjdEJvZHkoZXJyKTsNCiAgICB9KTsNCiAgfSk7DQp9DQoNCmFzeW5jIGZ1bmN0aW9uIHJlZnJlc2hCdWlsZFN0YXRlKCk6IFByb21pc2U8dm9pZD4gew0KICBjb25zdCBieXRlcyA9IGF3YWl0IHJlYWRGaWxlKG91dEZpbGUpOw0KICBjb25zdCBzaGEyNTYgPSBjcmVhdGVIYXNoKCJzaGEyNTYiKS51cGRhdGUoYnl0ZXMpLmRpZ2VzdCgiaGV4Iik7DQogIGNvbnN0IGJ1aWx0QXQgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7DQoNCiAgc3RhdGUub2sgPSB0cnVlOw0KICBzdGF0ZS5idWlsdEF0ID0gYnVpbHRBdDsNCiAgc3RhdGUuc2hhMjU2ID0gc2hhMjU2Ow0KICBzdGF0ZS5zaXplID0gYnl0ZXMuYnl0ZUxlbmd0aDsNCiAgc3RhdGUuZXJyb3IgPSBudWxsOw0KDQogIGNvbnNvbGUuZXJyb3IoYFtidW5kbGUtZGV2XSBidWlsdCBzaGEyNTY9JHtzaGEyNTYuc2xpY2UoMCwgMTIpfSBzaXplPSR7Ynl0ZXMuYnl0ZUxlbmd0aH1gKTsNCn0NCg0KYXN5bmMgZnVuY3Rpb24gaGFuZGxlQnVuZGxlKHJlczogU2VydmVyUmVzcG9uc2UpOiBQcm9taXNlPHZvaWQ+IHsNCiAgdHJ5IHsNCiAgICBjb25zdCBieXRlcyA9IGF3YWl0IHJlYWRGaWxlKG91dEZpbGUpOw0KICAgIHNldENvbW1vbkhlYWRlcnMocmVzLCAiYXBwbGljYXRpb24vamF2YXNjcmlwdDsgY2hhcnNldD11dGYtOCIpOw0KICAgIGlmIChzdGF0ZS5zaGEyNTYpIHsNCiAgICAgIHJlcy5zZXRIZWFkZXIoIkVUYWciLCBgIiR7c3RhdGUuc2hhMjU2fSJgKTsNCiAgICB9DQogICAgcmVzLnNldEhlYWRlcigiQ2FjaGUtQ29udHJvbCIsICJuby1jYWNoZSIpOw0KICAgIHJlcy5zdGF0dXNDb2RlID0gMjAwOw0KICAgIHJlcy5lbmQoYnl0ZXMpOw0KICB9IGNhdGNoIChlcnIpIHsNCiAgICBzZXRDb21tb25IZWFkZXJzKHJlcywgInRleHQvcGxhaW47IGNoYXJzZXQ9dXRmLTgiKTsNCiAgICByZXMuc3RhdHVzQ29kZSA9IDUwMzsNCiAgICByZXMuZW5kKGBidW5kbGUgbm90IHJlYWR5OiAke1N0cmluZyhlcnIpfWApOw0KICB9DQp9DQoNCmZ1bmN0aW9uIGhhbmRsZURlZmF1bHQocmVxOiBJbmNvbWluZ01lc3NhZ2UsIHJlczogU2VydmVyUmVzcG9uc2UpOiB2b2lkIHsNCiAgY29uc3Qgb3JpZ2luID0gZ2V0UmVxdWVzdE9yaWdpbihyZXEpOw0KICBzZXRDb21tb25IZWFkZXJzKHJlcywgInRleHQvcGxhaW47IGNoYXJzZXQ9dXRmLTgiKTsNCiAgcmVzLnN0YXR1c0NvZGUgPSAyMDA7DQogIHJlcy5lbmQoDQogICAgWw0KICAgICAgImJ1bmRsZSBkZXYgc2VydmVyIGlzIHJ1bm5pbmciLA0KICAgICAgYGJ1bmRsZTogJHtvcmlnaW59JHtidW5kbGVSb3V0ZVBhdGh9YCwNCiAgICAgIGBsb2c6ICAgICR7b3JpZ2lufS9sb2dgLA0KICAgIF0uam9pbigiXG4iKSwNCiAgKTsNCn0NCg0KYXN5bmMgZnVuY3Rpb24gaGFuZGxlTG9nKHJlcTogSW5jb21pbmdNZXNzYWdlLCByZXM6IFNlcnZlclJlc3BvbnNlKTogUHJvbWlzZTx2b2lkPiB7DQogIGlmIChyZXEubWV0aG9kICE9PSAiUE9TVCIpIHsNCiAgICBzZXRDb21tb25IZWFkZXJzKHJlcywgImFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9dXRmLTgiKTsNCiAgICByZXMuc3RhdHVzQ29kZSA9IDQwNTsNCiAgICByZXMuZW5kKEpTT04uc3RyaW5naWZ5KHsgb2s6IGZhbHNlLCBlcnJvcjogIm1ldGhvZCBub3QgYWxsb3dlZCIgfSkpOw0KICAgIHJldHVybjsNCiAgfQ0KDQogIHRyeSB7DQogICAgY29uc3QgcmF3Qm9keSA9IGF3YWl0IHJlYWRSZXF1ZXN0Qm9keShyZXEpOw0KICAgIGNvbnN0IHBhcnNlZCA9IHJhd0JvZHkgPyBKU09OLnBhcnNlKHJhd0JvZHkpIDoge307DQogICAgY29uc3QgbGV2ZWwgPSBTdHJpbmcocGFyc2VkPy5sZXZlbCB8fCAibG9nIikudG9Mb3dlckNhc2UoKTsNCiAgICBjb25zdCBtZXNzYWdlID0gcGFyc2VkPy5tZXNzYWdlOw0KICAgIGNvbnN0IHBheWxvYWQgPSBwYXJzZWQ/LnBheWxvYWQ7DQoNCiAgICBjb25zdCB0ZXh0ID0NCiAgICAgIHR5cGVvZiBtZXNzYWdlID09PSAic3RyaW5nIiAmJiBtZXNzYWdlLmxlbmd0aCA+IDAgPyBtZXNzYWdlIDogSlNPTi5zdHJpbmdpZnkobWVzc2FnZSA/PyAiIik7DQoNCiAgICBpZiAobGV2ZWwgPT09ICJlcnJvciIpIHsNCiAgICAgIGNvbnNvbGUuZXJyb3IoYFtyZW1vdGUtbG9nXSAke3RleHR9YCwgcGF5bG9hZCA/PyAiIik7DQogICAgfSBlbHNlIGlmIChsZXZlbCA9PT0gIndhcm4iKSB7DQogICAgICBjb25zb2xlLndhcm4oYFtyZW1vdGUtbG9nXSAke3RleHR9YCwgcGF5bG9hZCA/PyAiIik7DQogICAgfSBlbHNlIGlmIChsZXZlbCA9PT0gImluZm8iKSB7DQogICAgICBjb25zb2xlLmluZm8oYFtyZW1vdGUtbG9nXSAke3RleHR9YCwgcGF5bG9hZCA/PyAiIik7DQogICAgfSBlbHNlIHsNCiAgICAgIGNvbnNvbGUubG9nKGBbcmVtb3RlLWxvZ10gJHt0ZXh0fWAsIHBheWxvYWQgPz8gIiIpOw0KICAgIH0NCg0KICAgIHNldENvbW1vbkhlYWRlcnMocmVzLCAiYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOCIpOw0KICAgIHJlcy5zdGF0dXNDb2RlID0gMjAwOw0KICAgIHJlcy5lbmQoSlNPTi5zdHJpbmdpZnkoeyBvazogdHJ1ZSB9KSk7DQogIH0gY2F0Y2ggKGVycikgew0KICAgIGNvbnNvbGUuZXJyb3IoYFtyZW1vdGUtbG9nXSBpbnZhbGlkIGxvZyBwYXlsb2FkOiAke1N0cmluZyhlcnIpfWApOw0KICAgIHNldENvbW1vbkhlYWRlcnMocmVzLCAiYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOCIpOw0KICAgIHJlcy5zdGF0dXNDb2RlID0gNDAwOw0KICAgIHJlcy5lbmQoDQogICAgICBKU09OLnN0cmluZ2lmeSh7DQogICAgICAgIG9rOiBmYWxzZSwNCiAgICAgICAgZXJyb3I6IGBpbnZhbGlkIGxvZyBwYXlsb2FkOiAke1N0cmluZyhlcnIpfWAsDQogICAgICB9KSwNCiAgICApOw0KICB9DQp9DQoNCmFzeW5jIGZ1bmN0aW9uIHJvdXRlKHJlcTogSW5jb21pbmdNZXNzYWdlLCByZXM6IFNlcnZlclJlc3BvbnNlKTogUHJvbWlzZTx2b2lkPiB7DQogIGlmIChyZXEubWV0aG9kID09PSAiT1BUSU9OUyIpIHsNCiAgICBzZXRDb21tb25IZWFkZXJzKHJlcyk7DQogICAgcmVzLnN0YXR1c0NvZGUgPSAyMDQ7DQogICAgcmVzLmVuZCgpOw0KICAgIHJldHVybjsNCiAgfQ0KDQogIGNvbnN0IHJhd1VybCA9IHJlcS51cmwgfHwgIi8iOw0KICBsZXQgcGF0aG5hbWUgPSByYXdVcmw7DQogIHRyeSB7DQogICAgcGF0aG5hbWUgPSBuZXcgVVJMKHJhd1VybCwgZ2V0U2VydmVyVXJsKCIvIikpLnBhdGhuYW1lOw0KICB9IGNhdGNoIHt9DQoNCiAgaWYgKHBhdGhuYW1lID09PSBidW5kbGVSb3V0ZVBhdGgpIHsNCiAgICBhd2FpdCBoYW5kbGVCdW5kbGUocmVzKTsNCiAgICByZXR1cm47DQogIH0NCg0KICBpZiAocGF0aG5hbWUgPT09ICIvbG9nIikgew0KICAgIGF3YWl0IGhhbmRsZUxvZyhyZXEsIHJlcyk7DQogICAgcmV0dXJuOw0KICB9DQoNCiAgaGFuZGxlRGVmYXVsdChyZXEsIHJlcyk7DQp9DQoNCmFzeW5jIGZ1bmN0aW9uIHN0YXJ0KCk6IFByb21pc2U8dm9pZD4gew0KICBhd2FpdCBzZXR1cEJ1bmRsZU5hbWVGcm9tUGFja2FnZUpzb24oKTsNCiAgYXdhaXQgbWtkaXIob3V0RGlyLCB7IHJlY3Vyc2l2ZTogdHJ1ZSB9KTsNCiAgY29uc3QgY29tcGlsZXIgPSBjcmVhdGVDb21waWxlcigpOw0KDQogIGNvbnN0IHdhdGNoZXIgPSBjb21waWxlci53YXRjaCh7fSwgYXN5bmMgKGVyciwgc3RhdHMpID0+IHsNCiAgICByZWJ1aWxkQ291bnQgKz0gMTsNCiAgICBjb25zdCB0cyA9IG5vd0lzbygpOw0KDQogICAgaWYgKGVycikgew0KICAgICAgc3RhdGUub2sgPSBmYWxzZTsNCiAgICAgIHN0YXRlLmVycm9yID0gZm9ybWF0UnNwYWNrRXJyb3IoZXJyKTsNCiAgICAgIGNvbnNvbGUuZXJyb3IoYFtidW5kbGUtZGV2XSBbJHt0c31dIHJlYnVpbGQgIyR7cmVidWlsZENvdW50fSBmYWlsZWQ6ICR7c3RhdGUuZXJyb3J9YCk7DQogICAgICByZXR1cm47DQogICAgfQ0KDQogICAgaWYgKCFzdGF0cyB8fCBzdGF0cy5oYXNFcnJvcnMoKSkgew0KICAgICAgc3RhdGUub2sgPSBmYWxzZTsNCiAgICAgIHN0YXRlLmVycm9yID0gZ2V0RXJyb3JGcm9tU3RhdHMoc3RhdHMpOw0KICAgICAgY29uc29sZS5lcnJvcihgW2J1bmRsZS1kZXZdIFske3RzfV0gcmVidWlsZCAjJHtyZWJ1aWxkQ291bnR9IGZhaWxlZDogJHtzdGF0ZS5lcnJvcn1gKTsNCiAgICAgIHJldHVybjsNCiAgICB9DQoNCiAgICB0cnkgew0KICAgICAgYXdhaXQgcmVmcmVzaEJ1aWxkU3RhdGUoKTsNCiAgICAgIHByaW50TGlzdGVuRW5kcG9pbnRzKCk7DQogICAgICBjb25zb2xlLmVycm9yKGBbYnVuZGxlLWRldl0gWyR7dHN9XSByZWJ1aWxkICMke3JlYnVpbGRDb3VudH0gY29tcGxldGVkYCk7DQogICAgfSBjYXRjaCAocmVmcmVzaEVycikgew0KICAgICAgc3RhdGUub2sgPSBmYWxzZTsNCiAgICAgIHN0YXRlLmVycm9yID0gU3RyaW5nKHJlZnJlc2hFcnIpOw0KICAgICAgY29uc29sZS5lcnJvcigNCiAgICAgICAgYFtidW5kbGUtZGV2XSBbJHt0c31dIHJlYnVpbGQgIyR7cmVidWlsZENvdW50fSByZWFkIG91dHB1dCBmYWlsZWQ6ICR7c3RhdGUuZXJyb3J9YCwNCiAgICAgICk7DQogICAgfQ0KICB9KTsNCg0KICBjb25zdCBzZXJ2ZXIgPSBjcmVhdGVTZXJ2ZXIoKHJlcSwgcmVzKSA9PiB7DQogICAgY29uc3Qgc3RhcnRBdCA9IERhdGUubm93KCk7DQogICAgcmVzLm9uKCJmaW5pc2giLCAoKSA9PiB7DQogICAgICBjb25zdCBtZXRob2QgPSByZXEubWV0aG9kIHx8ICJHRVQiOw0KICAgICAgY29uc3QgcGF0aCA9IHJlcS51cmwgfHwgIi8iOw0KICAgICAgY29uc3QgZWxhcHNlZE1zID0gRGF0ZS5ub3coKSAtIHN0YXJ0QXQ7DQogICAgICBjb25zb2xlLmVycm9yKGBbYnVuZGxlLWRldl0gJHttZXRob2R9ICR7cGF0aH0gLT4gJHtyZXMuc3RhdHVzQ29kZX0gKCR7ZWxhcHNlZE1zfW1zKWApOw0KICAgIH0pOw0KICAgIHZvaWQgcm91dGUocmVxLCByZXMpOw0KICB9KTsNCg0KICBhd2FpdCBsaXN0ZW5XaXRoUG9ydEZhbGxiYWNrKHNlcnZlcik7DQogIGlmIChhY3RpdmVQb3J0ICE9PSBwcmVmZXJyZWRQb3J0KSB7DQogICAgY29uc29sZS5lcnJvcihgW2J1bmRsZS1kZXZdIHJlcXVlc3RlZCBwb3J0ICR7cHJlZmVycmVkUG9ydH0gd2FzIHVuYXZhaWxhYmxlYCk7DQogIH0NCiAgY29uc29sZS5lcnJvcihgW2J1bmRsZS1kZXZdIHdhdGNoaW5nICR7cmVzb2x2ZShfX2Rpcm5hbWUsICJzcmMiKX1gKTsNCg0KICBjb25zdCBzaHV0ZG93biA9IGFzeW5jICgpOiBQcm9taXNlPHZvaWQ+ID0+IHsNCiAgICBjb25zb2xlLmVycm9yKCJbYnVuZGxlLWRldl0gc2h1dHRpbmcgZG93bi4uLiIpOw0KICAgIHNlcnZlci5jbG9zZSgpOw0KDQogICAgYXdhaXQgbmV3IFByb21pc2U8dm9pZD4oKHJlc29sdmVDbG9zZSwgcmVqZWN0Q2xvc2UpID0+IHsNCiAgICAgIHRyeSB7DQogICAgICAgIHdhdGNoZXIuY2xvc2UoKCkgPT4gew0KICAgICAgICAgIHJlc29sdmVDbG9zZSgpOw0KICAgICAgICB9KTsNCiAgICAgIH0gY2F0Y2ggKGNsb3NlRXJyKSB7DQogICAgICAgIHJlamVjdENsb3NlKGNsb3NlRXJyKTsNCiAgICAgIH0NCiAgICB9KTsNCg0KICAgIGF3YWl0IG5ldyBQcm9taXNlPHZvaWQ+KChyZXNvbHZlQ2xvc2UsIHJlamVjdENsb3NlKSA9PiB7DQogICAgICB0cnkgew0KICAgICAgICBjb21waWxlci5jbG9zZSgoKSA9PiB7DQogICAgICAgICAgcmVzb2x2ZUNsb3NlKCk7DQogICAgICAgIH0pOw0KICAgICAgfSBjYXRjaCAoY2xvc2VFcnIpIHsNCiAgICAgICAgcmVqZWN0Q2xvc2UoY2xvc2VFcnIpOw0KICAgICAgfQ0KICAgIH0pOw0KDQogICAgcHJvY2Vzcy5leGl0KDApOw0KICB9Ow0KDQogIHByb2Nlc3Mub24oIlNJR0lOVCIsICgpID0+IHsNCiAgICB2b2lkIHNodXRkb3duKCk7DQogIH0pOw0KICBwcm9jZXNzLm9uKCJTSUdURVJNIiwgKCkgPT4gew0KICAgIHZvaWQgc2h1dGRvd24oKTsNCiAgfSk7DQp9DQoNCnN0YXJ0KCkuY2F0Y2goKGVycikgPT4gew0KICBjb25zb2xlLmVycm9yKGBbYnVuZGxlLWRldl0gZmFpbGVkIHRvIHN0YXJ0OiAke1N0cmluZyhlcnIpfWApOw0KICBwcm9jZXNzLmV4aXQoMSk7DQp9KTsNCg==
+import { createHash } from "node:crypto";
+import { mkdir, readFile } from "node:fs/promises";
+import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
+import { networkInterfaces } from "node:os";
+import { basename, dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { rspack, type MultiStats, type Stats } from "@rspack/core";
+import { createRspackConfig } from "./rspack.shared";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const bindHost = process.env.BUNDLE_HOST || "0.0.0.0";
+const preferredPort = Number(process.env.BUNDLE_PORT || "7878");
+let activePort = preferredPort;
+
+const outDir = resolve(__dirname, "dist");
+const packageJsonPath = resolve(__dirname, "package.json");
+let bundleFileName = "bundle.bundle.cjs";
+let bundleRoutePath = `/${bundleFileName}`;
+let outFile = resolve(outDir, bundleFileName);
+
+type BuildState = {
+  ok: boolean;
+  builtAt: string | null;
+  sha256: string | null;
+  size: number;
+  error: string | null;
+};
+
+const state: BuildState = {
+  ok: false,
+  builtAt: null,
+  sha256: null,
+  size: 0,
+  error: null,
+};
+
+let rebuildCount = 0;
+
+function nowIso(): string {
+  return new Date().toISOString();
+}
+
+function toUrlHost(host: string): string {
+  return host.includes(":") ? `[${host}]` : host;
+}
+
+function getServerUrl(pathname = "", host = "127.0.0.1"): string {
+  return `http://${toUrlHost(host)}:${activePort}${pathname}`;
+}
+
+type ListenAddress = {
+  interfaceName: string;
+  family: string;
+  address: string;
+  internal: boolean;
+};
+
+function toFamilyName(family: string | number): string {
+  if (typeof family === "number") {
+    return family === 4 ? "IPv4" : family === 6 ? "IPv6" : String(family);
+  }
+  return family;
+}
+
+function getListenAddresses(): ListenAddress[] {
+  const interfaces = networkInterfaces();
+  const result: ListenAddress[] = [];
+  const seen = new Set<string>();
+
+  for (const [interfaceName, values] of Object.entries(interfaces)) {
+    if (!values) {
+      continue;
+    }
+
+    for (const info of values) {
+      if (!info?.address) {
+        continue;
+      }
+
+      const key = `${interfaceName}|${info.address}`;
+      if (seen.has(key)) {
+        continue;
+      }
+
+      seen.add(key);
+      result.push({
+        interfaceName,
+        family: toFamilyName(info.family),
+        address: info.address,
+        internal: info.internal,
+      });
+    }
+  }
+
+  return result.sort((a, b) => {
+    if (a.interfaceName !== b.interfaceName) {
+      return a.interfaceName.localeCompare(b.interfaceName);
+    }
+    if (a.family !== b.family) {
+      return a.family.localeCompare(b.family);
+    }
+    return a.address.localeCompare(b.address);
+  });
+}
+
+function printListenEndpoints(): void {
+  const listenAddresses = getListenAddresses();
+  const bundlePath = bundleRoutePath;
+  const logPath = "/log";
+
+  console.error(`[bundle-dev] listening on ${bindHost}:${activePort}`);
+  console.error("[bundle-dev] available endpoints (by interface):");
+  console.error(`[bundle-dev]   [local] bundle: ${getServerUrl(bundlePath, "localhost")}`);
+  console.error(`[bundle-dev]   [local] log:    ${getServerUrl(logPath, "localhost")}`);
+
+  let currentInterfaceName = "";
+  for (const item of listenAddresses) {
+    if (item.interfaceName !== currentInterfaceName) {
+      currentInterfaceName = item.interfaceName;
+      console.error(`[bundle-dev]   [${currentInterfaceName}]`);
+    }
+
+    const suffix = item.internal ? " internal" : "";
+    console.error(
+      `[bundle-dev]     - ${item.family}${suffix} bundle: ${getServerUrl(bundlePath, item.address)}`,
+    );
+    console.error(`[bundle-dev]       log:  ${getServerUrl(logPath, item.address)}`);
+  }
+}
+
+async function setupBundleNameFromPackageJson(): Promise<void> {
+  try {
+    const raw = await readFile(packageJsonPath, "utf-8");
+    const pkg = JSON.parse(raw) as { name?: unknown };
+    const packageName = typeof pkg.name === "string" && pkg.name.length > 0 ? pkg.name : "bundle";
+
+    bundleFileName = `${packageName}.bundle.cjs`;
+    bundleRoutePath = `/${bundleFileName}`;
+    outFile = resolve(outDir, bundleFileName);
+  } catch (err) {
+    console.error(
+      `[bundle-dev] read package name failed, fallback to '${bundleFileName}': ${String(err)}`,
+    );
+  }
+}
+
+function isAddressInUseError(err: unknown): boolean {
+  if (!err || typeof err !== "object") {
+    return false;
+  }
+
+  return Reflect.get(err, "code") === "EADDRINUSE";
+}
+
+async function listenWithPortFallback(server: ReturnType<typeof createServer>): Promise<void> {
+  let tryPort = preferredPort;
+
+  while (true) {
+    try {
+      await new Promise<void>((resolveListen, rejectListen) => {
+        const onError = (err: Error): void => {
+          server.off("listening", onListening);
+          rejectListen(err);
+        };
+
+        const onListening = (): void => {
+          server.off("error", onError);
+          resolveListen();
+        };
+
+        server.once("error", onError);
+        server.once("listening", onListening);
+        server.listen(tryPort, bindHost);
+      });
+
+      activePort = tryPort;
+      return;
+    } catch (err) {
+      if (!isAddressInUseError(err)) {
+        throw err;
+      }
+
+      console.error(`[bundle-dev] port ${tryPort} is in use, trying ${tryPort + 1}`);
+      tryPort += 1;
+    }
+  }
+}
+
+function formatRspackError(err: unknown): string {
+  if (typeof err === "string") {
+    return err;
+  }
+
+  if (err && typeof err === "object") {
+    const message = Reflect.get(err, "message");
+    if (typeof message === "string" && message.length > 0) {
+      return message;
+    }
+
+    const details = Reflect.get(err, "details");
+    if (typeof details === "string" && details.length > 0) {
+      return details;
+    }
+  }
+
+  return String(err);
+}
+
+function getErrorFromStats(stats: Stats | MultiStats | undefined): string {
+  if (!stats) {
+    return "build failed";
+  }
+
+  const info = stats.toJson({ all: false, errors: true });
+  const firstError = info.errors?.[0];
+  if (!firstError) {
+    return "build failed";
+  }
+
+  return formatRspackError(firstError);
+}
+
+function createCompiler() {
+  return rspack(
+    createRspackConfig({
+      rootDir: __dirname,
+      outPath: outDir,
+      outFileName: basename(outFile),
+      mode: "development",
+    }),
+  );
+}
+
+function setCommonHeaders(res: ServerResponse, contentType?: string): void {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  if (contentType) {
+    res.setHeader("Content-Type", contentType);
+  }
+}
+
+function getRequestOrigin(req: IncomingMessage): string {
+  const forwardedProto = req.headers["x-forwarded-proto"];
+  const forwardedHost = req.headers["x-forwarded-host"];
+  const hostHeader = req.headers.host;
+
+  const proto =
+    typeof forwardedProto === "string" && forwardedProto.length > 0
+      ? forwardedProto.split(",")[0]!.trim()
+      : "http";
+
+  const host =
+    typeof forwardedHost === "string" && forwardedHost.length > 0
+      ? forwardedHost.split(",")[0]!.trim()
+      : typeof hostHeader === "string" && hostHeader.length > 0
+        ? hostHeader
+        : `127.0.0.1:${activePort}`;
+
+  return `${proto}://${host}`;
+}
+
+async function readRequestBody(req: IncomingMessage): Promise<string> {
+  const chunks: Buffer[] = [];
+
+  return await new Promise<string>((resolveBody, rejectBody) => {
+    req.on("data", (chunk: Buffer | string) => {
+      chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+    });
+
+    req.on("end", () => {
+      resolveBody(Buffer.concat(chunks).toString("utf-8"));
+    });
+
+    req.on("error", (err) => {
+      rejectBody(err);
+    });
+  });
+}
+
+async function refreshBuildState(): Promise<void> {
+  const bytes = await readFile(outFile);
+  const sha256 = createHash("sha256").update(bytes).digest("hex");
+  const builtAt = new Date().toISOString();
+
+  state.ok = true;
+  state.builtAt = builtAt;
+  state.sha256 = sha256;
+  state.size = bytes.byteLength;
+  state.error = null;
+
+  console.error(`[bundle-dev] built sha256=${sha256.slice(0, 12)} size=${bytes.byteLength}`);
+}
+
+async function handleBundle(res: ServerResponse): Promise<void> {
+  try {
+    const bytes = await readFile(outFile);
+    setCommonHeaders(res, "application/javascript; charset=utf-8");
+    if (state.sha256) {
+      res.setHeader("ETag", `"${state.sha256}"`);
+    }
+    res.setHeader("Cache-Control", "no-cache");
+    res.statusCode = 200;
+    res.end(bytes);
+  } catch (err) {
+    setCommonHeaders(res, "text/plain; charset=utf-8");
+    res.statusCode = 503;
+    res.end(`bundle not ready: ${String(err)}`);
+  }
+}
+
+function handleDefault(req: IncomingMessage, res: ServerResponse): void {
+  const origin = getRequestOrigin(req);
+  setCommonHeaders(res, "text/plain; charset=utf-8");
+  res.statusCode = 200;
+  res.end(
+    [
+      "bundle dev server is running",
+      `bundle: ${origin}${bundleRoutePath}`,
+      `log:    ${origin}/log`,
+    ].join("\n"),
+  );
+}
+
+async function handleLog(req: IncomingMessage, res: ServerResponse): Promise<void> {
+  if (req.method !== "POST") {
+    setCommonHeaders(res, "application/json; charset=utf-8");
+    res.statusCode = 405;
+    res.end(JSON.stringify({ ok: false, error: "method not allowed" }));
+    return;
+  }
+
+  try {
+    const rawBody = await readRequestBody(req);
+    const parsed = rawBody ? JSON.parse(rawBody) : {};
+    const level = String(parsed?.level || "log").toLowerCase();
+    const message = parsed?.message;
+    const payload = parsed?.payload;
+
+    const text =
+      typeof message === "string" && message.length > 0 ? message : JSON.stringify(message ?? "");
+
+    if (level === "error") {
+      console.error(`[remote-log] ${text}`, payload ?? "");
+    } else if (level === "warn") {
+      console.warn(`[remote-log] ${text}`, payload ?? "");
+    } else if (level === "info") {
+      console.info(`[remote-log] ${text}`, payload ?? "");
+    } else {
+      console.log(`[remote-log] ${text}`, payload ?? "");
+    }
+
+    setCommonHeaders(res, "application/json; charset=utf-8");
+    res.statusCode = 200;
+    res.end(JSON.stringify({ ok: true }));
+  } catch (err) {
+    console.error(`[remote-log] invalid log payload: ${String(err)}`);
+    setCommonHeaders(res, "application/json; charset=utf-8");
+    res.statusCode = 400;
+    res.end(
+      JSON.stringify({
+        ok: false,
+        error: `invalid log payload: ${String(err)}`,
+      }),
+    );
+  }
+}
+
+async function route(req: IncomingMessage, res: ServerResponse): Promise<void> {
+  if (req.method === "OPTIONS") {
+    setCommonHeaders(res);
+    res.statusCode = 204;
+    res.end();
+    return;
+  }
+
+  const rawUrl = req.url || "/";
+  let pathname = rawUrl;
+  try {
+    pathname = new URL(rawUrl, getServerUrl("/")).pathname;
+  } catch {}
+
+  if (pathname === bundleRoutePath) {
+    await handleBundle(res);
+    return;
+  }
+
+  if (pathname === "/log") {
+    await handleLog(req, res);
+    return;
+  }
+
+  handleDefault(req, res);
+}
+
+async function start(): Promise<void> {
+  await setupBundleNameFromPackageJson();
+  await mkdir(outDir, { recursive: true });
+  const compiler = createCompiler();
+
+  const watcher = compiler.watch({}, async (err, stats) => {
+    rebuildCount += 1;
+    const ts = nowIso();
+
+    if (err) {
+      state.ok = false;
+      state.error = formatRspackError(err);
+      console.error(`[bundle-dev] [${ts}] rebuild #${rebuildCount} failed: ${state.error}`);
+      return;
+    }
+
+    if (!stats || stats.hasErrors()) {
+      state.ok = false;
+      state.error = getErrorFromStats(stats);
+      console.error(`[bundle-dev] [${ts}] rebuild #${rebuildCount} failed: ${state.error}`);
+      return;
+    }
+
+    try {
+      await refreshBuildState();
+      printListenEndpoints();
+      console.error(`[bundle-dev] [${ts}] rebuild #${rebuildCount} completed`);
+    } catch (refreshErr) {
+      state.ok = false;
+      state.error = String(refreshErr);
+      console.error(
+        `[bundle-dev] [${ts}] rebuild #${rebuildCount} read output failed: ${state.error}`,
+      );
+    }
+  });
+
+  const server = createServer((req, res) => {
+    const startAt = Date.now();
+    res.on("finish", () => {
+      const method = req.method || "GET";
+      const path = req.url || "/";
+      const elapsedMs = Date.now() - startAt;
+      console.error(`[bundle-dev] ${method} ${path} -> ${res.statusCode} (${elapsedMs}ms)`);
+    });
+    void route(req, res);
+  });
+
+  await listenWithPortFallback(server);
+  if (activePort !== preferredPort) {
+    console.error(`[bundle-dev] requested port ${preferredPort} was unavailable`);
+  }
+  console.error(`[bundle-dev] watching ${resolve(__dirname, "src")}`);
+
+  const shutdown = async (): Promise<void> => {
+    console.error("[bundle-dev] shutting down...");
+    server.close();
+
+    await new Promise<void>((resolveClose, rejectClose) => {
+      try {
+        watcher.close(() => {
+          resolveClose();
+        });
+      } catch (closeErr) {
+        rejectClose(closeErr);
+      }
+    });
+
+    await new Promise<void>((resolveClose, rejectClose) => {
+      try {
+        compiler.close(() => {
+          resolveClose();
+        });
+      } catch (closeErr) {
+        rejectClose(closeErr);
+      }
+    });
+
+    process.exit(0);
+  };
+
+  process.on("SIGINT", () => {
+    void shutdown();
+  });
+  process.on("SIGTERM", () => {
+    void shutdown();
+  });
+}
+
+start().catch((err) => {
+  console.error(`[bundle-dev] failed to start: ${String(err)}`);
+  process.exit(1);
+});

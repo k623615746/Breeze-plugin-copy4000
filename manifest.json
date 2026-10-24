@@ -1,1 +1,99 @@
-ewogICJuYW1lIjogIuaLt+i0nea8q+eUuyBDb3B5NDAwMCIsCiAgInV1aWQiOiAiMzcxZDMzYzYtYTkwMS00MzRhLWEwYWUtZDRlYTgwYzc2MTJmIiwKICAiaWNvblVybCI6ICJodHRwczovL3d3dy5jb3B5NDAwMC5jb20vZmF2aWNvbi5pY28iLAogICJkZXNjcmliZSI6ICLmi7fotJ3mvKvnlLvvvIhjb3B5NDAwMCDnur/ot6/vvInvvIzlhoXnva7ln5/lkI3lpLHmlYjoh6rliqjmjqLmtYvkuI7miqXplJnmjJbnn78iLAogICJ2ZXJzaW9uIjogIjAuMS4wIiwKICAiaG9tZSI6ICJodHRwczovL2dpdGh1Yi5jb20vazYyMzYxNTc0Ni9icmVlemUtcGx1Z2luLWNvcHk0MDAwIiwKICAidXBkYXRlVXJsIjogImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vcmVwb3MvazYyMzYxNTc0Ni9icmVlemUtcGx1Z2luLWNvcHk0MDAwL3JlbGVhc2VzL2xhdGVzdCIsCiAgIm5wbU5hbWUiOiAiYnJlZXplLXBsdWdpbi1jb3B5NDAwMCIsCiAgImZ1bmN0aW9uIjogWwogICAgewogICAgICAiaWQiOiAicmFuayIsCiAgICAgICJ0aXRsZSI6ICLmjpLooYzmppwiLAogICAgICAiYWN0aW9uIjogewogICAgICAgICJ0eXBlIjogIm9wZW5Db21pY0xpc3QiLAogICAgICAgICJwYXlsb2FkIjogewogICAgICAgICAgInNjZW5lIjogewogICAgICAgICAgICAidGl0bGUiOiAi5o6S6KGM5qacIiwKICAgICAgICAgICAgInNvdXJjZSI6ICIzNzFkMzNjNi1hOTAxLTQzNGEtYTBhZS1kNGVhODBjNzYxMmYiLAogICAgICAgICAgICAiYm9keSI6IHsKICAgICAgICAgICAgICAidHlwZSI6ICJwbHVnaW5QYWdlZENvbWljTGlzdCIsCiAgICAgICAgICAgICAgInJlcXVlc3QiOiB7CiAgICAgICAgICAgICAgICAiZm5QYXRoIjogImdldFJhbmtpbmdEYXRhIiwKICAgICAgICAgICAgICAgICJjb3JlIjoge30sCiAgICAgICAgICAgICAgICAiZXh0ZXJuIjogewogICAgICAgICAgICAgICAgICAic291cmNlIjogInJhbmsiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9LAogICAgICAgICAgICAiZmlsdGVyIjogewogICAgICAgICAgICAgICJmblBhdGgiOiAiZ2V0UmFua2luZ0ZpbHRlckJ1bmRsZSIsCiAgICAgICAgICAgICAgImV4dGVybiI6IHsKICAgICAgICAgICAgICAgICJzb3VyY2UiOiAicmFuayIKICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIH0KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICJuZXdlc3QiLAogICAgICAidGl0bGUiOiAi5pyA6L+R5pu05pawIiwKICAgICAgImFjdGlvbiI6IHsKICAgICAgICAidHlwZSI6ICJvcGVuQ29taWNMaXN0IiwKICAgICAgICAicGF5bG9hZCI6IHsKICAgICAgICAgICJzY2VuZSI6IHsKICAgICAgICAgICAgInRpdGxlIjogIuacgOi/keabtOaWsCIsCiAgICAgICAgICAgICJzb3VyY2UiOiAiMzcxZDMzYzYtYTkwMS00MzRhLWEwYWUtZDRlYTgwYzc2MTJmIiwKICAgICAgICAgICAgImJvZHkiOiB7CiAgICAgICAgICAgICAgInR5cGUiOiAicGx1Z2luUGFnZWRDb21pY0xpc3QiLAogICAgICAgICAgICAgICJyZXF1ZXN0IjogewogICAgICAgICAgICAgICAgImZuUGF0aCI6ICJnZXRSYW5raW5nRGF0YSIsCiAgICAgICAgICAgICAgICAiY29yZSI6IHt9LAogICAgICAgICAgICAgICAgImV4dGVybiI6IHsKICAgICAgICAgICAgICAgICAgInNvdXJjZSI6ICJuZXdlc3QiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9LAogICAgICAgICAgICAiZmlsdGVyIjogewogICAgICAgICAgICAgICJmblBhdGgiOiAiZ2V0UmFua2luZ0ZpbHRlckJ1bmRsZSIsCiAgICAgICAgICAgICAgImV4dGVybiI6IHsKICAgICAgICAgICAgICAgICJzb3VyY2UiOiAibmV3ZXN0IgogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfSwKICAgIHsKICAgICAgImlkIjogInJlY29tbWVuZCIsCiAgICAgICJ0aXRsZSI6ICLnvJbovpHmjqjojZAiLAogICAgICAiYWN0aW9uIjogewogICAgICAgICJ0eXBlIjogIm9wZW5Db21pY0xpc3QiLAogICAgICAgICJwYXlsb2FkIjogewogICAgICAgICAgInNjZW5lIjogewogICAgICAgICAgICAidGl0bGUiOiAi57yW6L6R5o6o6I2QIiwKICAgICAgICAgICAgInNvdXJjZSI6ICIzNzFkMzNjNi1hOTAxLTQzNGEtYTBhZS1kNGVhODBjNzYxMmYiLAogICAgICAgICAgICAiYm9keSI6IHsKICAgICAgICAgICAgICAidHlwZSI6ICJwbHVnaW5QYWdlZENvbWljTGlzdCIsCiAgICAgICAgICAgICAgInJlcXVlc3QiOiB7CiAgICAgICAgICAgICAgICAiZm5QYXRoIjogImdldFJhbmtpbmdEYXRhIiwKICAgICAgICAgICAgICAgICJjb3JlIjoge30sCiAgICAgICAgICAgICAgICAiZXh0ZXJuIjogewogICAgICAgICAgICAgICAgICAic291cmNlIjogInJlY29tbWVuZCIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJmaWx0ZXIiOiB7CiAgICAgICAgICAgICAgImZuUGF0aCI6ICJnZXRSYW5raW5nRmlsdGVyQnVuZGxlIiwKICAgICAgICAgICAgICAiZXh0ZXJuIjogewogICAgICAgICAgICAgICAgInNvdXJjZSI6ICJyZWNvbW1lbmQiCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgXQp9Cg==
+{
+  "name": "拷贝漫画 Copy4000",
+  "uuid": "371d33c6-a901-434a-a0ae-d4ea80c7612f",
+  "iconUrl": "https://www.copy4000.com/favicon.ico",
+  "describe": "拷贝漫画（copy4000 线路），内置域名失效自动探测与报错挖矿",
+  "version": "0.1.0",
+  "home": "https://github.com/k623615746/breeze-plugin-copy4000",
+  "updateUrl": "https://api.github.com/repos/k623615746/breeze-plugin-copy4000/releases/latest",
+  "npmName": "breeze-plugin-copy4000",
+  "function": [
+    {
+      "id": "rank",
+      "title": "排行榜",
+      "action": {
+        "type": "openComicList",
+        "payload": {
+          "scene": {
+            "title": "排行榜",
+            "source": "371d33c6-a901-434a-a0ae-d4ea80c7612f",
+            "body": {
+              "type": "pluginPagedComicList",
+              "request": {
+                "fnPath": "getRankingData",
+                "core": {},
+                "extern": {
+                  "source": "rank"
+                }
+              }
+            },
+            "filter": {
+              "fnPath": "getRankingFilterBundle",
+              "extern": {
+                "source": "rank"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "newest",
+      "title": "最近更新",
+      "action": {
+        "type": "openComicList",
+        "payload": {
+          "scene": {
+            "title": "最近更新",
+            "source": "371d33c6-a901-434a-a0ae-d4ea80c7612f",
+            "body": {
+              "type": "pluginPagedComicList",
+              "request": {
+                "fnPath": "getRankingData",
+                "core": {},
+                "extern": {
+                  "source": "newest"
+                }
+              }
+            },
+            "filter": {
+              "fnPath": "getRankingFilterBundle",
+              "extern": {
+                "source": "newest"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "recommend",
+      "title": "编辑推荐",
+      "action": {
+        "type": "openComicList",
+        "payload": {
+          "scene": {
+            "title": "编辑推荐",
+            "source": "371d33c6-a901-434a-a0ae-d4ea80c7612f",
+            "body": {
+              "type": "pluginPagedComicList",
+              "request": {
+                "fnPath": "getRankingData",
+                "core": {},
+                "extern": {
+                  "source": "recommend"
+                }
+              }
+            },
+            "filter": {
+              "fnPath": "getRankingFilterBundle",
+              "extern": {
+                "source": "recommend"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

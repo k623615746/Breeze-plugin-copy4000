@@ -1,1 +1,52 @@
-Ly8gY29weTQwMDAg5YWo6ZO+6Lev6IGU6LCD77ya5pCc57SiIOKGkiDor6bmg4Ug4oaSIOeroOiKgiDihpIg5Zu+54mHIFVSTCDihpIg5Zu+54mH5Y+v6L6+5oCnCi8vIOeUqOazlTogbm9kZSB0ZXN0L2UyZS5tanMgW+WFs+mUruivjV0KY29uc3QgQkFTRSA9ICJodHRwczovL2FwaS5jb3B5NDAwMC5jb20vYXBpL3YzIjsKY29uc3QgSEVBREVSUyA9IHsKICBBY2NlcHQ6ICJhcHBsaWNhdGlvbi9qc29uIiwKICB2ZXJzaW9uOiAiMjAyNS4wNS4wOSIsCiAgT3JpZ2luOiAiaHR0cHM6Ly9jb3B5NDAwMC5jb20iLAogIHJlZ2lvbjogIjAiLAogIHdlYnA6ICIwIiwKICBwbGF0Zm9ybTogIjEiLAogICJVc2VyLUFnZW50IjoKICAgICJNb3ppbGxhLzUuMCAoTGludXg7IEFuZHJvaWQgMTMpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMTQuMC41NzM1LjE5NiBNb2JpbGUgU2FmYXJpLzUzNy4zNiBpRE9LaXQvMS4wLjAgUlNTWC8xLjAuMCIsCn07Cgpjb25zdCBrZXl3b3JkID0gcHJvY2Vzcy5hcmd2WzJdIHx8ICLmtbfotLznjosiOwpjb25zdCB0MCA9IERhdGUubm93KCk7CmNvbnN0IGxvZyA9ICguLi5hKSA9PiBjb25zb2xlLmxvZyhgWyR7U3RyaW5nKERhdGUubm93KCkgLSB0MCkucGFkU3RhcnQoNSl9bXNdYCwgLi4uYSk7Cgphc3luYyBmdW5jdGlvbiBnZXQocGF0aCkgewogIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKGAke0JBU0V9JHtwYXRofWAsIHsgaGVhZGVyczogSEVBREVSUywgc2lnbmFsOiBBYm9ydFNpZ25hbC50aW1lb3V0KDIwMDAwKSB9KTsKICBjb25zdCB0ZXh0ID0gYXdhaXQgcmVzLnRleHQoKTsKICBjb25zdCBqc29uID0gSlNPTi5wYXJzZSh0ZXh0KTsKICBpZiAoTnVtYmVyKGpzb24uY29kZSkgIT09IDIwMCkgdGhyb3cgbmV3IEVycm9yKGAke3BhdGh9IC0+IGNvZGU9JHtqc29uLmNvZGV9ICR7anNvbi5tZXNzYWdlfWApOwogIHJldHVybiBqc29uLnJlc3VsdHM7Cn0KCmNvbnN0IHNlYXJjaCA9IGF3YWl0IGdldChgL3NlYXJjaC9jb21pYz9xPSR7ZW5jb2RlVVJJQ29tcG9uZW50KGtleXdvcmQpfSZsaW1pdD0zJm9mZnNldD0wJnBsYXRmb3JtPTFgKTsKY29uc3QgZmlyc3QgPSBzZWFyY2gubGlzdD8uWzBdOwpsb2coYOaQnOe0ouOAjCR7a2V5d29yZH3jgI3lkb3kuK0gJHtzZWFyY2gudG90YWx9IOadoe+8jOmmluadoe+8miR7Zmlyc3QubmFtZX0gKCR7Zmlyc3QucGF0aF93b3JkfSlgKTsKCmNvbnN0IGRldGFpbCA9IGF3YWl0IGdldChgL2NvbWljMi8ke2ZpcnN0LnBhdGhfd29yZH0/cGxhdGZvcm09MWApOwpjb25zdCBncm91cHMgPSBBcnJheS5pc0FycmF5KGRldGFpbC5ncm91cHMpID8gZGV0YWlsLmdyb3VwcyA6IE9iamVjdC52YWx1ZXMoZGV0YWlsLmdyb3VwcyB8fCB7fSk7CmxvZyhg6K+m5oOF77ya5L2c6ICFICR7KGRldGFpbC5jb21pYy5hdXRob3IgfHwgW10pLm1hcCgoYSkgPT4gYS5uYW1lKS5qb2luKCIvIil977yM5YiG57uEICR7Z3JvdXBzLmxlbmd0aH0g5LiqYCk7Cgpjb25zdCBncm91cCA9IGdyb3Vwcy5maW5kKChnKSA9PiBnLnBhdGhfd29yZCA9PT0gImRlZmF1bHQiKSB8fCBncm91cHNbMF07CmNvbnN0IGNoYXB0ZXJzID0gYXdhaXQgZ2V0KGAvY29taWMvJHtmaXJzdC5wYXRoX3dvcmR9L2dyb3VwLyR7Z3JvdXAucGF0aF93b3JkfS9jaGFwdGVycz9saW1pdD0zJm9mZnNldD0wYCk7CmxvZyhg56ug6IqC77yIJHtncm91cC5uYW1lfe+8ie+8muWFsSAke2NoYXB0ZXJzLnRvdGFsfSDor53vvIzpppbor50gJHtjaGFwdGVycy5saXN0WzBdLm5hbWV9YCk7Cgpjb25zdCBjaCA9IGNoYXB0ZXJzLmxpc3RbMF07CmNvbnN0IGNvbnRlbnQgPSBhd2FpdCBnZXQoYC9jb21pYy8ke2ZpcnN0LnBhdGhfd29yZH0vY2hhcHRlcjIvJHtjaC51dWlkfT9wbGF0Zm9ybT0xYCk7CmNvbnN0IHBhZ2VzID0gY29udGVudC5jaGFwdGVyLmNvbnRlbnRzIHx8IFtdOwpsb2coYOeroOiKguOAjCR7Y2gubmFtZX3jgI3lm77niYcgJHtwYWdlcy5sZW5ndGh9IOW8oO+8jOmmluW8oCAke3BhZ2VzWzBdPy51cmx9YCk7Cgpjb25zdCBpbWcgPSBhd2FpdCBmZXRjaChwYWdlc1swXS51cmwsIHsKICBoZWFkZXJzOiB7IFJlZmVyZXI6ICJodHRwczovL2NvcHk0MDAwLmNvbS8iLCAiVXNlci1BZ2VudCI6IEhFQURFUlNbIlVzZXItQWdlbnQiXSB9LAogIHNpZ25hbDogQWJvcnRTaWduYWwudGltZW91dCgyMDAwMCksCn0pOwpjb25zdCBidWYgPSBCdWZmZXIuZnJvbShhd2FpdCBpbWcuYXJyYXlCdWZmZXIoKSk7CmNvbnN0IG1hZ2ljID0gYnVmLnN1YmFycmF5KDAsIDMpLnRvU3RyaW5nKCJoZXgiKTsKbG9nKGDlm77niYcgSFRUUCAke2ltZy5zdGF0dXN977yMJHtidWYubGVuZ3RofSDlrZfoioLvvIxtYWdpYz0ke21hZ2ljfSAke21hZ2ljLnN0YXJ0c1dpdGgoImZmZDhmZiIpID8gIihKUEVHIOKckykiIDogIiJ9YCk7Cgpjb25zb2xlLmxvZygiXG7pk77ot6/lrozmlbTvvJrmkJzntKIg4oaSIOivpuaDhSDihpIg56ug6IqCIOKGkiDlm77niYcg4oaSIOWbvueJh+Wtl+iKgiIpOwo=
+// copy4000 全链路联调：搜索 → 详情 → 章节 → 图片 URL → 图片可达性
+// 用法: node test/e2e.mjs [关键词]
+const BASE = "https://api.copy4000.com/api/v3";
+const HEADERS = {
+  Accept: "application/json",
+  version: "2025.05.09",
+  Origin: "https://copy4000.com",
+  region: "0",
+  webp: "0",
+  platform: "1",
+  "User-Agent":
+    "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.196 Mobile Safari/537.36 iDOKit/1.0.0 RSSX/1.0.0",
+};
+
+const keyword = process.argv[2] || "海贼王";
+const t0 = Date.now();
+const log = (...a) => console.log(`[${String(Date.now() - t0).padStart(5)}ms]`, ...a);
+
+async function get(path) {
+  const res = await fetch(`${BASE}${path}`, { headers: HEADERS, signal: AbortSignal.timeout(20000) });
+  const text = await res.text();
+  const json = JSON.parse(text);
+  if (Number(json.code) !== 200) throw new Error(`${path} -> code=${json.code} ${json.message}`);
+  return json.results;
+}
+
+const search = await get(`/search/comic?q=${encodeURIComponent(keyword)}&limit=3&offset=0&platform=1`);
+const first = search.list?.[0];
+log(`搜索「${keyword}」命中 ${search.total} 条，首条：${first.name} (${first.path_word})`);
+
+const detail = await get(`/comic2/${first.path_word}?platform=1`);
+const groups = Array.isArray(detail.groups) ? detail.groups : Object.values(detail.groups || {});
+log(`详情：作者 ${(detail.comic.author || []).map((a) => a.name).join("/")}，分组 ${groups.length} 个`);
+
+const group = groups.find((g) => g.path_word === "default") || groups[0];
+const chapters = await get(`/comic/${first.path_word}/group/${group.path_word}/chapters?limit=3&offset=0`);
+log(`章节（${group.name}）：共 ${chapters.total} 话，首话 ${chapters.list[0].name}`);
+
+const ch = chapters.list[0];
+const content = await get(`/comic/${first.path_word}/chapter2/${ch.uuid}?platform=1`);
+const pages = content.chapter.contents || [];
+log(`章节「${ch.name}」图片 ${pages.length} 张，首张 ${pages[0]?.url}`);
+
+const img = await fetch(pages[0].url, {
+  headers: { Referer: "https://copy4000.com/", "User-Agent": HEADERS["User-Agent"] },
+  signal: AbortSignal.timeout(20000),
+});
+const buf = Buffer.from(await img.arrayBuffer());
+const magic = buf.subarray(0, 3).toString("hex");
+log(`图片 HTTP ${img.status}，${buf.length} 字节，magic=${magic} ${magic.startsWith("ffd8ff") ? "(JPEG ✓)" : ""}`);
+
+console.log("\n链路完整：搜索 → 详情 → 章节 → 图片 → 图片字节");

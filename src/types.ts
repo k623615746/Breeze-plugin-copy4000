@@ -1,1 +1,116 @@
-LyoqIOaLt+i0nea8q+eUuyB2MyBBUEkg55qE5pWw5o2u57uT5p6E77yI5Y+q5aOw5piO55So5Yiw55qE5a2X5q6177yJICovCgpleHBvcnQgdHlwZSBBcGlBdXRob3IgPSB7IG5hbWU/OiBzdHJpbmc7IHBhdGhfd29yZD86IHN0cmluZyB9OwpleHBvcnQgdHlwZSBBcGlUaGVtZSA9IHsgbmFtZT86IHN0cmluZzsgcGF0aF93b3JkPzogc3RyaW5nIH07CmV4cG9ydCB0eXBlIEFwaURpc3BsYXkgPSB7IHZhbHVlPzogbnVtYmVyIHwgc3RyaW5nOyBkaXNwbGF5Pzogc3RyaW5nIH07CgpleHBvcnQgdHlwZSBBcGlDb21pYyA9IHsKICB1dWlkPzogc3RyaW5nOwogIG5hbWU/OiBzdHJpbmc7CiAgYWxpYXM/OiBzdHJpbmc7CiAgcGF0aF93b3JkPzogc3RyaW5nOwogIGNvdmVyPzogc3RyaW5nOwogIHBvcHVsYXI/OiBudW1iZXI7CiAgZGF0ZXRpbWVfdXBkYXRlZD86IHN0cmluZzsKICBkYXRldGltZV9jcmVhdGVkPzogc3RyaW5nOwogIGJyaWVmPzogc3RyaW5nOwogIGF1dGhvcj86IEFwaUF1dGhvcltdOwogIHRoZW1lPzogQXBpVGhlbWVbXTsKICBzdGF0dXM/OiBBcGlEaXNwbGF5OwogIHJlZ2lvbj86IEFwaURpc3BsYXk7CiAgZnJlZV90eXBlPzogQXBpRGlzcGxheTsKICByZXN0cmljdD86IEFwaURpc3BsYXk7CiAgcmVjbGFzcz86IEFwaURpc3BsYXk7CiAgbGFzdF9jaGFwdGVyPzogeyB1dWlkPzogc3RyaW5nOyBuYW1lPzogc3RyaW5nIH07CiAgZ3JvdXBzPzogQXBpR3JvdXBbXSB8IFJlY29yZDxzdHJpbmcsIEFwaUdyb3VwPjsKICBiYW4/OiBudW1iZXI7Cn07CgpleHBvcnQgdHlwZSBBcGlHcm91cCA9IHsKICBuYW1lPzogc3RyaW5nOwogIHBhdGhfd29yZD86IHN0cmluZzsKICBjb3VudD86IG51bWJlcjsKfTsKCmV4cG9ydCB0eXBlIEFwaVNlYXJjaFJlc3VsdCA9IHsKICBsaXN0PzogQXBpQ29taWNbXTsKICB0b3RhbD86IG51bWJlcjsKICBsaW1pdD86IG51bWJlcjsKICBvZmZzZXQ/OiBudW1iZXI7Cn07CgpleHBvcnQgdHlwZSBBcGlEZXRhaWxSZXN1bHQgPSB7CiAgY29taWM/OiBBcGlDb21pYzsKICBwb3B1bGFyPzogbnVtYmVyOwogIGdyb3Vwcz86IFJlY29yZDxzdHJpbmcsIEFwaUdyb3VwPiB8IEFwaUdyb3VwW107CiAgaXNfbG9jaz86IGJvb2xlYW47CiAgaXNfbG9naW4/OiBib29sZWFuOwp9OwoKZXhwb3J0IHR5cGUgQXBpQ2hhcHRlckl0ZW0gPSB7CiAgbmFtZT86IHN0cmluZzsKICB1dWlkPzogc3RyaW5nOwogIGluZGV4PzogbnVtYmVyOwogIHNpemU/OiBudW1iZXI7CiAgY291bnQ/OiBudW1iZXI7CiAgb3JkZXJlZD86IG51bWJlcjsKICBncm91cF9wYXRoX3dvcmQ/OiBzdHJpbmc7CiAgZ3JvdXBfbmFtZT86IHN0cmluZzsKICBkYXRldGltZV9jcmVhdGVkPzogc3RyaW5nOwp9OwoKZXhwb3J0IHR5cGUgQXBpQ2hhcHRlckxpc3QgPSB7CiAgbGlzdD86IEFwaUNoYXB0ZXJJdGVtW107CiAgdG90YWw/OiBudW1iZXI7CiAgbGltaXQ/OiBudW1iZXI7CiAgb2Zmc2V0PzogbnVtYmVyOwp9OwoKZXhwb3J0IHR5cGUgQXBpQ2hhcHRlckNvbnRlbnQgPSB7CiAgY2hhcHRlcj86IHsKICAgIHV1aWQ/OiBzdHJpbmc7CiAgICBuYW1lPzogc3RyaW5nOwogICAgY29udGVudHM/OiBBcnJheTx7IHVybD86IHN0cmluZyB9PjsKICAgIHdvcmRzPzogbnVtYmVyW107CiAgICBzaXplPzogbnVtYmVyOwogICAgcHJldj86IHN0cmluZyB8IG51bGw7CiAgICBuZXh0Pzogc3RyaW5nIHwgbnVsbDsKICB9OwogIGNvbWljPzogQXBpQ29taWM7CiAgaXNfbG9jaz86IGJvb2xlYW47Cn07CgpleHBvcnQgdHlwZSBBcGlSYW5rTGlzdCA9IHsKICBsaXN0PzogQXJyYXk8eyBjb21pYz86IEFwaUNvbWljOyBib29rPzogQXBpQ29taWM7IHBvcHVsYXI/OiBudW1iZXI7IHNvcnQ/OiBudW1iZXIgfT47CiAgdG90YWw/OiBudW1iZXI7CiAgbGltaXQ/OiBudW1iZXI7CiAgb2Zmc2V0PzogbnVtYmVyOwp9OwoKZXhwb3J0IHR5cGUgQXBpUmVjb21tZW5kTGlzdCA9IHsKICBsaXN0PzogQXJyYXk8eyBjb21pYz86IEFwaUNvbWljOyB0eXBlPzogbnVtYmVyIH0+OwogIHRvdGFsPzogbnVtYmVyOwogIGxpbWl0PzogbnVtYmVyOwogIG9mZnNldD86IG51bWJlcjsKfTsKCmV4cG9ydCB0eXBlIEFwaU5ld2VzdExpc3QgPSB7CiAgbGlzdD86IEFycmF5PHsgY29taWM/OiBBcGlDb21pYzsgZGF0ZXRpbWVfY3JlYXRlZD86IHN0cmluZyB9PjsKICB0b3RhbD86IG51bWJlcjsKICBsaW1pdD86IG51bWJlcjsKICBvZmZzZXQ/OiBudW1iZXI7Cn07CgpleHBvcnQgdHlwZSBBcGlDb2xsZWN0TGlzdCA9IHsKICBsaXN0PzogQXJyYXk8eyB1dWlkPzogbnVtYmVyOyBjb21pYz86IEFwaUNvbWljIH0+OwogIHRvdGFsPzogbnVtYmVyOwogIGxpbWl0PzogbnVtYmVyOwogIG9mZnNldD86IG51bWJlcjsKfTsKCmV4cG9ydCB0eXBlIEFwaU1lbWJlckluZm8gPSB7CiAgdXNlcm5hbWU/OiBzdHJpbmc7CiAgbmlja25hbWU/OiBzdHJpbmc7CiAgYXZhdGFyPzogc3RyaW5nOwogIHVzZXJfaWQ/OiBzdHJpbmc7Cn07Cg==
+/** 拷贝漫画 v3 API 的数据结构（只声明用到的字段） */
+
+export type ApiAuthor = { name?: string; path_word?: string };
+export type ApiTheme = { name?: string; path_word?: string };
+export type ApiDisplay = { value?: number | string; display?: string };
+
+export type ApiComic = {
+  uuid?: string;
+  name?: string;
+  alias?: string;
+  path_word?: string;
+  cover?: string;
+  popular?: number;
+  datetime_updated?: string;
+  datetime_created?: string;
+  brief?: string;
+  author?: ApiAuthor[];
+  theme?: ApiTheme[];
+  status?: ApiDisplay;
+  region?: ApiDisplay;
+  free_type?: ApiDisplay;
+  restrict?: ApiDisplay;
+  reclass?: ApiDisplay;
+  last_chapter?: { uuid?: string; name?: string };
+  groups?: ApiGroup[] | Record<string, ApiGroup>;
+  ban?: number;
+};
+
+export type ApiGroup = {
+  name?: string;
+  path_word?: string;
+  count?: number;
+};
+
+export type ApiSearchResult = {
+  list?: ApiComic[];
+  total?: number;
+  limit?: number;
+  offset?: number;
+};
+
+export type ApiDetailResult = {
+  comic?: ApiComic;
+  popular?: number;
+  groups?: Record<string, ApiGroup> | ApiGroup[];
+  is_lock?: boolean;
+  is_login?: boolean;
+};
+
+export type ApiChapterItem = {
+  name?: string;
+  uuid?: string;
+  index?: number;
+  size?: number;
+  count?: number;
+  ordered?: number;
+  group_path_word?: string;
+  group_name?: string;
+  datetime_created?: string;
+};
+
+export type ApiChapterList = {
+  list?: ApiChapterItem[];
+  total?: number;
+  limit?: number;
+  offset?: number;
+};
+
+export type ApiChapterContent = {
+  chapter?: {
+    uuid?: string;
+    name?: string;
+    contents?: Array<{ url?: string }>;
+    words?: number[];
+    size?: number;
+    prev?: string | null;
+    next?: string | null;
+  };
+  comic?: ApiComic;
+  is_lock?: boolean;
+};
+
+export type ApiRankList = {
+  list?: Array<{ comic?: ApiComic; book?: ApiComic; popular?: number; sort?: number }>;
+  total?: number;
+  limit?: number;
+  offset?: number;
+};
+
+export type ApiRecommendList = {
+  list?: Array<{ comic?: ApiComic; type?: number }>;
+  total?: number;
+  limit?: number;
+  offset?: number;
+};
+
+export type ApiNewestList = {
+  list?: Array<{ comic?: ApiComic; datetime_created?: string }>;
+  total?: number;
+  limit?: number;
+  offset?: number;
+};
+
+export type ApiCollectList = {
+  list?: Array<{ uuid?: number; comic?: ApiComic }>;
+  total?: number;
+  limit?: number;
+  offset?: number;
+};
+
+export type ApiMemberInfo = {
+  username?: string;
+  nickname?: string;
+  avatar?: string;
+  user_id?: string;
+};

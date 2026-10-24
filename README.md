@@ -1,1 +1,172 @@
-IyBicmVlemUtcGx1Z2luLWNvcHk0MDAwCgpCcmVlemUg5ryr55S76ZiF6K+75Zmo5o+S5Lu277yM5o6l5YWl5ou36LSd5ryr55S7ICoqY29weTQwMDAqKiDnur/ot6/jgIIKCuWSjOW4uOingeWGmeazleS4jeWQjO+8jOi/meS4quaPkuS7tuS4jeaKiuWfn+WQjeWGmeatu+WcqOS7o+eggemHjO+8muWfn+WQjeeUsei/kOihjOaXtuino+aekO+8jOWkseaViOWQjuiDveiHquW3seaJvuWbnuadpeOAggoKLS0tCgojIyDkuIDjgIHkuLrku4DkuYjkuI3og73lhpnmrbvln5/lkI0KCuermeeCueWfn+WQjeS8muWRqOacn+aAp+i9ruaNou+8jOWwgemUgeaMiSAqKlNOSSDln5/lkI3pgJDkuKrngrkqKu+8jOS4jeaYr+aVtOautSBJUOOAguWQjOS4gOautSBDbG91ZGZsYXJlIElQIOS4iu+8jGBtYW5nYWNvcHkuY29tYCDooqsgVExTIOmHjee9ruOAgWBjb3B5NDAwMC5jb21gIOWFqOmAmu+8jOWwseaYr+ivgeaNruOAggoK5o6o6K6677yaKirmr4/mjaLkuIDkuKrmlrDln5/lkI3vvIzlroPpu5jorqTmmK/pgJrnmoTvvIznm7TliLDooqvljZXni6zliqDov5vlkI3ljZXjgIIqKiDmiYDku6Xmj5Lku7bnmoTpl67popjkuI3mmK8i5ZOq5Liq5Z+f5ZCN6IO955SoIu+8jOiAjOaYryLmgI7kuYjlnKjml6fln5/lkI3mrbvmjonlkI7mi7/liLDmlrDln5/lkI0i44CCCgrnrZTmoYjlnKjnq5nngrnoh6rlt7HnmoTplJnor6/mlofmoYjph4zvvJoKCmBgYAroq4vliLDlrpjntrLmm7TmlrDmnIDmlrBBUFAoaHR0cHM6Ly93d3cuY29weTQwMDAuY29tL2Rvd25sb2FkKe+8jOaCqOaIluaCqOi6q+mCiueahOS6uuabvue2k+S4i+i8iemBjuegtOino+eJiOacrOeahOaLt+iynea8q+eVqy4uLgpgYGAKCuaKpemUmeS/oeaBr+aYr+acgOivmuWunueahOWfn+WQjeWPkeW4g+a4oOmBk+KAlOKAlOWug+W/hemhu+WRiuivieS9oOWOu+WTquS4i+i9veOAguaPkuS7tuaKiui/meWPpeato+WImeWMlu+8jOWwseaIkOS6huiHquWKqOWPkeeOsOacuuWItuOAggoKLS0tCgojIyDkuozjgIHkuInlsYLnur/ot6/pmLLlvqEKCnwg5bGCIHwg5py65Yi2IHwg6Kem5Y+R5pe25py6IHwg5Luj56CBIHwKfCAtLS0gfCAtLS0gfCAtLS0gfCAtLS0gfAp8IDEgfCDlgaXlurfnvJPlrZggKyDlgJnpgInmsaDlubblj5HmjqLmtYsgfCDmr4/mrKHop6PmnpDnur/ot68gfCBgZG9tYWluLnRzOiByZXNvbHZlQXBpQmFzZWAgfAp8IDIgfCDmiqXplJnmjJbnn7/vvIjmraPliJnmj5Dlj5bmlrDln5/lkI3vvIkgfCDlhajpg6jlgJnpgInpg73mjqLmtYvlpLHotKUgfCBgZG9tYWluLnRzOiBkaXNjb3ZlckZyb21FcnJvcnNgIHwKfCAzIHwg5omL5Yqo6ZSB5a6aIHwg55So5oi35bey55+l5paw5Z+f5ZCNIHwgYOiuvue9riDihpIg5omL5Yqo6ZSB5a6a57q/6LevYCB8CgojIyMg56ysIDEg5bGC77ya5o6i5rWLCgrlr7nmr4/kuKrlgJnpgInlj5HkuIDkuKrovbvph4/mkJzntKLor7fmsYLvvIhgL3NlYXJjaC9jb21pYz9xPea1t+i0vOeOiyZsaW1pdD0xYO+8ie+8jOaMieWTjeW6lOW9ouaAgeWIhuexu++8mgoKfCDliKTlrpogfCDkvp3mja4gfCDlpITnkIYgfAp8IC0tLSB8IC0tLSB8IC0tLSB8CnwgYG9rYCB8IGBjb2RlID09PSAyMDBgIHwg56uL5Y2z6YeH55So77yM5YaZ5YWl5YGl5bq357yT5a2Y77yINSDliIbpkp/vvIkgfAp8IGBtYWludGVuYW5jZWAgfCBIVE1MIOWQq+OAjOacjeWLmeWZqOWNh+e0muS4reOAjSB8IOi3s+i/hyB8CnwgYGh0bWxgIHwg6L+U5ZueIEhUTUwg5LiN5pivIEpTT04gfCDot7Pov4cgfAp8IGBuZXR3b3JrYCB8IFRMUyDph43nva4gLyDotoXml7bvvIgxMHPvvIkgfCDot7Pov4cgfAp8IGBhcGktZXJyb3JgIHwgYGNvZGUgIT09IDIwMGAgfCDot7Pov4fvvIzlkIzml7bmioogYG1lc3NhZ2VgIOS4oue7meaMluefv+WZqCB8CgrmjqLmtYvliIbmibnlubblj5HvvIg0IOS4quS4gOaJue+8ie+8jOS7u+aEj+S4gOaJueWHuueOsOWPr+eUqOe6v+i3r+WwseWBnOatou+8jOmBv+WFjSAxMiDmnaHlgJnpgInkuLLooYznrYkgNzIg56eS44CCCgojIyMg56ysIDIg5bGC77ya5oql6ZSZ5oyW55+/Cgrlhajpg6jlgJnpgInpg73lpLHotKXml7bvvIznlKgqKuegtOino+eJiCBBUFAg55qEIFVBKirvvIhgaURPS2l0LzEuMC4wIFJTU1gvMS4wLjBg77yJ5YaN6K+35rGC5LiA6L2u4oCU4oCU5pyN5Yqh56uv5Lya5Lul5Li65L2g5Zyo55So55uX54mI5a6i5oi356uv77yM5Zue5ZCQIuivt+WIsOWumOe9keS4i+i9veacgOaWsCBBUFAi5bm26ZmE5LiK5paw5Z+f5ZCN44CCCgrmjJbnn7/lmajku47lk43lupTmlofmnKzph4zmir3lgJnpgInln5/lkI3vvIzmjInlj6/kv6HluqbmiZPliIbvvJoKCi0g5Ye6546w5ZyoIGAvZG93bmxvYWRg44CBYC9hcHBgIOS5i+exu+iQveWcsOi3r+W+hOWJjeeahCDihpIgKiorNCoqCi0g5ZCr5ZOB54mM6K+N77yIYGNvcHlgIC8gYG1hbmdhYCAvIGByZWxhbWFuaHVhYCAvIGBob3RtYW5nYWDvvInihpIgKiorMioqCi0g5pWw5a2X5q615LiO5b2T5YmN5Z+f5ZCN5LiA6Ie077yIYGNvcHk0MDAwYCDihpIgYGNvcHk0MDAwYO+8ieKGkiAqKiszKioKLSDov4fmu6QgQ2xvdWRmbGFyZSAvIEdpdEh1YiAvIEdvb2dsZSDnrYnlmarlo7Dln5/lkI0KCuavj+S4qiBob3N0IOWxleW8gOaIkOS4ieenjSBBUEkg5b2i5oCB5YaN5o6i5rWL77yaYGFwaS57aG9zdH1gIC8gYG1hcGkue2hvc3R9YCAvIGB7aG9zdH1gICsgYC9hcGkvdjNg44CCCgrlj6ropoHov5jmnIkqKuS4gOS4qioq5pen5Z+f5ZCN5rS7552A77yM5bCx6IO96Zeu5Ye65paw5Z+f5ZCN4oCU4oCU6L+Z5piv6ZO+5byP5Y+R546w44CCCgojIyMg56ysIDMg5bGC77ya5omL5Yqo6ZSB5a6aCgrorr7nva7pobXloasgYGNvcHk1MDAwLmNvbWAg5oiW5a6M5pW0IGBodHRwczovL2FwaS5jb3B5NTAwMC5jb20vYXBpL3YzYCDpg73ooYzvvIzmj5Lku7boh6rliqjooaXlhajmiJAgQVBJIOW9ouaAgeOAgueVmeepuuaBouWkjeiHquWKqOOAggoKLS0tCgojIyDkuInjgIHkuJrliqHor7fmsYLnmoTlrrnplJkKCiMjIyDkuIDkuKrlv4Xpobvnn6XpgZPnmoTlnZHvvJpVQSDlhrPlrprnlJ/mrbsKCuWunua1i++8iDIwMjYtMTDvvInlkIzkuIDkuKogYC9jb21pYzIve3BhdGhfd29yZH1gIOivt+axgu+8mgoKfCBVc2VyLUFnZW50IHwg57uT5p6cIHwKfCAtLS0gfCAtLS0gfAp8IGBpRE9LaXQvMS4wLjAgUlNTWC8xLjAuMGDvvIjnoLTop6PniYggQVBQIOeJueW+ge+8iSB8IGBjb2RlIDIwMGAgfAp8IOaZrumAmiBDaHJvbWUgfCBgY29kZSAyMTAg6KuL5Yiw5a6Y57ay5pu05paw5pyA5pawQVBQKC4uLilgIHwKfCDmma7pgJogU2FmYXJpIChpT1MpIHwgYGNvZGUgMjEwYCB8CgrmiYDku6Xmj5Lku7YqKum7mOiupOWwseeUqCBBUFAgVUEqKu+8jOa1j+iniOWZqCBVQSDlj6rkvZzkuLrlj43lkJHlhZzlupXjgILmkJzntKLmjqXlj6PkuI3moKHpqowgVUHvvIzor6bmg4Uv56ug6IqC5o6l5Y+j5qCh6aqM44CCCgpgYXBpLnRzYCDph4zmr4/kuKror7fmsYLkuKTmnaHlhZzlupXvvJoKCjEuICoq5Y+N55uX54mI5paH5qGIKirvvIhg56C06KejYCAvIGDlrpjntrJgIC8gYGRvd25sb2FkYO+8ieKGkiDmjaLmtY/op4jlmaggVUEg6YeN6K+V5ZCM5LiA5p2h57q/6LevCjIuIOe9kee7nOmUmeivryAvIOe7tOaKpOmhtSAvIOWFtuS7liBgY29kZWAg4oaSIOagh+iusOivpee6v+i3r+Wksei0pSDihpIg5by65Yi26YeN5paw6Kej5p6Q57q/6LevIOKGkiDph43or5XkuIDmrKEKCiMjIyDlj6bkuIDkuKrlnZHvvJrotoXml7bkuI3og73orr7lpKrnn60KCuiiq+WwgeaYryBUTFMg6YeN572u77yM5Yeg5Y2B5q+r56eS5bCx5aSx6LSl77yb56uZ54K56ZmQ5rWB5piv5oWi5ZON5bqU77yM5a6e5rWL6IO95YiwIDgg56eS44CC5oqK6LaF5pe26K6+5oiQIDN+NiDnp5LkvJrmiooi5oWiIuivr+WIpOaIkCLmrbsi77yM5a+86Ie05o+S5Lu25Zyo5q2j5bi457q/6Lev5LiK5Y+N5aSN5o2i57q/44CC5b2T5YmN5o6i5rWL6LaF5pe2IDEwIOenkuOAggoKLS0tCgojIyDlm5vjgIHlip/og70KCnwg6IO95YqbIHwg5a6e546wIHwKfCAtLS0gfCAtLS0gfAp8IOaQnOe0oiB8IGAvc2VhcmNoL2NvbWljYO+8jOaUr+aMgeagh+mimC/kvZzogIUv5rGJ5YyW57uEIHwKfCDor6bmg4UgfCBgL2NvbWljMi97cGF0aF93b3JkfWDvvIzlpJrmsYnljJbnu4Tnq6DoioLoh6rliqjliIbnu4QgfAp8IOeroOiKguWIl+ihqCB8IGAvY29taWMve3BhdGh9L2dyb3VwL3tncm91cH0vY2hhcHRlcnNg77yM5YiG6aG15ouJ5YWoIHwKfCDpmIXor7sgfCBgL2NvbWljL3twYXRofS9jaGFwdGVyMi97dXVpZH1gIHwKfCDkuIvovb0gfCBgZmV0Y2hJbWFnZUJ5dGVzYCDluKYgUmVmZXJlcu+8iOWbvueJhyBDRE4g5qCh6aqM77yJIHwKfCDmjpLooYzmppwgfCBgL3JhbmtzYO+8jOaXpS/lkagv5pyIL+aAuyDDlyDnlLfpopEv5aWz6aKRIHwKfCDmnIDov5Hmm7TmlrAgfCBgL3VwZGF0ZS9uZXdlc3RgIHwKfCDnvJbovpHmjqjojZAgfCBgL3JlY3NgIHwKfCDnmbvlvZUgfCBgL2xvZ2luYO+8jGBiYXNlNjQocGFzc3dvcmQgKyAiLTE3MjkiKWAgKyBgc2FsdD0xNzI5YCB8CgotLS0KCiMjIOS6lOOAgeiuvue9rumhuQoKfCDplK4gfCDor7TmmI4gfAp8IC0tLSB8IC0tLSB8CnwgYGFwaS5sb2NrYCB8IOaJi+WKqOmUgeWumue6v+i3r++8jOeVmeepuuiHquWKqCB8CnwgYGFwaS5wbGF0Zm9ybWAgfCBgcGxhdGZvcm1gIOivt+axguWPguaVsO+8jOm7mOiupCBgMWAgfAp8IGBhcGkudmVyc2lvbmAgfCDlrqLmiLfnq6/niYjmnKzlj7fvvIznq5nngrnmoKHpqozlpLHmlYjml7bmlLnov5nph4wgfAp8IGBhdXRoLnVzZXJuYW1lYCAvIGBhdXRoLnBhc3N3b3JkYCB8IOi0puWPt+Wvhuegge+8iOS7heaUtuiXj+eUqO+8iSB8CnwgYGF1dGgudG9rZW5gIHwg5Lmf5Y+v55u05o6l5aGrIHRva2VuIHwKCuiuvue9rumhteW6lemDqOOAjOaTjeS9nOOAjeWMuuacieWbm+S4quaMiemSru+8mgoKLSAqKumHjeaWsOaOoua1i+aJgOaciee6v+i3ryoqIOKAlOKAlCDovpPlh7rmr4/mnaHlgJnpgInnmoTov57pgJrnirbmgIHkuI7lu7bov58KLSAqKuS7juaKpemUmeaMluaWsOWfn+WQjSoqIOKAlOKAlCDkuLvliqjop6blj5HmjJbnn7/vvIzlj5HnjrDlkI7oh6rliqjliIfmjaIKLSAqKuafpeeci+W9k+WJjee6v+i3ryoqIOKAlOKAlCDlvZPliY3nur/ot68gKyDlgJnpgInmsaDlpKflsI8KLSAqKua4heeQhue8k+WtmCoqIOKAlOKAlCDmuIXor6bmg4Uv56ug6IqC57yT5a2Y5LiO5YGl5bq357yT5a2YCgotLS0KCiMjIOWFreOAgeWuieijheWIsCBCcmVlemUKCuS4pOenjeaWueW8j++8mgoKMS4gKirnvZHnu5zlronoo4XvvIjmjqjojZDvvIkqKu+8muaPkuS7tuWVhuW6lyDihpIg5rWP6KeI5a6J6KOFIOKGkiDnvZHnu5zlronoo4XvvIzloasKCiAgIGBgYAogICBodHRwczovL2dpdGh1Yi5jb20vazYyMzYxNTc0Ni9icmVlemUtcGx1Z2luLWNvcHk0MDAwL3JlbGVhc2VzL2xhdGVzdC9kb3dubG9hZC9icmVlemUtcGx1Z2luLWNvcHk0MDAwLmJ1bmRsZS5janMKICAgYGBgCgoyLiAqKuacrOWcsOaWh+S7tioq77ya5o+S5Lu25ZWG5bqXIOKGkiDlupXpg6jjgIzmm7TmlrDjgI3ihpIg5pys5Zyw5paH5Lu2IOKGkiDpgIkgYGRpc3QvYnJlZXplLXBsdWdpbi1jb3B5NDAwMC5idW5kbGUuY2pzYAoK6KOF5aW95ZCO6L+b5o+S5Lu26K6+572u6aG15Y+v5byAKirosIPor5XmqKHlvI8qKuWhqyBidW5kbGUg5Zyw5Z2A77yM5LmL5ZCO5pS55Luj56CB6IO954Ot5pu05paw77yIYGluaXRgIC8gYGdldEluZm9gIOeahOWFpeWPo+WIl+ihqOmZpOWklu+8jOmCo+S4pOmhueimgemHjeijhe+8ieOAggoKLS0tCgojIyDkuIPjgIHlvIDlj5EKCmBgYGJhc2gKbnBtIGluc3RhbGwKbnBtIHJ1biB0eXBlY2hlY2sKbnB4IHJzcGFjayBidWlsZCAgICAgIyDkuqfniakgZGlzdC9icmVlemUtcGx1Z2luLWNvcHk0MDAwLmJ1bmRsZS5janMKYGBgCgroh6rmtYvohJrmnKzvvJoKCmBgYGJhc2gKbm9kZSB0ZXN0L2RvbWFpbi1taW5pbmcubWpzICAgIyDln5/lkI3mjJbnn7/nrpfms5XvvIjnprvnur/vvIw1IOS4queUqOS+i++8iQpub2RlIHRlc3QvZTJlLm1qcyDmtbfotLznjosgICAgICAgIyDoo7jmjqXlj6Plhajpk77ot68Kbm9kZSB0ZXN0L3Ntb2tlLm1qcyAgICAgICAgICAgIyDliqDovb3miZPljIXkuqfnianot5HnnJ/lrp7mjqXlj6MKYGBgCgrmj5Lku7bot5HlnKggUXVpY2tKUy1ORyDph4zvvIzkuI3mmK8gTm9kZSDkuZ/kuI3mmK/mtY/op4jlmajvvJrljZXmlofku7YgYnVuZGxl77yM5peg6L+Q6KGM5pe2IG5wbSDkvp3otZbvvIzmjIHkuYXljJblj6rog73otbAgYGNhY2hlYCAvIGBwbHVnaW5Db25maWdg44CCCgotLS0KCiMjIOS4g+OAgeW3suefpei+ueeVjAoKLSAqKumVnOWDj+ermei3r+e6v+acquaOpeWFpSoq77yaYGlvcy4yMDI2Y29weS5jb21gIOmCo+Wll+i1sCBTU1IgSFRNTCArIEFFUy0xMjgtQ0JDIOino+Wvhu+8iGBkbnRzYCDlpLTjgIFgY2N6YC9gY2N0YCDlr4bpkqXjgIFgY29udGVudEtleWDvvInvvIzlj6/ku6XlnKggdjMgQVBJIOWFqOe6v+atu+aOieaXtuS9nOS4uuesrOWbm+adoeWFnOW6leOAgui/kOihjOaXtuaciSBgY3J5cHRvLmFlc0NiY1BrY3M3RGVjcnlwdGDvvIzmioDmnK/kuIrlj6/ooYzvvIzmnKrlrp7njrDjgIIKLSAqKueZu+W9lSBzYWx0IOehrOe8lueggSAxNzI5KirvvJrnq5nngrnmlLnnrpfms5Xml7bnmbvlvZXkvJrmjILvvIzpmIXor7vkuI3lj5flvbHlk43jgIIKLSAqKuWAmemAieaxoOS4iumZkCA2MCDmnaEqKu+8muiHquWKqOWPkeeOsOS8muaMgee7ree0r+enr++8jOi2heWHuuaMieWKoOWFpemhuuW6j+a3mOaxsOOAggoKLS0tCgrku4XkvpvlrabkuaDkuI7kuKrkurrkvb/nlKjjgILmj5Lku7bkuI3miZjnrqHku7vkvZXlhoXlrrnvvIzmiYDmnInmlbDmja7mnaXoh6rnq5nngrnlhazlvIDmjqXlj6PjgIIK
+# breeze-plugin-copy4000
+
+Breeze 漫画阅读器插件，接入拷贝漫画 **copy4000** 线路。
+
+和常见写法不同，这个插件不把域名写死在代码里：域名由运行时解析，失效后能自己找回来。
+
+---
+
+## 一、为什么不能写死域名
+
+站点域名会周期性轮换，封锁按 **SNI 域名逐个点**，不是整段 IP。同一段 Cloudflare IP 上，`mangacopy.com` 被 TLS 重置、`copy4000.com` 全通，就是证据。
+
+推论：**每换一个新域名，它默认是通的，直到被单独加进名单。** 所以插件的问题不是"哪个域名能用"，而是"怎么在旧域名死掉后拿到新域名"。
+
+答案在站点自己的错误文案里：
+
+```
+請到官網更新最新APP(https://www.copy4000.com/download)，您或您身邊的人曾經下載過破解版本的拷貝漫畫...
+```
+
+报错信息是最诚实的域名发布渠道——它必须告诉你去哪下载。插件把这句正则化，就成了自动发现机制。
+
+---
+
+## 二、三层线路防御
+
+| 层 | 机制 | 触发时机 | 代码 |
+| --- | --- | --- | --- |
+| 1 | 健康缓存 + 候选池并发探测 | 每次解析线路 | `domain.ts: resolveApiBase` |
+| 2 | 报错挖矿（正则提取新域名） | 全部候选都探测失败 | `domain.ts: discoverFromErrors` |
+| 3 | 手动锁定 | 用户已知新域名 | `设置 → 手动锁定线路` |
+
+### 第 1 层：探测
+
+对每个候选发一个轻量搜索请求（`/search/comic?q=海贼王&limit=1`），按响应形态分类：
+
+| 判定 | 依据 | 处理 |
+| --- | --- | --- |
+| `ok` | `code === 200` | 立即采用，写入健康缓存（5 分钟） |
+| `maintenance` | HTML 含「服務器升級中」 | 跳过 |
+| `html` | 返回 HTML 不是 JSON | 跳过 |
+| `network` | TLS 重置 / 超时（10s） | 跳过 |
+| `api-error` | `code !== 200` | 跳过，同时把 `message` 丢给挖矿器 |
+
+探测分批并发（4 个一批），任意一批出现可用线路就停止，避免 12 条候选串行等 72 秒。
+
+### 第 2 层：报错挖矿
+
+全部候选都失败时，用**破解版 APP 的 UA**（`iDOKit/1.0.0 RSSX/1.0.0`）再请求一轮——服务端会以为你在用盗版客户端，回吐"请到官网下载最新 APP"并附上新域名。
+
+挖矿器从响应文本里抽候选域名，按可信度打分：
+
+- 出现在 `/download`、`/app` 之类落地路径前的 → **+4**
+- 含品牌词（`copy` / `manga` / `relamanhua` / `hotmanga`）→ **+2**
+- 数字段与当前域名一致（`copy4000` → `copy4000`）→ **+3**
+- 过滤 Cloudflare / GitHub / Google 等噪声域名
+
+每个 host 展开成三种 API 形态再探测：`api.{host}` / `mapi.{host}` / `{host}` + `/api/v3`。
+
+只要还有**一个**旧域名活着，就能问出新域名——这是链式发现。
+
+### 第 3 层：手动锁定
+
+设置页填 `copy5000.com` 或完整 `https://api.copy5000.com/api/v3` 都行，插件自动补全成 API 形态。留空恢复自动。
+
+---
+
+## 三、业务请求的容错
+
+### 一个必须知道的坑：UA 决定生死
+
+实测（2026-10）同一个 `/comic2/{path_word}` 请求：
+
+| User-Agent | 结果 |
+| --- | --- |
+| `iDOKit/1.0.0 RSSX/1.0.0`（破解版 APP 特征） | `code 200` |
+| 普通 Chrome | `code 210 請到官網更新最新APP(...)` |
+| 普通 Safari (iOS) | `code 210` |
+
+所以插件**默认就用 APP UA**，浏览器 UA 只作为反向兜底。搜索接口不校验 UA，详情/章节接口校验。
+
+`api.ts` 里每个请求两条兜底：
+
+1. **反盗版文案**（`破解` / `官網` / `download`）→ 换浏览器 UA 重试同一条线路
+2. 网络错误 / 维护页 / 其他 `code` → 标记该线路失败 → 强制重新解析线路 → 重试一次
+
+### 另一个坑：超时不能设太短
+
+被封是 TLS 重置，几十毫秒就失败；站点限流是慢响应，实测能到 8 秒。把超时设成 3~6 秒会把"慢"误判成"死"，导致插件在正常线路上反复换线。当前探测超时 10 秒。
+
+---
+
+## 四、功能
+
+| 能力 | 实现 |
+| --- | --- |
+| 搜索 | `/search/comic`，支持标题/作者/汉化组 |
+| 详情 | `/comic2/{path_word}`，多汉化组章节自动分组 |
+| 章节列表 | `/comic/{path}/group/{group}/chapters`，分页拉全 |
+| 阅读 | `/comic/{path}/chapter2/{uuid}` |
+| 下载 | `fetchImageBytes` 带 Referer（图片 CDN 校验） |
+| 排行榜 | `/ranks`，日/周/月/总 × 男频/女频 |
+| 最近更新 | `/update/newest` |
+| 编辑推荐 | `/recs` |
+| 登录 | `/login`，`base64(password + "-1729")` + `salt=1729` |
+
+---
+
+## 五、设置项
+
+| 键 | 说明 |
+| --- | --- |
+| `api.lock` | 手动锁定线路，留空自动 |
+| `api.platform` | `platform` 请求参数，默认 `1` |
+| `api.version` | 客户端版本号，站点校验失效时改这里 |
+| `auth.username` / `auth.password` | 账号密码（仅收藏用） |
+| `auth.token` | 也可直接填 token |
+
+设置页底部「操作」区有四个按钮：
+
+- **重新探测所有线路** —— 输出每条候选的连通状态与延迟
+- **从报错挖新域名** —— 主动触发挖矿，发现后自动切换
+- **查看当前线路** —— 当前线路 + 候选池大小
+- **清理缓存** —— 清详情/章节缓存与健康缓存
+
+---
+
+## 六、安装到 Breeze
+
+两种方式：
+
+1. **网络安装（推荐）**：插件商店 → 浏览安装 → 网络安装，填
+
+   ```
+   https://github.com/k623615746/breeze-plugin-copy4000/releases/latest/download/breeze-plugin-copy4000.bundle.cjs
+   ```
+
+2. **本地文件**：插件商店 → 底部「更新」→ 本地文件 → 选 `dist/breeze-plugin-copy4000.bundle.cjs`
+
+装好后进插件设置页可开**调试模式**填 bundle 地址，之后改代码能热更新（`init` / `getInfo` 的入口列表除外，那两项要重装）。
+
+---
+
+## 七、开发
+
+```bash
+npm install
+npm run typecheck
+npx rspack build     # 产物 dist/breeze-plugin-copy4000.bundle.cjs
+```
+
+自测脚本：
+
+```bash
+node test/domain-mining.mjs   # 域名挖矿算法（离线，5 个用例）
+node test/e2e.mjs 海贼王       # 裸接口全链路
+node test/smoke.mjs           # 加载打包产物跑真实接口
+```
+
+插件跑在 QuickJS-NG 里，不是 Node 也不是浏览器：单文件 bundle，无运行时 npm 依赖，持久化只能走 `cache` / `pluginConfig`。
+
+---
+
+## 七、已知边界
+
+- **镜像站路线未接入**：`ios.2026copy.com` 那套走 SSR HTML + AES-128-CBC 解密（`dnts` 头、`ccz`/`cct` 密钥、`contentKey`），可以在 v3 API 全线死掉时作为第四条兜底。运行时有 `crypto.aesCbcPkcs7Decrypt`，技术上可行，未实现。
+- **登录 salt 硬编码 1729**：站点改算法时登录会挂，阅读不受影响。
+- **候选池上限 60 条**：自动发现会持续累积，超出按加入顺序淘汰。
+
+---
+
+仅供学习与个人使用。插件不托管任何内容，所有数据来自站点公开接口。

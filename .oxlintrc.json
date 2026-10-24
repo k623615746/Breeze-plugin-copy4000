@@ -1,1 +1,21 @@
-ew0KICAiJHNjaGVtYSI6ICIuL25vZGVfbW9kdWxlcy9veGxpbnQvY29uZmlndXJhdGlvbl9zY2hlbWEuanNvbiIsDQogICJwbHVnaW5zIjogWw0KICAgICJ0eXBlc2NyaXB0IiwNCiAgICAidW5pY29ybiIsDQogICAgIm94YyINCiAgXSwNCiAgImlnbm9yZVBhdHRlcm5zIjogWw0KICAgICJub2RlX21vZHVsZXMvKioiLA0KICAgICJkaXN0LyoqIiwNCiAgICAiYnVpbGQvKiovKi5janMiLA0KICAgICJkb2NzLyoqIg0KICBdLA0KICAiY2F0ZWdvcmllcyI6IHsNCiAgICAiY29ycmVjdG5lc3MiOiAiZXJyb3IiDQogIH0sDQogICJydWxlcyI6IHt9LA0KICAiZW52Ijogew0KICAgICJidWlsdGluIjogdHJ1ZQ0KICB9DQp9DQo=
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc"
+  ],
+  "ignorePatterns": [
+    "node_modules/**",
+    "dist/**",
+    "build/**/*.cjs",
+    "docs/**"
+  ],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {},
+  "env": {
+    "builtin": true
+  }
+}

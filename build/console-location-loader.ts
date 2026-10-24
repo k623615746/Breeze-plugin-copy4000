@@ -1,1 +1,117 @@
-aW1wb3J0IHsgcGFyc2VTeW5jLCBWaXNpdG9yIH0gZnJvbSAib3hjLXBhcnNlciI7DQppbXBvcnQgdHlwZSB7IENhbGxFeHByZXNzaW9uIH0gZnJvbSAib3hjLXBhcnNlciI7DQoNCmNvbnN0IE1FVEhPRFM6IFJlY29yZDxzdHJpbmcsIHRydWU+ID0gew0KICBsb2c6IHRydWUsDQogIGluZm86IHRydWUsDQogIHdhcm46IHRydWUsDQogIGVycm9yOiB0cnVlLA0KICBkZWJ1ZzogdHJ1ZSwNCiAgdGFibGU6IHRydWUsDQogIGRpcjogdHJ1ZSwNCn07DQoNCmZ1bmN0aW9uIHRvUG9zaXhQYXRoKGZpbGVQYXRoOiBzdHJpbmcpOiBzdHJpbmcgew0KICByZXR1cm4gU3RyaW5nKGZpbGVQYXRoIHx8ICIiKS5yZXBsYWNlKC9cXC9nLCAiLyIpOw0KfQ0KDQpmdW5jdGlvbiBmaW5kT3BlblBhcmVuKHNvdXJjZTogc3RyaW5nLCBmcm9tOiBudW1iZXIsIHRvOiBudW1iZXIpOiBudW1iZXIgew0KICBjb25zdCBzdGFydCA9IE1hdGgubWF4KDAsIGZyb20pOw0KICBjb25zdCBlbmQgPSBNYXRoLm1pbihzb3VyY2UubGVuZ3RoLCB0byk7DQogIGZvciAobGV0IGkgPSBzdGFydDsgaSA8IGVuZDsgaSArPSAxKSB7DQogICAgaWYgKHNvdXJjZS5jaGFyQ29kZUF0KGkpID09PSA0MCkgew0KICAgICAgcmV0dXJuIGk7DQogICAgfQ0KICB9DQogIHJldHVybiAtMTsNCn0NCg0KLyoqIOavj+ihjOi1t+WniyBvZmZzZXQg55qE5pWw57uELOeUqOS6juaKiuWtl+espuWBj+enu+aNoueul+aIkCAxLWJhc2VkIOihjOWIl+OAgiAqLw0KZnVuY3Rpb24gYnVpbGRMaW5lU3RhcnRzKHNvdXJjZTogc3RyaW5nKTogbnVtYmVyW10gew0KICBjb25zdCBsaW5lU3RhcnRzID0gWzBdOw0KICBmb3IgKGxldCBpID0gMDsgaSA8IHNvdXJjZS5sZW5ndGg7IGkgKz0gMSkgew0KICAgIGlmIChzb3VyY2UuY2hhckNvZGVBdChpKSA9PT0gMTApIHsNCiAgICAgIGxpbmVTdGFydHMucHVzaChpICsgMSk7DQogICAgfQ0KICB9DQogIHJldHVybiBsaW5lU3RhcnRzOw0KfQ0KDQpmdW5jdGlvbiBnZXRMaW5lQW5kQ2hhcmFjdGVyT2ZQb3NpdGlvbigNCiAgbGluZVN0YXJ0czogbnVtYmVyW10sDQogIHBvc2l0aW9uOiBudW1iZXIsDQopOiB7IGxpbmU6IG51bWJlcjsgY2hhcmFjdGVyOiBudW1iZXIgfSB7DQogIGxldCBsb3cgPSAwOw0KICBsZXQgaGlnaCA9IGxpbmVTdGFydHMubGVuZ3RoIC0gMTsNCiAgd2hpbGUgKGxvdyA8IGhpZ2gpIHsNCiAgICBjb25zdCBtaWQgPSAobG93ICsgaGlnaCArIDEpID4+IDE7DQogICAgaWYgKGxpbmVTdGFydHNbbWlkXSA8PSBwb3NpdGlvbikgew0KICAgICAgbG93ID0gbWlkOw0KICAgIH0gZWxzZSB7DQogICAgICBoaWdoID0gbWlkIC0gMTsNCiAgICB9DQogIH0NCiAgcmV0dXJuIHsgbGluZTogbG93LCBjaGFyYWN0ZXI6IHBvc2l0aW9uIC0gbGluZVN0YXJ0c1tsb3ddIH07DQp9DQoNCmZ1bmN0aW9uIGNvbnNvbGVMb2NhdGlvbkxvYWRlcih0aGlzOiB7IHJlc291cmNlUGF0aDogc3RyaW5nIH0sIHNvdXJjZTogc3RyaW5nKTogc3RyaW5nIHsNCiAgY29uc3QgZmlsZVBhdGggPSB0b1Bvc2l4UGF0aCh0aGlzLnJlc291cmNlUGF0aCk7DQoNCiAgaWYgKCFmaWxlUGF0aC5pbmNsdWRlcygiL3NyYy8iKSkgew0KICAgIHJldHVybiBzb3VyY2U7DQogIH0NCg0KICBjb25zdCB7IHByb2dyYW0gfSA9IHBhcnNlU3luYyh0aGlzLnJlc291cmNlUGF0aCwgc291cmNlLCB7DQogICAgbGFuZzogdGhpcy5yZXNvdXJjZVBhdGguZW5kc1dpdGgoIi50c3giKSA/ICJ0c3giIDogInRzIiwNCiAgICBzb3VyY2VUeXBlOiAidW5hbWJpZ3VvdXMiLA0KICB9KTsNCg0KICBjb25zdCBsaW5lU3RhcnRzID0gYnVpbGRMaW5lU3RhcnRzKHNvdXJjZSk7DQogIGNvbnN0IGVkaXRzOiBBcnJheTx7IGluZGV4OiBudW1iZXI7IHRleHQ6IHN0cmluZyB9PiA9IFtdOw0KDQogIGNvbnN0IHZpc2l0b3IgPSBuZXcgVmlzaXRvcih7DQogICAgQ2FsbEV4cHJlc3Npb24obm9kZTogQ2FsbEV4cHJlc3Npb24pIHsNCiAgICAgIGNvbnN0IHsgY2FsbGVlIH0gPSBub2RlOw0KICAgICAgaWYgKA0KICAgICAgICBjYWxsZWUudHlwZSAhPT0gIk1lbWJlckV4cHJlc3Npb24iIHx8DQogICAgICAgIGNhbGxlZS5jb21wdXRlZCB8fA0KICAgICAgICBjYWxsZWUub2JqZWN0LnR5cGUgIT09ICJJZGVudGlmaWVyIiB8fA0KICAgICAgICBjYWxsZWUub2JqZWN0Lm5hbWUgIT09ICJjb25zb2xlIg0KICAgICAgKSB7DQogICAgICAgIHJldHVybjsNCiAgICAgIH0NCg0KICAgICAgY29uc3QgbWV0aG9kID0gY2FsbGVlLnByb3BlcnR5Lm5hbWU7DQogICAgICBpZiAoIU1FVEhPRFNbbWV0aG9kXSkgew0KICAgICAgICByZXR1cm47DQogICAgICB9DQoNCiAgICAgIGNvbnN0IHsgbGluZSwgY2hhcmFjdGVyIH0gPSBnZXRMaW5lQW5kQ2hhcmFjdGVyT2ZQb3NpdGlvbihsaW5lU3RhcnRzLCBub2RlLnN0YXJ0KTsNCiAgICAgIGNvbnN0IGxvY2F0aW9uID0gYCR7ZmlsZVBhdGh9OiR7bGluZSArIDF9OiR7Y2hhcmFjdGVyICsgMX1gOw0KDQogICAgICBjb25zdCBvcGVuUGFyZW4gPSBmaW5kT3BlblBhcmVuKHNvdXJjZSwgY2FsbGVlLmVuZCwgbm9kZS5lbmQpOw0KDQogICAgICBpZiAob3BlblBhcmVuID49IDApIHsNCiAgICAgICAgY29uc3QgaW5zZXJ0ID0NCiAgICAgICAgICBub2RlLmFyZ3VtZW50cy5sZW5ndGggPiAwID8gYCR7SlNPTi5zdHJpbmdpZnkobG9jYXRpb24pfSwgYCA6IEpTT04uc3RyaW5naWZ5KGxvY2F0aW9uKTsNCiAgICAgICAgZWRpdHMucHVzaCh7IGluZGV4OiBvcGVuUGFyZW4gKyAxLCB0ZXh0OiBpbnNlcnQgfSk7DQogICAgICB9DQogICAgfSwNCiAgfSk7DQoNCiAgdmlzaXRvci52aXNpdChwcm9ncmFtKTsNCg0KICBpZiAoZWRpdHMubGVuZ3RoID09PSAwKSB7DQogICAgcmV0dXJuIHNvdXJjZTsNCiAgfQ0KDQogIGVkaXRzLnNvcnQoKGEsIGIpID0+IGIuaW5kZXggLSBhLmluZGV4KTsNCiAgbGV0IG91dHB1dCA9IHNvdXJjZTsNCiAgZm9yIChjb25zdCBlZGl0IG9mIGVkaXRzKSB7DQogICAgb3V0cHV0ID0gYCR7b3V0cHV0LnNsaWNlKDAsIGVkaXQuaW5kZXgpfSR7ZWRpdC50ZXh0fSR7b3V0cHV0LnNsaWNlKGVkaXQuaW5kZXgpfWA7DQogIH0NCg0KICByZXR1cm4gb3V0cHV0Ow0KfQ0KDQpleHBvcnQgZGVmYXVsdCBjb25zb2xlTG9jYXRpb25Mb2FkZXI7DQo=
+import { parseSync, Visitor } from "oxc-parser";
+import type { CallExpression } from "oxc-parser";
+
+const METHODS: Record<string, true> = {
+  log: true,
+  info: true,
+  warn: true,
+  error: true,
+  debug: true,
+  table: true,
+  dir: true,
+};
+
+function toPosixPath(filePath: string): string {
+  return String(filePath || "").replace(/\\/g, "/");
+}
+
+function findOpenParen(source: string, from: number, to: number): number {
+  const start = Math.max(0, from);
+  const end = Math.min(source.length, to);
+  for (let i = start; i < end; i += 1) {
+    if (source.charCodeAt(i) === 40) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+/** 每行起始 offset 的数组,用于把字符偏移换算成 1-based 行列。 */
+function buildLineStarts(source: string): number[] {
+  const lineStarts = [0];
+  for (let i = 0; i < source.length; i += 1) {
+    if (source.charCodeAt(i) === 10) {
+      lineStarts.push(i + 1);
+    }
+  }
+  return lineStarts;
+}
+
+function getLineAndCharacterOfPosition(
+  lineStarts: number[],
+  position: number,
+): { line: number; character: number } {
+  let low = 0;
+  let high = lineStarts.length - 1;
+  while (low < high) {
+    const mid = (low + high + 1) >> 1;
+    if (lineStarts[mid] <= position) {
+      low = mid;
+    } else {
+      high = mid - 1;
+    }
+  }
+  return { line: low, character: position - lineStarts[low] };
+}
+
+function consoleLocationLoader(this: { resourcePath: string }, source: string): string {
+  const filePath = toPosixPath(this.resourcePath);
+
+  if (!filePath.includes("/src/")) {
+    return source;
+  }
+
+  const { program } = parseSync(this.resourcePath, source, {
+    lang: this.resourcePath.endsWith(".tsx") ? "tsx" : "ts",
+    sourceType: "unambiguous",
+  });
+
+  const lineStarts = buildLineStarts(source);
+  const edits: Array<{ index: number; text: string }> = [];
+
+  const visitor = new Visitor({
+    CallExpression(node: CallExpression) {
+      const { callee } = node;
+      if (
+        callee.type !== "MemberExpression" ||
+        callee.computed ||
+        callee.object.type !== "Identifier" ||
+        callee.object.name !== "console"
+      ) {
+        return;
+      }
+
+      const method = callee.property.name;
+      if (!METHODS[method]) {
+        return;
+      }
+
+      const { line, character } = getLineAndCharacterOfPosition(lineStarts, node.start);
+      const location = `${filePath}:${line + 1}:${character + 1}`;
+
+      const openParen = findOpenParen(source, callee.end, node.end);
+
+      if (openParen >= 0) {
+        const insert =
+          node.arguments.length > 0 ? `${JSON.stringify(location)}, ` : JSON.stringify(location);
+        edits.push({ index: openParen + 1, text: insert });
+      }
+    },
+  });
+
+  visitor.visit(program);
+
+  if (edits.length === 0) {
+    return source;
+  }
+
+  edits.sort((a, b) => b.index - a.index);
+  let output = source;
+  for (const edit of edits) {
+    output = `${output.slice(0, edit.index)}${edit.text}${output.slice(edit.index)}`;
+  }
+
+  return output;
+}
+
+export default consoleLocationLoader;

@@ -1,1 +1,5 @@
-YWxsb3dCdWlsZHM6DQogIGVzYnVpbGQ6IHRydWUNCm1pbmltdW1SZWxlYXNlQWdlOiAxNDQwDQptaW5pbXVtUmVsZWFzZUFnZUV4Y2x1ZGU6DQogIC0gYnJlZXplLXBsdWdpbi1raXQNCg==
+allowBuilds:
+  esbuild: true
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - breeze-plugin-kit

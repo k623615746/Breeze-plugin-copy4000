@@ -1,1 +1,15 @@
-aW1wb3J0IHsgd3JpdGVGaWxlIH0gZnJvbSAibm9kZTpmcy9wcm9taXNlcyI7DQppbXBvcnQgeyByZXNvbHZlIH0gZnJvbSAibm9kZTpwYXRoIjsNCmltcG9ydCB7IGJ1aWxkTWFuaWZlc3RJbmZvIH0gZnJvbSAiLi4vc3JjL2dldC1pbmZvIjsNCg0KYXN5bmMgZnVuY3Rpb24gbWFpbigpIHsNCiAgY29uc3QgbWFuaWZlc3QgPSBidWlsZE1hbmlmZXN0SW5mbygpOw0KICBjb25zdCBtYW5pZmVzdFBhdGggPSByZXNvbHZlKHByb2Nlc3MuY3dkKCksICJtYW5pZmVzdC5qc29uIik7DQogIGF3YWl0IHdyaXRlRmlsZShtYW5pZmVzdFBhdGgsIGAke0pTT04uc3RyaW5naWZ5KG1hbmlmZXN0LCBudWxsLCAyKX1cbmAsICJ1dGYtOCIpOw0KICBjb25zb2xlLmxvZyhgW21hbmlmZXN0XSBnZW5lcmF0ZWQ6ICR7bWFuaWZlc3RQYXRofWApOw0KfQ0KDQp2b2lkIG1haW4oKS5jYXRjaCgoZXJyb3IpID0+IHsNCiAgY29uc29sZS5lcnJvcigiW21hbmlmZXN0XSBnZW5lcmF0ZSBmYWlsZWQ6IiwgZXJyb3IpOw0KICBwcm9jZXNzLmV4aXQoMSk7DQp9KTsNCg==
+import { writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { buildManifestInfo } from "../src/get-info";
+
+async function main() {
+  const manifest = buildManifestInfo();
+  const manifestPath = resolve(process.cwd(), "manifest.json");
+  await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf-8");
+  console.log(`[manifest] generated: ${manifestPath}`);
+}
+
+void main().catch((error) => {
+  console.error("[manifest] generate failed:", error);
+  process.exit(1);
+});

@@ -1,1 +1,5 @@
-cmVxdWlyZSgndHN4L2NqcycpOw0KDQpjb25zdCBtb2QgPSByZXF1aXJlKCcuL2NvbnNvbGUtbG9jYXRpb24tbG9hZGVyLnRzJyk7DQoNCm1vZHVsZS5leHBvcnRzID0gbW9kLmRlZmF1bHQgfHwgbW9kOw0K
+require('tsx/cjs');
+
+const mod = require('./console-location-loader.ts');
+
+module.exports = mod.default || mod;

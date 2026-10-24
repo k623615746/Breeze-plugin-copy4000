@@ -1,1 +1,106 @@
-IyDln5/lkI3lpLHmlYjlupTmgKXpooTmoYgKCuWGmee7mSLlk6rlpKnmj5Lku7bnqoHnhLbmiZPkuI3lvIAi55qE6YKj5LiA5Yi744CC5oyJ6aG65bqP5omn6KGM77yM6YCa5bi4IDEg5YiG6ZKf5YaF6IO95oGi5aSN44CCCgotLS0KCiMjIOS4gOOAgeWFiOWIhua4heS4ieenjSLmiZPkuI3lvIAiCgp8IOeXh+eKtiB8IOWkp+amgueOh+WOn+WboCB8IOWIpOaWreaWueazlSB8CnwgLS0tIHwgLS0tIHwgLS0tIHwKfCDmiqXplJnjgIzmnI3liqHlmajljYfnuqfkuK3jgI0vIOi/lOWbniBIVE1MIHwg56uZ54K557u05oqkIHwg5o2i5omL5py65rWB6YeP5YaN6K+V77yb562JIDEwfjMwIOWIhumSnyB8Cnwg5oql6ZSZ44CM6KuL5Yiw5a6Y57ay5pu05paw5pyA5pawQVBQKC4uLinjgI0gfCAqKuWfn+WQjeato+W4uO+8jOWPquaYryBVQSDooqvliKTlrprkuLrpnZ7lrpjmlrnlrqLmiLfnq68qKiB8IOaPkuS7tuS8muiHquWKqOaNoiBVQSDph43or5XvvIzml6DpnIDlpITnkIYgfAp8IOS4gOebtOi9rOWciCAvIOi/nuaOpemHjee9riAvIOi2heaXtiB8ICoq5Z+f5ZCN6KKr5bCBKiogfCDmtY/op4jlmajnm7TmjqXlvIAgYGh0dHBzOi8vYXBpLmNvcHk0MDAwLmNvbS9hcGkvdjMvc2VhcmNoL2NvbWljP3E9dGVzdGAg5Lmf5LiN6YCaIHwKCuWPquacieesrOS4ieenjemcgOimgei1sOS4i+mdoueahOa1geeoi+OAguWIpOaWreimgeeCue+8mioq6KKr5bCB5pivIFRMUyDph43nva7vvIzlpLHotKXlvojlv6vvvJvnq5nngrnmhaLmmK/otoXml7bvvIzpgJrluLggNX44IOenkuOAgioqIOS4pOiAheWcqOaPkuS7tumHjOaYr+S4jeWQjOeKtuaAge+8iGBuZXR3b3JrYCB2cyBgYXBpLWVycm9yYO+8ieOAggoKLS0tCgojIyDkuozjgIHoh6rliqjmgaLlpI3vvJrku4DkuYjpg73kuI3nlKjlgZoKCuaPkuS7tuWQr+WKqOWSjOavj+asoeivt+axguWJjemDveS8muino+aekOe6v+i3r++8jOmhuuW6j+aYr++8mgoKYGBgCuaJi+WKqOmUgeWumiDihpIg6L+b56iL57yT5a2YIOKGkiDlgaXlurfnvJPlrZgoNW1pbikg4oaSIOWAmemAieaxoOaOoua1iyDihpIg5oql6ZSZ5oyW55+/IOKGkiDmiqXplJkKYGBgCgrmraPluLjmg4XlhrXkuIvpmY3nuqfmmK/pgI/mmI7nmoTjgILlj6ropoHlgJnpgInmsaDph4zov5jmnInkuIDmnaHmtLvnnYDnmoTnur/ot6/vvIznlKjmiLfml6DmhJ/jgIIKCi0tLQoKIyMg5LiJ44CB5omL5Yqo5oGi5aSN77ya5LiJ5q2lCgojIyMg56ysIDEg5q2l77ya54K544CM6YeN5paw5o6i5rWL5omA5pyJ57q/6Lev44CNCgrorr7nva4g4oaSIOaTjeS9nCDihpIg6YeN5paw5o6i5rWL5omA5pyJ57q/6Lev44CCCgp0b2FzdCDkvJrlkYror4nkvaDlvZPliY3lj6/nlKjnur/ot6/lkozlu7bov5/jgILmnInlj6/nlKjnmoTlsLHnu5PmnZ/kuobjgIIKCiMjIyDnrKwgMiDmraXvvJrngrnjgIzku47miqXplJnmjJbmlrDln5/lkI3jgI0KCuWmguaenOesrCAxIOatpeWFqOeBre+8jOeCuei/meS4quOAggoK5Y6f55CG77ya55So5pmu6YCa5rWP6KeI5ZmoIFVBIOWOu+ivt+axguavj+adoeWAmemAiee6v+i3r++8jOermeeCueWIpOWumuS9oOS4jeaYr+WumOaWueWuouaIt+err+WQju+8jOS8mui/lOWbngoKYGBgCmNvZGUgMjEwIOiri+WIsOWumOe2suabtOaWsOacgOaWsEFQUChodHRwczovL3d3dy5jb3B5NTAwMC5jb20vZG93bmxvYWQpLCAuLi4KYGBgCgrmlrDln5/lkI3lsLHlhpnlnKjov5nlj6Xph4zjgILmj5Lku7bmraPliJnmir3lh7rmnaXjgIHooaXmiJAgYGFwaS57aG9zdH0vYXBpL3YzYOOAgemHjeaWsOaOoua1i+OAgeiHquWKqOWIh+aNouOAggoKKirliY3mj5DmmK/oh7PlsJHov5jmnInkuIDmnaHml6fnur/ot6/mtLvnnYAqKuKAlOKAlOatu+Wfn+WQjeS4jeS8muWbnuivneOAguaJgOS7pei/meS4gOatpee7j+W4uOmcgOimgemFjeWQiOesrCAzIOatpeOAggoKIyMjIOesrCAzIOatpe+8muaJi+WKqOWhq+Wfn+WQjQoK6K6+572uIOKGkiDmiYvliqjplIHlrprnur/ot6/vvIzloasgYGNvcHk1MDAwLmNvbWAg5oiWIGBodHRwczovL2FwaS5jb3B5NTAwMC5jb20vYXBpL3YzYO+8jOaPkuS7tuiHquWKqOihpeWFqOOAggoK5aGr5a6M55WZ56m65Y2z5oGi5aSN6Ieq5Yqo5o6i5rWL44CCCgotLS0KCiMjIOWbm+OAgeWmguaenOWFqOmDveS4jeihjAoK6K+05piO6KaB5LmI56uZ54K55pW05L2T5pCs6L+B5Yiw5a6M5YWo6ZmM55Sf55qE5Z+f5ZCN77yM6KaB5LmI5Li05pe25LiL57q/44CC5q2k5pe277yaCgoxLiDmtY/op4jlmajmiZPlvIAgYGh0dHBzOi8vd3d3LmNvcHk0MDAwLmNvbS9kb3dubG9hZGDvvIznnIvmmK/lkKbot7PovawKMi4g55So5a6Y5pa5IEFQUCDmipPkuIDmrKHljIXvvIjmiJbnnIsgQVBQIOWGheeahOWFrOWRiu+8ie+8jOaLv+WIsOaWsOWfn+WQjQozLiDmiYvliqjloavov5vorr7nva7pobUKCuaJi+WKqOWhq+eahOWfn+WQjeS8mui/m+WFpeWAmemAieaxoO+8iGBzb3VyY2U6IG1hbnVhbGDvvInvvIzkuYvlkI7oh6rliqjmjqLmtYvkvJrkvJjlhYjnlKjlroPjgIIKCi0tLQoKIyMg5LqU44CB56ys5Zub6YGT6Ziy57q/77yI5pyq5a6e546w77yM55WZ5L2c5pa55qGI77yJCgp2MyBBUEkg5YWo57q/5q275o6J5pe277yM6L+Y5pyJ6ZWc5YOP56uZ6Lev57q/5Y+v6LWw77yaYGlvcy4yMDI2Y29weS5jb21gIOi/meexu+ermeeCuei1sCBTU1IgSFRNTCArIEFFUy0xMjgtQ0JD77yaCgp8IOWxgiB8IOaOpeWPoyB8IOWKoOWvhiB8CnwgLS0tIHwgLS0tIHwgLS0tIHwKfCDmkJzntKIgfCBgL2FwaS9rYi93ZWIvc2VhcmNoY2kvY29taWNzYCB8IOaXoCB8Cnwg6K+m5oOFIHwgYC9jb21pYy97cGF0aF93b3JkfWAgSFRNTCB8IOaXoCB8Cnwg56ug6IqCIHwgYC9jb21pY2RldGFpbC97cGF0aF93b3JkfS9jaGFwdGVyc2AgKyBgZG50c2Ag5aS0IHwg5ZON5bqUIEFFUy0xMjgtQ0JDIHwKfCDlm77niYcgfCDpmIXor7vpobXlhoXltYwgYGNvbnRlbnRLZXlgIHwg5pWw5o2uIEFFUy0xMjgtQ0JDIHwKCuWvhumSpeS4jeaYr+WGmeatu+eahO+8jOaYryoq6aG16Z2i5LiL5Y+RKirnmoTvvJror6bmg4XpobUgYDxpbnB1dCBpZD0iZG50IiB2YWx1ZT5gIOe7mSBgZG50c2DvvIxgPHNjcmlwdD52YXIgY2N6PScuLi4nYCDnu5kgQUVTIGtlee+8m+mYheivu+mhtSBgPHNjcmlwdD52YXIgY2N0YCArIGB2YXIgY29udGVudEtleWAg5ZCM55CG44CCSVYg5Y+W5a+G5paH5YmNIDE2IOWtl+espuOAggoK6L+Q6KGM5pe25o+Q5L6b5LqGIGBjcnlwdG8uYWVzQ2JjUGtjczdEZWNyeXB0YO+8jOiDveebtOaOpeWunueOsOOAguayoeWBmueahOWOn+WboO+8muWkmuS4gOWll+ino+aekOWZqOe7tOaKpOaIkOacrOe/u+WAje+8jOiAjCB2MyBBUEkg55uu5YmN5aSf56iz44CC55yf5Yiw5LqG5YWo57q/5q275o6J6YKj5aSp77yM5YaN5o6l5LiN6L+f44CCCgotLS0KCiMjIOWFreOAgemVv+acn+e7tOaKpAoKfCDkvJrlpLHmlYjnmoTkuJzopb8gfCDooajnjrAgfCDmlLnlk6rph4wgfAp8IC0tLSB8IC0tLSB8IC0tLSB8Cnwg5Z+f5ZCNIHwg6L+e5o6l6YeN572uIHwg6Ieq5Yqo77yM5oiW6K6+572u6aG15omL5aGrIHwKfCBgdmVyc2lvbmAg6K+35rGC5aS0IHwgYGNvZGVgIOW8guW4uCAvIOaPkOekuuWNh+e6pyB8IOiuvue9riDihpIg5a6i5oi356uv54mI5pys5Y+3IHwKfCBgcGxhdGZvcm1gIOWPguaVsCB8IOi/lOWbnuepuuWIl+ihqCB8IOiuvue9riDihpIgcGxhdGZvcm0g5Y+C5pWwIHwKfCDnmbvlvZUgc2FsdO+8iGAxNzI5YO+8iSB8IOeZu+W9leWksei0pSB8IGBpbmRleC50czogbG9naW5XaXRoQWNjb3VudGAgfAp8IOWbvueJhyBSZWZlcmVyIOinhOWImSB8IOWbvueJhyA0MDMgfCDorr7nva4g4oaSIOWbvueJhyBSZWZlcmVyIHwKCuaUueS7o+eggeWQjumHjeaWsOaehOW7uu+8mgoKYGBgYmFzaApucG0gcnVuIHR5cGVjaGVjayAmJiBucHggcnNwYWNrIGJ1aWxkCmBgYAoK5Lqn54mpIGBkaXN0L2JyZWV6ZS1wbHVnaW4tY29weTQwMDAuYnVuZGxlLmNqc2DvvIzkuKLov5sgQnJlZXplIOaPkuS7tuebruW9leWNs+WPr+OAggo=
+# 域名失效应急预案
+
+写给"哪天插件突然打不开"的那一刻。按顺序执行，通常 1 分钟内能恢复。
+
+---
+
+## 一、先分清三种"打不开"
+
+| 症状 | 大概率原因 | 判断方法 |
+| --- | --- | --- |
+| 报错「服务器升级中」/ 返回 HTML | 站点维护 | 换手机流量再试；等 10~30 分钟 |
+| 报错「請到官網更新最新APP(...)」 | **域名正常，只是 UA 被判定为非官方客户端** | 插件会自动换 UA 重试，无需处理 |
+| 一直转圈 / 连接重置 / 超时 | **域名被封** | 浏览器直接开 `https://api.copy4000.com/api/v3/search/comic?q=test` 也不通 |
+
+只有第三种需要走下面的流程。判断要点：**被封是 TLS 重置，失败很快；站点慢是超时，通常 5~8 秒。** 两者在插件里是不同状态（`network` vs `api-error`）。
+
+---
+
+## 二、自动恢复：什么都不用做
+
+插件启动和每次请求前都会解析线路，顺序是：
+
+```
+手动锁定 → 进程缓存 → 健康缓存(5min) → 候选池探测 → 报错挖矿 → 报错
+```
+
+正常情况下降级是透明的。只要候选池里还有一条活着的线路，用户无感。
+
+---
+
+## 三、手动恢复：三步
+
+### 第 1 步：点「重新探测所有线路」
+
+设置 → 操作 → 重新探测所有线路。
+
+toast 会告诉你当前可用线路和延迟。有可用的就结束了。
+
+### 第 2 步：点「从报错挖新域名」
+
+如果第 1 步全灭，点这个。
+
+原理：用普通浏览器 UA 去请求每条候选线路，站点判定你不是官方客户端后，会返回
+
+```
+code 210 請到官網更新最新APP(https://www.copy5000.com/download), ...
+```
+
+新域名就写在这句里。插件正则抽出来、补成 `api.{host}/api/v3`、重新探测、自动切换。
+
+**前提是至少还有一条旧线路活着**——死域名不会回话。所以这一步经常需要配合第 3 步。
+
+### 第 3 步：手动填域名
+
+设置 → 手动锁定线路，填 `copy5000.com` 或 `https://api.copy5000.com/api/v3`，插件自动补全。
+
+填完留空即恢复自动探测。
+
+---
+
+## 四、如果全都不行
+
+说明要么站点整体搬迁到完全陌生的域名，要么临时下线。此时：
+
+1. 浏览器打开 `https://www.copy4000.com/download`，看是否跳转
+2. 用官方 APP 抓一次包（或看 APP 内的公告），拿到新域名
+3. 手动填进设置页
+
+手动填的域名会进入候选池（`source: manual`），之后自动探测会优先用它。
+
+---
+
+## 五、第四道防线（未实现，留作方案）
+
+v3 API 全线死掉时，还有镜像站路线可走：`ios.2026copy.com` 这类站点走 SSR HTML + AES-128-CBC：
+
+| 层 | 接口 | 加密 |
+| --- | --- | --- |
+| 搜索 | `/api/kb/web/searchci/comics` | 无 |
+| 详情 | `/comic/{path_word}` HTML | 无 |
+| 章节 | `/comicdetail/{path_word}/chapters` + `dnts` 头 | 响应 AES-128-CBC |
+| 图片 | 阅读页内嵌 `contentKey` | 数据 AES-128-CBC |
+
+密钥不是写死的，是**页面下发**的：详情页 `<input id="dnt" value>` 给 `dnts`，`<script>var ccz='...'` 给 AES key；阅读页 `<script>var cct` + `var contentKey` 同理。IV 取密文前 16 字符。
+
+运行时提供了 `crypto.aesCbcPkcs7Decrypt`，能直接实现。没做的原因：多一套解析器维护成本翻倍，而 v3 API 目前够稳。真到了全线死掉那天，再接不迟。
+
+---
+
+## 六、长期维护
+
+| 会失效的东西 | 表现 | 改哪里 |
+| --- | --- | --- |
+| 域名 | 连接重置 | 自动，或设置页手填 |
+| `version` 请求头 | `code` 异常 / 提示升级 | 设置 → 客户端版本号 |
+| `platform` 参数 | 返回空列表 | 设置 → platform 参数 |
+| 登录 salt（`1729`） | 登录失败 | `index.ts: loginWithAccount` |
+| 图片 Referer 规则 | 图片 403 | 设置 → 图片 Referer |
+
+改代码后重新构建：
+
+```bash
+npm run typecheck && npx rspack build
+```
+
+产物 `dist/breeze-plugin-copy4000.bundle.cjs`，丢进 Breeze 插件目录即可。

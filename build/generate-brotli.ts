@@ -1,1 +1,34 @@
-aW1wb3J0IHsgcmVhZGRpciwgcmVhZEZpbGUsIHdyaXRlRmlsZSB9IGZyb20gIm5vZGU6ZnMvcHJvbWlzZXMiOw0KaW1wb3J0IHsgcmVzb2x2ZSB9IGZyb20gIm5vZGU6cGF0aCI7DQppbXBvcnQgeyBwcm9taXNpZnkgfSBmcm9tICJub2RlOnV0aWwiOw0KaW1wb3J0IHsgYnJvdGxpQ29tcHJlc3MsIGNvbnN0YW50cyBhcyB6bGliQ29uc3RhbnRzIH0gZnJvbSAibm9kZTp6bGliIjsNCg0KY29uc3QgYnJvdGxpQ29tcHJlc3NBc3luYyA9IHByb21pc2lmeShicm90bGlDb21wcmVzcyk7DQoNCmFzeW5jIGZ1bmN0aW9uIG1haW4oKSB7DQogIGNvbnN0IGRpc3REaXIgPSByZXNvbHZlKHByb2Nlc3MuY3dkKCksICJkaXN0Iik7DQogIGNvbnN0IGZpbGVzID0gKGF3YWl0IHJlYWRkaXIoZGlzdERpcikpLmZpbHRlcigoZmlsZSkgPT4gZmlsZS5lbmRzV2l0aCgiLmJ1bmRsZS5janMiKSk7DQoNCiAgaWYgKGZpbGVzLmxlbmd0aCA9PT0gMCkgew0KICAgIHRocm93IG5ldyBFcnJvcihgW2Jyb3RsaV0gbm8gLmJ1bmRsZS5janMgZmlsZSBmb3VuZCBpbiAke2Rpc3REaXJ9YCk7DQogIH0NCg0KICBmb3IgKGNvbnN0IGZpbGUgb2YgZmlsZXMpIHsNCiAgICBjb25zdCBzb3VyY2VQYXRoID0gcmVzb2x2ZShkaXN0RGlyLCBmaWxlKTsNCiAgICBjb25zdCB0YXJnZXRQYXRoID0gYCR7c291cmNlUGF0aH0uYnJgOw0KICAgIGNvbnN0IHNvdXJjZSA9IGF3YWl0IHJlYWRGaWxlKHNvdXJjZVBhdGgpOw0KICAgIGNvbnN0IGNvbXByZXNzZWQgPSBhd2FpdCBicm90bGlDb21wcmVzc0FzeW5jKHNvdXJjZSwgew0KICAgICAgcGFyYW1zOiB7DQogICAgICAgIFt6bGliQ29uc3RhbnRzLkJST1RMSV9QQVJBTV9RVUFMSVRZXTogMTEsDQogICAgICAgIFt6bGliQ29uc3RhbnRzLkJST1RMSV9QQVJBTV9TSVpFX0hJTlRdOiBzb3VyY2UubGVuZ3RoLA0KICAgICAgfSwNCiAgICB9KTsNCiAgICBhd2FpdCB3cml0ZUZpbGUodGFyZ2V0UGF0aCwgY29tcHJlc3NlZCk7DQogICAgY29uc29sZS5sb2coYFticm90bGldIGdlbmVyYXRlZDogJHt0YXJnZXRQYXRofWApOw0KICB9DQp9DQoNCnZvaWQgbWFpbigpLmNhdGNoKChlcnJvcikgPT4gew0KICBjb25zb2xlLmVycm9yKCJbYnJvdGxpXSBnZW5lcmF0ZSBmYWlsZWQ6IiwgZXJyb3IpOw0KICBwcm9jZXNzLmV4aXQoMSk7DQp9KTsNCg==
+import { readdir, readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { promisify } from "node:util";
+import { brotliCompress, constants as zlibConstants } from "node:zlib";
+
+const brotliCompressAsync = promisify(brotliCompress);
+
+async function main() {
+  const distDir = resolve(process.cwd(), "dist");
+  const files = (await readdir(distDir)).filter((file) => file.endsWith(".bundle.cjs"));
+
+  if (files.length === 0) {
+    throw new Error(`[brotli] no .bundle.cjs file found in ${distDir}`);
+  }
+
+  for (const file of files) {
+    const sourcePath = resolve(distDir, file);
+    const targetPath = `${sourcePath}.br`;
+    const source = await readFile(sourcePath);
+    const compressed = await brotliCompressAsync(source, {
+      params: {
+        [zlibConstants.BROTLI_PARAM_QUALITY]: 11,
+        [zlibConstants.BROTLI_PARAM_SIZE_HINT]: source.length,
+      },
+    });
+    await writeFile(targetPath, compressed);
+    console.log(`[brotli] generated: ${targetPath}`);
+  }
+}
+
+void main().catch((error) => {
+  console.error("[brotli] generate failed:", error);
+  process.exit(1);
+});

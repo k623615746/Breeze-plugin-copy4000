@@ -1,1 +1,83 @@
-Ly8g5pys5Zyw5YaS54Of77ya55SoIE5vZGUg5qih5ouf5a6/5Li7546v5aKD5Yqg6L295omT5YyF5Lqn54mp77yM6LeR55yf5a6e5o6l5Y+jCi8vIOeUqOazlTogbm9kZSB0ZXN0L3Ntb2tlLm1qcwppbXBvcnQgeyBjcmVhdGVSZXF1aXJlIH0gZnJvbSAibm9kZTptb2R1bGUiOwoKY29uc3QgcmVxdWlyZSA9IGNyZWF0ZVJlcXVpcmUoaW1wb3J0Lm1ldGEudXJsKTsKCi8vIOKAlOKAlCDlrr/kuLvov5DooYzml7bmoakg4oCU4oCUCmdsb2JhbFRoaXMuYnl0ZXNUb0Jhc2U2NCA9IChieXRlcykgPT4gQnVmZmVyLmZyb20oYnl0ZXMpLnRvU3RyaW5nKCJiYXNlNjQiKTsKY29uc3Qgc3RvcmUgPSBuZXcgTWFwKCk7Cmdsb2JhbFRoaXMuYnJpZGdlID0gewogIGFzeW5jIGNhbGwocm91dGUsIC4uLmFyZ3MpIHsKICAgIGlmIChyb3V0ZS5zdGFydHNXaXRoKCJjYWNoZS4iKSkgewogICAgICBjb25zdCBbLCBvcCwga2V5LCB2YWx1ZV0gPSByb3V0ZS5zcGxpdCgiLiIpOwogICAgICB2b2lkIG9wOwogICAgICB2b2lkIGtleTsKICAgICAgdm9pZCB2YWx1ZTsKICAgICAgcmV0dXJuIG51bGw7CiAgICB9CiAgICB2b2lkIGFyZ3M7CiAgICByZXR1cm4gbnVsbDsKICB9LAogIGNhbGxTeW5jKCkgewogICAgcmV0dXJuIG51bGw7CiAgfSwKfTsKCmNvbnN0IG1vZCA9IHJlcXVpcmUoIi4uL2Rpc3QvYnJlZXplLXBsdWdpbi1jb3B5NDAwMC5idW5kbGUuY2pzIik7CmNvbnN0IHBsdWdpbiA9IG1vZC5kZWZhdWx0ID8/IG1vZDsKCmNvbnN0IHQwID0gRGF0ZS5ub3coKTsKY29uc3QgbG9nID0gKC4uLmEpID0+IGNvbnNvbGUubG9nKGBbJHtTdHJpbmcoRGF0ZS5ub3coKSAtIHQwKS5wYWRTdGFydCg2KX1tc11gLCAuLi5hKTsKbGV0IGZhaWx1cmVzID0gMDsKY29uc3QgY2hlY2sgPSAobmFtZSwgY29uZCwgZXh0cmEgPSAiIikgPT4gewogIGlmICghY29uZCkgZmFpbHVyZXMgKz0gMTsKICBjb25zb2xlLmxvZyhgJHtjb25kID8gIlBBU1MiIDogIkZBSUwifSAke25hbWV9JHtleHRyYSA/IGAg4oCUICR7ZXh0cmF9YCA6ICIifWApOwp9OwoKLy8gMS4gaW5pdApjb25zdCBpbml0UmVzID0gYXdhaXQgcGx1Z2luLmluaXQoKTsKbG9nKCJpbml0OiIsIEpTT04uc3RyaW5naWZ5KGluaXRSZXMuZGF0YSkpOwoKLy8gMi4g5pCc57SiCmNvbnN0IHNlYXJjaCA9IGF3YWl0IHBsdWdpbi5zZWFyY2hDb21pYyh7IGtleXdvcmQ6ICLmtbfotLznjosiLCBwYWdlOiAxIH0pOwpjb25zdCBmaXJzdCA9IHNlYXJjaC5pdGVtcz8uWzBdOwpsb2coYOaQnOe0ou+8miR7c2VhcmNoLml0ZW1zLmxlbmd0aH0g5p2h77yM6aaW5p2hICR7Zmlyc3Q/LnRpdGxlfSAoJHtmaXJzdD8uaWR9KWApOwpjaGVjaygic2VhcmNoQ29taWMg6L+U5Zue5p2h55uuIiwgc2VhcmNoLml0ZW1zLmxlbmd0aCA+IDApOwpjaGVjaygic2VhcmNoQ29taWMg5aWR57qm5a6M5pW0IiwgQm9vbGVhbihzZWFyY2gucGFnaW5nICYmIHNlYXJjaC5zY2hlbWU/LnR5cGUgPT09ICJzZWFyY2hSZXN1bHQiKSk7CgovLyAzLiDor6bmg4UKY29uc3QgZGV0YWlsID0gYXdhaXQgcGx1Z2luLmdldENvbWljRGV0YWlsKHsgY29taWNJZDogZmlyc3QuaWQgfSk7CmNvbnN0IGVwcyA9IGRldGFpbC5kYXRhLm5vcm1hbC5lcHM7CmxvZyhg6K+m5oOF77yaJHtkZXRhaWwuZGF0YS5ub3JtYWwuY29taWNJbmZvLnRpdGxlfe+8jCR7ZXBzLmxlbmd0aH0g6K+d77yM5L2c6ICFICR7ZGV0YWlsLmRhdGEubm9ybWFsLmNvbWljSW5mby5jcmVhdG9yLm5hbWV9YCk7CmNoZWNrKCJnZXRDb21pY0RldGFpbCDnq6DoioLpnZ7nqboiLCBlcHMubGVuZ3RoID4gMCk7CmNoZWNrKCLnq6DoioIgb3JkZXIg5YWo5bGA5ZSv5LiAIiwgbmV3IFNldChlcHMubWFwKChlKSA9PiBlLm9yZGVyKSkuc2l6ZSA9PT0gZXBzLmxlbmd0aCk7CgovLyA0LiDpmIXor7vlv6vnhacKY29uc3QgdGFyZ2V0ID0gZXBzWzBdOwpjb25zdCBzbmFwc2hvdCA9IGF3YWl0IHBsdWdpbi5nZXRSZWFkU25hcHNob3QoeyBjb21pY0lkOiBmaXJzdC5pZCwgY2hhcHRlcklkOiB0YXJnZXQucmVxdWVzdElkIH0pOwpjb25zdCBwYWdlcyA9IHNuYXBzaG90LmRhdGEuY2hhcHRlci5wYWdlczsKbG9nKGDpmIXor7vvvJoke3RhcmdldC5uYW1lfe+8jCR7cGFnZXMubGVuZ3RofSDpobXvvIzpppblm74gJHtwYWdlc1swXT8udXJsPy5zbGljZSgwLCA2MCl94oCmYCk7CmNoZWNrKCJnZXRSZWFkU25hcHNob3Qg5pyJ5Zu+54mHIiwgcGFnZXMubGVuZ3RoID4gMCk7CmNoZWNrKCJwYWdlcy51cmwg6Z2e5Y2g5L2NIiwgcGFnZXNbMF0udXJsLnN0YXJ0c1dpdGgoImh0dHAiKSk7CgovLyA1LiDlm77niYflrZfoioIKY29uc3QgYnl0ZXMgPSBhd2FpdCBwbHVnaW4uZmV0Y2hJbWFnZUJ5dGVzKHsgdXJsOiBwYWdlc1swXS51cmwsIHRpbWVvdXRNczogMzAwMDAgfSk7CmNvbnN0IG1hZ2ljID0gQnVmZmVyLmZyb20oYnl0ZXMpLnN1YmFycmF5KDAsIDMpLnRvU3RyaW5nKCJoZXgiKTsKbG9nKGDlm77niYfvvJoke2J5dGVzLmxlbmd0aH0g5a2X6IqC77yMbWFnaWM9JHttYWdpY31gKTsKY2hlY2soImZldGNoSW1hZ2VCeXRlcyDmi7/liLAgSlBFRyIsIG1hZ2ljID09PSAiZmZkOGZmIik7CgovLyA2LiDmjpLooYzmppwgLyDorr7nva4KY29uc3QgcmFuayA9IGF3YWl0IHBsdWdpbi5nZXRSYW5raW5nRGF0YSh7IHBhZ2U6IDEsIGV4dGVybjogeyBzb3VyY2U6ICJyYW5rIiwgZGF0ZVR5cGU6ICLml6XmppwiLCBhdWRpZW5jZTogIueUt+mikSIgfSB9KTsKbG9nKGDmjpLooYzmppzvvJoke3JhbmsuZGF0YS5pdGVtcy5sZW5ndGh9IOadoe+8jGhhc1JlYWNoZWRNYXg9JHtyYW5rLmRhdGEuaGFzUmVhY2hlZE1heH1gKTsKY2hlY2soImdldFJhbmtpbmdEYXRhIOi/lOWbnuadoeebriIsIHJhbmsuZGF0YS5pdGVtcy5sZW5ndGggPiAwKTsKCmNvbnN0IHNldHRpbmdzID0gYXdhaXQgcGx1Z2luLmdldFNldHRpbmdzQnVuZGxlKCk7CmxvZyhg6K6+572u77yaJHtzZXR0aW5ncy5zY2hlbWUuc2VjdGlvbnMubGVuZ3RofSDkuKrliIbnu4TvvIzlvZPliY3plIHlrpo9JHtKU09OLnN0cmluZ2lmeShzZXR0aW5ncy5kYXRhLnZhbHVlc1siYXBpLmxvY2siXSl9YCk7CmNoZWNrKCJnZXRTZXR0aW5nc0J1bmRsZSDmnInnur/ot6/lrZfmrrUiLCBzZXR0aW5ncy5zY2hlbWUuc2VjdGlvbnNbMF0uZmllbGRzLmxlbmd0aCA+PSAzKTsKCmNvbnN0IGNhcHMgPSBhd2FpdCBwbHVnaW4uZ2V0Q2FwYWJpbGl0aWVzQnVuZGxlKCk7CmxvZyhg6IO95Yqb77yaJHtjYXBzLnNjaGVtZS5hY3Rpb25zLm1hcCgoYSkgPT4gYS50aXRsZSkuam9pbigiIC8gIil9YCk7Cgpjb25zb2xlLmxvZyhgXG4ke2ZhaWx1cmVzID09PSAwID8gIuWFqOmDqOmAmui/hyIgOiBgJHtmYWlsdXJlc30g6aG55aSx6LSlYH1gKTsKcHJvY2Vzcy5leGl0KGZhaWx1cmVzID09PSAwID8gMCA6IDEpOwo=
+// 本地冒烟：用 Node 模拟宿主环境加载打包产物，跑真实接口
+// 用法: node test/smoke.mjs
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+
+// —— 宿主运行时桩 ——
+globalThis.bytesToBase64 = (bytes) => Buffer.from(bytes).toString("base64");
+const store = new Map();
+globalThis.bridge = {
+  async call(route, ...args) {
+    if (route.startsWith("cache.")) {
+      const [, op, key, value] = route.split(".");
+      void op;
+      void key;
+      void value;
+      return null;
+    }
+    void args;
+    return null;
+  },
+  callSync() {
+    return null;
+  },
+};
+
+const mod = require("../dist/breeze-plugin-copy4000.bundle.cjs");
+const plugin = mod.default ?? mod;
+
+const t0 = Date.now();
+const log = (...a) => console.log(`[${String(Date.now() - t0).padStart(6)}ms]`, ...a);
+let failures = 0;
+const check = (name, cond, extra = "") => {
+  if (!cond) failures += 1;
+  console.log(`${cond ? "PASS" : "FAIL"} ${name}${extra ? ` — ${extra}` : ""}`);
+};
+
+// 1. init
+const initRes = await plugin.init();
+log("init:", JSON.stringify(initRes.data));
+
+// 2. 搜索
+const search = await plugin.searchComic({ keyword: "海贼王", page: 1 });
+const first = search.items?.[0];
+log(`搜索：${search.items.length} 条，首条 ${first?.title} (${first?.id})`);
+check("searchComic 返回条目", search.items.length > 0);
+check("searchComic 契约完整", Boolean(search.paging && search.scheme?.type === "searchResult"));
+
+// 3. 详情
+const detail = await plugin.getComicDetail({ comicId: first.id });
+const eps = detail.data.normal.eps;
+log(`详情：${detail.data.normal.comicInfo.title}，${eps.length} 话，作者 ${detail.data.normal.comicInfo.creator.name}`);
+check("getComicDetail 章节非空", eps.length > 0);
+check("章节 order 全局唯一", new Set(eps.map((e) => e.order)).size === eps.length);
+
+// 4. 阅读快照
+const target = eps[0];
+const snapshot = await plugin.getReadSnapshot({ comicId: first.id, chapterId: target.requestId });
+const pages = snapshot.data.chapter.pages;
+log(`阅读：${target.name}，${pages.length} 页，首图 ${pages[0]?.url?.slice(0, 60)}…`);
+check("getReadSnapshot 有图片", pages.length > 0);
+check("pages.url 非占位", pages[0].url.startsWith("http"));
+
+// 5. 图片字节
+const bytes = await plugin.fetchImageBytes({ url: pages[0].url, timeoutMs: 30000 });
+const magic = Buffer.from(bytes).subarray(0, 3).toString("hex");
+log(`图片：${bytes.length} 字节，magic=${magic}`);
+check("fetchImageBytes 拿到 JPEG", magic === "ffd8ff");
+
+// 6. 排行榜 / 设置
+const rank = await plugin.getRankingData({ page: 1, extern: { source: "rank", dateType: "日榜", audience: "男频" } });
+log(`排行榜：${rank.data.items.length} 条，hasReachedMax=${rank.data.hasReachedMax}`);
+check("getRankingData 返回条目", rank.data.items.length > 0);
+
+const settings = await plugin.getSettingsBundle();
+log(`设置：${settings.scheme.sections.length} 个分组，当前锁定=${JSON.stringify(settings.data.values["api.lock"])}`);
+check("getSettingsBundle 有线路字段", settings.scheme.sections[0].fields.length >= 3);
+
+const caps = await plugin.getCapabilitiesBundle();
+log(`能力：${caps.scheme.actions.map((a) => a.title).join(" / ")}`);
+
+console.log(`\n${failures === 0 ? "全部通过" : `${failures} 项失败`}`);
+process.exit(failures === 0 ? 0 : 1);

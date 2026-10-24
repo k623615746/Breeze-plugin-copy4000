@@ -1,1 +1,22 @@
-aW1wb3J0IHsgcmVhZEZpbGUsIHdyaXRlRmlsZSB9IGZyb20gIm5vZGU6ZnMvcHJvbWlzZXMiOw0KDQphc3luYyBmdW5jdGlvbiBtYWluKCkgew0KICBjb25zdCBpbmZvUGF0aCA9IG5ldyBVUkwoIi4uL3NyYy9nZXQtaW5mby50cyIsIGltcG9ydC5tZXRhLnVybCk7DQogIGNvbnN0IGluZm8gPSBhd2FpdCByZWFkRmlsZShpbmZvUGF0aCwgInV0Zi04Iik7DQogIGNvbnN0IG1hdGNoID0gaW5mby5tYXRjaCgvdmVyc2lvbjpccyoiKFteIl0qKSIvKTsNCiAgaWYgKCFtYXRjaCkgew0KICAgIHRocm93IG5ldyBFcnJvcigidmVyc2lvbiBub3QgZm91bmQgaW4gc3JjL2dldC1pbmZvLnRzIik7DQogIH0NCiAgY29uc3QgdmVyc2lvbiA9IG1hdGNoWzFdOw0KDQogIGNvbnN0IHBrZ1BhdGggPSBuZXcgVVJMKCIuLi9wYWNrYWdlLmpzb24iLCBpbXBvcnQubWV0YS51cmwpOw0KICBjb25zdCBwa2cgPSBKU09OLnBhcnNlKGF3YWl0IHJlYWRGaWxlKHBrZ1BhdGgsICJ1dGYtOCIpKTsNCiAgcGtnLnZlcnNpb24gPSB2ZXJzaW9uOw0KICBhd2FpdCB3cml0ZUZpbGUocGtnUGF0aCwgYCR7SlNPTi5zdHJpbmdpZnkocGtnLCBudWxsLCAyKX1cbmAsICJ1dGYtOCIpOw0KICBjb25zb2xlLmxvZyhgW3ZlcnNpb25dIHN5bmNlZCBwYWNrYWdlLmpzb24g4oaQIHNyYy9nZXQtaW5mby50cyDihpIgJHt2ZXJzaW9ufWApOw0KfQ0KDQp2b2lkIG1haW4oKS5jYXRjaCgoZXJyb3IpID0+IHsNCiAgY29uc29sZS5lcnJvcigiW3ZlcnNpb25dIGdlbmVyYXRlIGZhaWxlZDoiLCBlcnJvcik7DQogIHByb2Nlc3MuZXhpdCgxKTsNCn0pOw0K
+import { readFile, writeFile } from "node:fs/promises";
+
+async function main() {
+  const infoPath = new URL("../src/get-info.ts", import.meta.url);
+  const info = await readFile(infoPath, "utf-8");
+  const match = info.match(/version:\s*"([^"]*)"/);
+  if (!match) {
+    throw new Error("version not found in src/get-info.ts");
+  }
+  const version = match[1];
+
+  const pkgPath = new URL("../package.json", import.meta.url);
+  const pkg = JSON.parse(await readFile(pkgPath, "utf-8"));
+  pkg.version = version;
+  await writeFile(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`, "utf-8");
+  console.log(`[version] synced package.json ← src/get-info.ts → ${version}`);
+}
+
+void main().catch((error) => {
+  console.error("[version] generate failed:", error);
+  process.exit(1);
+});
